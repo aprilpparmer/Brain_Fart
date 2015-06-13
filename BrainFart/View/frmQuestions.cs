@@ -16,5 +16,20 @@ namespace BrainFart
         {
             InitializeComponent();
         }
+
+        private void questionsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.questionsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.questionsDataSet);
+
+        }
+
+        private void frmQuestions_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'questionsDataSet.questions' table. You can move, or remove it, as needed.
+            this.questionsTableAdapter.Fill(this.questionsDataSet.questions);
+
+        }
     }
 }

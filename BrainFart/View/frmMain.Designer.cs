@@ -47,7 +47,7 @@
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("logo.InitialImage")));
-            this.logo.Location = new System.Drawing.Point(67, 12);
+            this.logo.Location = new System.Drawing.Point(71, 12);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(310, 84);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -58,7 +58,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(137, 134);
+            this.lblWelcome.Location = new System.Drawing.Point(143, 134);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(167, 20);
             this.lblWelcome.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(187, 188);
+            this.btnStart.Location = new System.Drawing.Point(189, 188);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(475, 300);
+            this.ClientSize = new System.Drawing.Size(454, 300);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.logo);
