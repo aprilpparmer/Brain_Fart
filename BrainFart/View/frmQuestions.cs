@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BrainFart.Controller;
+using BrainFart.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +14,27 @@ namespace BrainFart
 {
     public partial class frmQuestions : Form
     {
+        private Questions question;
         public frmQuestions()
         {
             InitializeComponent();
+            this.loadQuestion();
         }
 
-        private void questionsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        public void loadQuestion()
         {
-            this.Validate();
-            this.questionsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.questionsDataSet);
-
+            this.getQuestion();
+            questionDescripLabel.Text = this.question.QuestionDescrip;
         }
 
-        private void frmQuestions_Load(object sender, EventArgs e)
+        private void getQuestion()
         {
-            // TODO: This line of code loads data into the 'questionsDataSet.questions' table. You can move, or remove it, as needed.
-            this.questionsTableAdapter.Fill(this.questionsDataSet.questions);
-
+            List<Questions> questionList = BrainFartController.GetAllQuestions();
+            
+            //Get a random question from the list of questions
+            Random rnd = new Random();
+            int r = rnd.Next(questionList.Count);
+            this.question = questionList[r];
         }
     }
 }
