@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label questionLabel;
             this.answerLabel = new System.Windows.Forms.Label();
             this.answerChoice1 = new System.Windows.Forms.RadioButton();
@@ -37,8 +36,19 @@
             this.answerChoice4 = new System.Windows.Forms.RadioButton();
             this.submitButton = new System.Windows.Forms.Button();
             this.questionDescripLabel = new System.Windows.Forms.Label();
+            this.correctLabel = new System.Windows.Forms.Label();
+            this.nextButton = new System.Windows.Forms.Button();
             questionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // questionLabel
+            // 
+            questionLabel.AutoSize = true;
+            questionLabel.Location = new System.Drawing.Point(45, 50);
+            questionLabel.Name = "questionLabel";
+            questionLabel.Size = new System.Drawing.Size(52, 13);
+            questionLabel.TabIndex = 8;
+            questionLabel.Text = "Question:";
             // 
             // answerLabel
             // 
@@ -101,15 +111,7 @@
             this.submitButton.TabIndex = 7;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
-            // 
-            // questionLabel
-            // 
-            questionLabel.AutoSize = true;
-            questionLabel.Location = new System.Drawing.Point(45, 50);
-            questionLabel.Name = "questionLabel";
-            questionLabel.Size = new System.Drawing.Size(52, 13);
-            questionLabel.TabIndex = 8;
-            questionLabel.Text = "Question:";
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // questionDescripLabel
             // 
@@ -119,12 +121,37 @@
             this.questionDescripLabel.TabIndex = 9;
             this.questionDescripLabel.Text = "***************";
             // 
+            // correctLabel
+            // 
+            this.correctLabel.AutoSize = true;
+            this.correctLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.correctLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.correctLabel.Location = new System.Drawing.Point(225, 205);
+            this.correctLabel.Name = "correctLabel";
+            this.correctLabel.Size = new System.Drawing.Size(145, 20);
+            this.correctLabel.TabIndex = 10;
+            this.correctLabel.Text = "Correct/Incorrect";
+            this.correctLabel.Visible = false;
+            // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(241, 271);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(75, 23);
+            this.nextButton.TabIndex = 11;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Visible = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
             // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(364, 324);
+            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.correctLabel);
             this.Controls.Add(questionLabel);
             this.Controls.Add(this.questionDescripLabel);
             this.Controls.Add(this.submitButton);
@@ -149,5 +176,7 @@
         private System.Windows.Forms.RadioButton answerChoice4;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Label questionDescripLabel;
+        private System.Windows.Forms.Label correctLabel;
+        private System.Windows.Forms.Button nextButton;
     }
 }

@@ -15,26 +15,59 @@ namespace BrainFart
     public partial class frmQuestions : Form
     {
         private Questions question;
+        private List<Questions> questionList;
         public frmQuestions()
         {
-            InitializeComponent();
-            this.loadQuestion();
+            try
+            {
+                InitializeComponent();
+                this.questionList = BrainFartController.GetAllQuestions();
+                this.loadQuestion();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.GetType());
+            }
         }
 
         public void loadQuestion()
         {
-            this.getQuestion();
-            questionDescripLabel.Text = this.question.QuestionDescrip;
+            if (this.questionList.Count == 0)
+            {
+                MessageBox.Show("You have answered all of the questions! Game Over!");
+                this.Close();
+            }
+            else
+            {
+                this.getQuestion();
+                questionDescripLabel.Text = this.question.QuestionDescrip;
+            }
         }
 
         private void getQuestion()
         {
-            List<Questions> questionList = BrainFartController.GetAllQuestions();
-            
             //Get a random question from the list of questions
             Random rnd = new Random();
-            int r = rnd.Next(questionList.Count);
+            int r = rnd.Next(this.questionList.Count);
             this.question = questionList[r];
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            correctLabel.Text = "Correct!";
+            correctLabel.Visible = true;
+            submitButton.Enabled = false;
+            nextButton.Visible = true;
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            nextButton.Visible = false;
+            submitButton.Enabled = true;
+            correctLabel.Visible = false;
+            this.questionList.Remove(this.question);
+            this.loadQuestion();
+
         }
     }
 }
