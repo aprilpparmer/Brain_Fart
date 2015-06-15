@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\BrainFartController.cs" />
+    <Compile Include="DAL\AnswersDAL.cs" />
     <Compile Include="DAL\QuestionsDAL.cs" />
     <Compile Include="DB\BrainFartConnection.cs" />
     <Compile Include="View\frmMain.cs">

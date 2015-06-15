@@ -16,6 +16,7 @@ namespace BrainFart
     {
         private Questions question;
         private List<Questions> questionList;
+        private List<Answers> answerList;
         public frmQuestions()
         {
             try
@@ -26,7 +27,7 @@ namespace BrainFart
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.GetType());
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
         }
 
@@ -40,7 +41,12 @@ namespace BrainFart
             else
             {
                 this.getQuestion();
+                this.answerList = BrainFartController.GetAllAnswerChoices(this.question.QuestionID);
                 questionDescripLabel.Text = this.question.QuestionDescrip;
+                answerChoice1.Text = this.answerList[0].AnswerDescrip;
+                answerChoice2.Text = this.answerList[1].AnswerDescrip;
+                answerChoice3.Text = this.answerList[2].AnswerDescrip;
+                answerChoice4.Text = this.answerList[3].AnswerDescrip;
             }
         }
 

@@ -14,5 +14,10 @@ namespace BrainFart.Controller
         {
             return QuestionsDAL.GetAllQuestions();
         }
+
+        public static List<Answers> GetAllAnswerChoices(int questionID)
+        {
+            return AnswersDAL.GetAllAnswerChoices(questionID);
+        }
     }
 }
