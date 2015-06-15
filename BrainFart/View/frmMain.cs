@@ -1,4 +1,5 @@
 ﻿using System;
+using BrainFart.View;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace BrainFart
     {
 
         private frmQuestions questions;
+        private frmAddModifyQuestion addQuestions;
 
         public mainForm()
         {
@@ -24,6 +26,12 @@ namespace BrainFart
         {
             questions = new frmQuestions();
             this.questions.Show();
+        }
+
+        private void btnAddQuestion_Click(object sender, EventArgs e)
+        {
+            addQuestions = new frmAddModifyQuestion();
+            this.addQuestions.Show();
         }
     }
 }

@@ -34,6 +34,7 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
+            this.btnAddQuestion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,12 +75,23 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // btnAddQuestion
+            // 
+            this.btnAddQuestion.Location = new System.Drawing.Point(329, 265);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.Size = new System.Drawing.Size(113, 23);
+            this.btnAddQuestion.TabIndex = 3;
+            this.btnAddQuestion.Text = "Add Question";
+            this.btnAddQuestion.UseVisualStyleBackColor = true;
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 300);
+            this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.logo);
@@ -97,6 +109,7 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnAddQuestion;
     }
 }
 

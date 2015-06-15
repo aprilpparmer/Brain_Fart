@@ -48,6 +48,12 @@
     <Compile Include="DAL\AnswersDAL.cs" />
     <Compile Include="DAL\QuestionsDAL.cs" />
     <Compile Include="DB\BrainFartConnection.cs" />
+    <Compile Include="View\frmAddModifyQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAddModifyQuestion.Designer.cs">
+      <DependentUpon>frmAddModifyQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="View\frmQuestions.Designer.cs">
       <DependentUpon>frmQuestions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmAddModifyQuestion.resx">
+      <DependentUpon>frmAddModifyQuestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
