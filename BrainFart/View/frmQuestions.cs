@@ -17,7 +17,7 @@ namespace BrainFart
         private Questions question;
         private List<Questions> questionList;
         private List<Answers> answerList;
-        
+        private Answers answer;
         
         public frmQuestions()
         {
@@ -45,6 +45,7 @@ namespace BrainFart
             }
             else
             {
+                lblCorrectAnswer.Text = " ";
                 this.answerChoice1.Checked = false;
                 this.answerChoice2.Checked = false;
                 this.answerChoice3.Checked = false;
@@ -96,7 +97,26 @@ namespace BrainFart
             }
             else
             {
+
+                if (answerList[0].Correct.Equals(1))
+                {
+                    this.answer = answerList[0];
+                }
+                else if (answerList[1].Correct.Equals(1))
+                {
+                    this.answer = answerList[1];
+                }
+                else if (answerList[2].Correct.Equals(1))
+                {
+                    this.answer = answerList[2];
+                }
+                else
+                {
+                    this.answer = answerList[3];
+                }
+
                 correctLabel.Text = "Incorrect!";
+                lblCorrectAnswer.Text = "The Correct Answer is: " + answer.AnswerDescrip;
             }
 
         }

@@ -38,6 +38,7 @@
             this.questionDescripLabel = new System.Windows.Forms.Label();
             this.correctLabel = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
+            this.lblCorrectAnswer = new System.Windows.Forms.Label();
             questionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -105,7 +106,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(122, 272);
+            this.submitButton.Location = new System.Drawing.Point(122, 323);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 7;
@@ -126,7 +127,7 @@
             this.correctLabel.AutoSize = true;
             this.correctLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correctLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.correctLabel.Location = new System.Drawing.Point(225, 205);
+            this.correctLabel.Location = new System.Drawing.Point(118, 259);
             this.correctLabel.Name = "correctLabel";
             this.correctLabel.Size = new System.Drawing.Size(145, 20);
             this.correctLabel.TabIndex = 10;
@@ -135,7 +136,7 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(241, 271);
+            this.nextButton.Location = new System.Drawing.Point(241, 322);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.TabIndex = 11;
@@ -144,12 +145,21 @@
             this.nextButton.Visible = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
+            // lblCorrectAnswer
+            // 
+            this.lblCorrectAnswer.AutoSize = true;
+            this.lblCorrectAnswer.Location = new System.Drawing.Point(119, 298);
+            this.lblCorrectAnswer.Name = "lblCorrectAnswer";
+            this.lblCorrectAnswer.Size = new System.Drawing.Size(0, 13);
+            this.lblCorrectAnswer.TabIndex = 13;
+            // 
             // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(364, 324);
+            this.ClientSize = new System.Drawing.Size(405, 358);
+            this.Controls.Add(this.lblCorrectAnswer);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.correctLabel);
             this.Controls.Add(questionLabel);
@@ -178,5 +188,6 @@
         private System.Windows.Forms.Label questionDescripLabel;
         private System.Windows.Forms.Label correctLabel;
         private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Label lblCorrectAnswer;
     }
 }
