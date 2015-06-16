@@ -17,7 +17,7 @@ namespace BrainFart
         private Questions question;
         private List<Questions> questionList;
         private List<Answers> answerList;
-        private int isChecked;
+        
         
         public frmQuestions()
         {
