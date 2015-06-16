@@ -17,13 +17,17 @@ namespace BrainFart
         private Questions question;
         private List<Questions> questionList;
         private List<Answers> answerList;
+        private int isChecked;
+        
         public frmQuestions()
         {
+
             try
             {
                 InitializeComponent();
                 this.questionList = BrainFartController.GetAllQuestions();
                 this.loadQuestion();
+                
             }
             catch (Exception ex)
             {
@@ -33,6 +37,7 @@ namespace BrainFart
 
         public void loadQuestion()
         {
+
             if (this.questionList.Count == 0)
             {
                 MessageBox.Show("You have answered all of the questions! Game Over!");
@@ -40,6 +45,10 @@ namespace BrainFart
             }
             else
             {
+                this.answerChoice1.Checked = false;
+                this.answerChoice2.Checked = false;
+                this.answerChoice3.Checked = false;
+                this.answerChoice4.Checked = false;
                 this.getQuestion();
                 this.answerList = BrainFartController.GetAllAnswerChoices(this.question.QuestionID);
                 questionDescripLabel.Text = this.question.QuestionDescrip;
@@ -60,10 +69,36 @@ namespace BrainFart
 
         private void submitButton_Click(object sender, EventArgs e)
         {
-            correctLabel.Text = "Correct!";
+
+            this.checkAnswer();
             correctLabel.Visible = true;
             submitButton.Enabled = false;
             nextButton.Visible = true;
+        }
+
+        private void checkAnswer()
+        {
+            if (this.answerChoice1.Checked && answerList[0].Correct.Equals(1))
+            {
+                correctLabel.Text = "Correct!";
+            }
+            else if (this.answerChoice2.Checked && answerList[1].Correct.Equals(1))
+            {
+                correctLabel.Text = "Correct!";
+            }
+            else if (this.answerChoice3.Checked && answerList[2].Correct.Equals(1))
+            {
+                correctLabel.Text = "Correct!";
+            }
+            else if (this.answerChoice4.Checked && answerList[3].Correct.Equals(1))
+            {
+                correctLabel.Text = "Correct!";
+            }
+            else
+            {
+                correctLabel.Text = "Incorrect!";
+            }
+
         }
 
         private void nextButton_Click(object sender, EventArgs e)
