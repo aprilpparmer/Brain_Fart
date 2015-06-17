@@ -255,16 +255,15 @@
             this.groupBox1.Controls.Add(this.answerChoice4);
             this.groupBox1.Location = new System.Drawing.Point(24, 86);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 218);
+            this.groupBox1.Size = new System.Drawing.Size(419, 200);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
             // questionDescripLabel
             // 
-            this.questionDescripLabel.AutoSize = true;
-            this.questionDescripLabel.Location = new System.Drawing.Point(74, 25);
+            this.questionDescripLabel.Location = new System.Drawing.Point(73, 25);
             this.questionDescripLabel.Name = "questionDescripLabel";
-            this.questionDescripLabel.Size = new System.Drawing.Size(63, 13);
+            this.questionDescripLabel.Size = new System.Drawing.Size(340, 58);
             this.questionDescripLabel.TabIndex = 33;
             this.questionDescripLabel.Text = "**************";
             // 
@@ -273,7 +272,7 @@
             this.pointValueLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.difficultiesBindingSource, "point_value", true));
             this.pointValueLabel.Location = new System.Drawing.Point(290, 113);
             this.pointValueLabel.Name = "pointValueLabel";
-            this.pointValueLabel.Size = new System.Drawing.Size(100, 23);
+            this.pointValueLabel.Size = new System.Drawing.Size(100, 13);
             this.pointValueLabel.TabIndex = 32;
             this.pointValueLabel.Text = "********";
             // 
@@ -282,7 +281,7 @@
             this.difficultyDescripLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.difficultiesBindingSource, "difficultyDescrip", true));
             this.difficultyDescripLabel.Location = new System.Drawing.Point(276, 90);
             this.difficultyDescripLabel.Name = "difficultyDescripLabel";
-            this.difficultyDescripLabel.Size = new System.Drawing.Size(100, 23);
+            this.difficultyDescripLabel.Size = new System.Drawing.Size(100, 13);
             this.difficultyDescripLabel.TabIndex = 31;
             this.difficultyDescripLabel.Text = "********";
             // 
