@@ -14,8 +14,8 @@ namespace BrainFart
     public partial class mainForm : Form
     {
 
-        private frmQuestions questions;
         private frmRegister register;
+        private frmNewGame newGame;
 
         public mainForm()
         {
@@ -24,8 +24,8 @@ namespace BrainFart
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            questions = new frmQuestions();
-            this.questions.Show();
+            newGame = new frmNewGame();
+            this.newGame.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

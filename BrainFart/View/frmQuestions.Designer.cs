@@ -43,9 +43,9 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblScore = new System.Windows.Forms.Label();
             this.lblPatientTabUser = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.lblScore = new System.Windows.Forms.Label();
             questionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -137,7 +137,7 @@
             this.correctLabel.AutoSize = true;
             this.correctLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correctLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.correctLabel.Location = new System.Drawing.Point(72, 175);
+            this.correctLabel.Location = new System.Drawing.Point(43, 175);
             this.correctLabel.Name = "correctLabel";
             this.correctLabel.Size = new System.Drawing.Size(145, 20);
             this.correctLabel.TabIndex = 10;
@@ -158,7 +158,7 @@
             // lblCorrectAnswer
             // 
             this.lblCorrectAnswer.AutoSize = true;
-            this.lblCorrectAnswer.Location = new System.Drawing.Point(119, 298);
+            this.lblCorrectAnswer.Location = new System.Drawing.Point(49, 298);
             this.lblCorrectAnswer.Name = "lblCorrectAnswer";
             this.lblCorrectAnswer.Size = new System.Drawing.Size(0, 13);
             this.lblCorrectAnswer.TabIndex = 13;
@@ -204,6 +204,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category:";
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Location = new System.Drawing.Point(308, 0);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(75, 13);
+            this.lblScore.TabIndex = 29;
+            this.lblScore.Text = "Current Score:";
+            // 
             // lblPatientTabUser
             // 
             this.lblPatientTabUser.AutoSize = true;
@@ -224,15 +233,6 @@
             this.button3.TabIndex = 35;
             this.button3.Text = "Quit";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // lblScore
-            // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Location = new System.Drawing.Point(308, 0);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(75, 13);
-            this.lblScore.TabIndex = 29;
-            this.lblScore.Text = "Current Score:";
             // 
             // frmQuestions
             // 
