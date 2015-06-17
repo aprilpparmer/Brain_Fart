@@ -16,6 +16,7 @@ namespace BrainFart
 
         private frmRegister register;
         private frmNewGame newGame;
+        private frmQuestions questions;
 
         public mainForm()
         {
@@ -24,8 +25,11 @@ namespace BrainFart
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            newGame = new frmNewGame();
-            this.newGame.Show();
+            questions = new frmQuestions();
+            this.questions.Show();
+            //Code for when options are in place
+            //newGame = new frmNewGame();
+            //this.newGame.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
