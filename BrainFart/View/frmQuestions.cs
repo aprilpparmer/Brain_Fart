@@ -123,7 +123,7 @@ namespace BrainFart
                 {
                     this.answer = answerList[3];
                 }
-
+                correctLabel.ForeColor = System.Drawing.Color.Red;
                 correctLabel.Text = "Incorrect!";
                 lblCorrectAnswer.Text = "The Correct Answer is: " + answer.AnswerDescrip;
             }

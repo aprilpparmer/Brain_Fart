@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BrainFartTests
 {
     [TestClass]
-    public class UnitTest1
+    public class QuestionUnitTests
     {
         [TestMethod]
         public void TestMethod1()
