@@ -185,6 +185,7 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainForm";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.groupBox1.ResumeLayout(false);
