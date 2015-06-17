@@ -85,6 +85,7 @@
             // categoryLabel
             // 
             categoryLabel.AutoSize = true;
+            categoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             categoryLabel.Location = new System.Drawing.Point(6, 0);
             categoryLabel.Name = "categoryLabel";
             categoryLabel.Size = new System.Drawing.Size(52, 13);
@@ -94,7 +95,8 @@
             // dificultyLabel
             // 
             dificultyLabel.AutoSize = true;
-            dificultyLabel.Location = new System.Drawing.Point(230, 90);
+            dificultyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dificultyLabel.Location = new System.Drawing.Point(159, 0);
             dificultyLabel.Name = "dificultyLabel";
             dificultyLabel.Size = new System.Drawing.Size(50, 13);
             dificultyLabel.TabIndex = 30;
@@ -103,7 +105,8 @@
             // point_valueLabel
             // 
             point_valueLabel.AutoSize = true;
-            point_valueLabel.Location = new System.Drawing.Point(230, 113);
+            point_valueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            point_valueLabel.Location = new System.Drawing.Point(6, 180);
             point_valueLabel.Name = "point_valueLabel";
             point_valueLabel.Size = new System.Drawing.Size(64, 13);
             point_valueLabel.TabIndex = 31;
@@ -164,7 +167,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(233, 175);
+            this.submitButton.Location = new System.Drawing.Point(257, 175);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 7;
@@ -187,7 +190,7 @@
             this.correctLabel.AutoSize = true;
             this.correctLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correctLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.correctLabel.Location = new System.Drawing.Point(43, 175);
+            this.correctLabel.Location = new System.Drawing.Point(106, 177);
             this.correctLabel.Name = "correctLabel";
             this.correctLabel.Size = new System.Drawing.Size(145, 20);
             this.correctLabel.TabIndex = 10;
@@ -196,7 +199,7 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(314, 175);
+            this.nextButton.Location = new System.Drawing.Point(338, 175);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.TabIndex = 11;
@@ -269,19 +272,22 @@
             // 
             // pointValueLabel
             // 
+            this.pointValueLabel.AutoSize = true;
             this.pointValueLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.difficultiesBindingSource, "point_value", true));
-            this.pointValueLabel.Location = new System.Drawing.Point(290, 113);
+            this.pointValueLabel.Location = new System.Drawing.Point(66, 180);
             this.pointValueLabel.Name = "pointValueLabel";
-            this.pointValueLabel.Size = new System.Drawing.Size(100, 13);
+            this.pointValueLabel.Size = new System.Drawing.Size(39, 13);
             this.pointValueLabel.TabIndex = 32;
             this.pointValueLabel.Text = "********";
             // 
             // difficultyDescripLabel
             // 
+            this.difficultyDescripLabel.AutoSize = true;
             this.difficultyDescripLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.difficultiesBindingSource, "difficultyDescrip", true));
-            this.difficultyDescripLabel.Location = new System.Drawing.Point(276, 90);
+            this.difficultyDescripLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.difficultyDescripLabel.Location = new System.Drawing.Point(215, 0);
             this.difficultyDescripLabel.Name = "difficultyDescripLabel";
-            this.difficultyDescripLabel.Size = new System.Drawing.Size(100, 13);
+            this.difficultyDescripLabel.Size = new System.Drawing.Size(39, 13);
             this.difficultyDescripLabel.TabIndex = 31;
             this.difficultyDescripLabel.Text = "********";
             // 
@@ -289,6 +295,7 @@
             // 
             this.categoryDescripLabel.AutoSize = true;
             this.categoryDescripLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriesBindingSource, "categoryDescrip", true));
+            this.categoryDescripLabel.ForeColor = System.Drawing.Color.Olive;
             this.categoryDescripLabel.Location = new System.Drawing.Point(57, 0);
             this.categoryDescripLabel.Name = "categoryDescripLabel";
             this.categoryDescripLabel.Size = new System.Drawing.Size(43, 13);
@@ -308,6 +315,7 @@
             // lblScore
             // 
             this.lblScore.AutoSize = true;
+            this.lblScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblScore.Location = new System.Drawing.Point(308, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(75, 13);
