@@ -86,7 +86,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(174, 140);
+            this.btnRegister.Location = new System.Drawing.Point(174, 149);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(97, 23);
             this.btnRegister.TabIndex = 6;
@@ -102,7 +102,7 @@
             this.groupBox1.Controls.Add(this.lblPassword);
             this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.lblUserName);
-            this.groupBox1.Location = new System.Drawing.Point(71, 169);
+            this.groupBox1.Location = new System.Drawing.Point(71, 189);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(294, 120);
             this.groupBox1.TabIndex = 7;
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(454, 300);
+            this.ClientSize = new System.Drawing.Size(454, 331);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnStart);
