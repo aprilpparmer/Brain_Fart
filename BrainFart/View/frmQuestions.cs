@@ -88,12 +88,14 @@ namespace BrainFart
 
         private void checkAnswer()
         {
+            correctLabel.ForeColor = System.Drawing.Color.Green;
             if (this.answerChoice1.Checked && answerList[0].Correct.Equals(1))
             {
                 correctLabel.Text = "Correct!";
             }
             else if (this.answerChoice2.Checked && answerList[1].Correct.Equals(1))
             {
+
                 correctLabel.Text = "Correct!";
             }
             else if (this.answerChoice3.Checked && answerList[2].Correct.Equals(1))
@@ -127,7 +129,6 @@ namespace BrainFart
                 correctLabel.Text = "Incorrect!";
                 lblCorrectAnswer.Text = "The Correct Answer is: " + answer.AnswerDescrip;
             }
-
         }
 
         private void nextButton_Click(object sender, EventArgs e)
