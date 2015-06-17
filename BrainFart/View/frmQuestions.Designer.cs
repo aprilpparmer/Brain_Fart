@@ -45,6 +45,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPatientTabUser = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.lblScore = new System.Windows.Forms.Label();
             questionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -114,7 +115,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(230, 166);
+            this.submitButton.Location = new System.Drawing.Point(233, 175);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 7;
@@ -124,6 +125,7 @@
             // 
             // questionDescripLabel
             // 
+            this.questionDescripLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionDescripLabel.Location = new System.Drawing.Point(73, 25);
             this.questionDescripLabel.Name = "questionDescripLabel";
             this.questionDescripLabel.Size = new System.Drawing.Size(326, 58);
@@ -144,7 +146,7 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(324, 166);
+            this.nextButton.Location = new System.Drawing.Point(314, 175);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.TabIndex = 11;
@@ -184,6 +186,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblScore);
             this.groupBox1.Controls.Add(questionLabel);
             this.groupBox1.Controls.Add(this.questionDescripLabel);
             this.groupBox1.Controls.Add(this.answerLabel);
@@ -206,12 +209,12 @@
             this.lblPatientTabUser.AutoSize = true;
             this.lblPatientTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPatientTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPatientTabUser.Location = new System.Drawing.Point(332, 67);
+            this.lblPatientTabUser.Location = new System.Drawing.Point(286, 67);
             this.lblPatientTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPatientTabUser.Name = "lblPatientTabUser";
-            this.lblPatientTabUser.Size = new System.Drawing.Size(110, 16);
+            this.lblPatientTabUser.Size = new System.Drawing.Size(127, 16);
             this.lblPatientTabUser.TabIndex = 22;
-            this.lblPatientTabUser.Text = "Logged in as: Biff";
+            this.lblPatientTabUser.Text = "Logged in as: Guest";
             // 
             // button3
             // 
@@ -221,6 +224,15 @@
             this.button3.TabIndex = 35;
             this.button3.Text = "Quit";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Location = new System.Drawing.Point(308, 0);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(75, 13);
+            this.lblScore.TabIndex = 29;
+            this.lblScore.Text = "Current Score:";
             // 
             // frmQuestions
             // 
@@ -262,5 +274,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblPatientTabUser;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblScore;
     }
 }

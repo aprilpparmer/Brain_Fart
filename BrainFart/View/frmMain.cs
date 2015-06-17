@@ -15,7 +15,7 @@ namespace BrainFart
     {
 
         private frmQuestions questions;
-        private frmAddModifyQuestion addQuestions;
+        private frmRegister register;
 
         public mainForm()
         {
@@ -28,10 +28,10 @@ namespace BrainFart
             this.questions.Show();
         }
 
-        private void btnAddQuestion_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-            addQuestions = new frmAddModifyQuestion();
-            this.addQuestions.Show();
+            register = new frmRegister();
+            this.register.Show();
         }
     }
 }

@@ -48,12 +48,6 @@
     <Compile Include="DAL\AnswersDAL.cs" />
     <Compile Include="DAL\QuestionsDAL.cs" />
     <Compile Include="DB\BrainFartConnection.cs" />
-    <Compile Include="View\frmAddModifyQuestion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmAddModifyQuestion.Designer.cs">
-      <DependentUpon>frmAddModifyQuestion.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,9 +68,12 @@
     <Compile Include="View\frmQuestions.Designer.cs">
       <DependentUpon>frmQuestions.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmAddModifyQuestion.resx">
-      <DependentUpon>frmAddModifyQuestion.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="View\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,6 +1,4 @@
 ﻿using System;
-using BrainFart.Controller;
-using BrainFart.Model;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +10,14 @@ using System.Windows.Forms;
 
 namespace BrainFart.View
 {
-    public partial class frmAddModifyQuestion : Form
+    public partial class frmRegister : Form
     {
-        public frmAddModifyQuestion()
+        public frmRegister()
         {
             InitializeComponent();
         }
 
-        private void addQuestionCnclbtn_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
