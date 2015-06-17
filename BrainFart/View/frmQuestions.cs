@@ -50,13 +50,22 @@ namespace BrainFart
                 this.answerChoice2.Checked = false;
                 this.answerChoice3.Checked = false;
                 this.answerChoice4.Checked = false;
+
+                //Loads a new question
                 this.getQuestion();
+                //Loads the answer choices for the question
                 this.answerList = BrainFartController.GetAllAnswerChoices(this.question.QuestionID);
                 questionDescripLabel.Text = this.question.QuestionDescrip;
                 answerChoice1.Text = this.answerList[0].AnswerDescrip;
                 answerChoice2.Text = this.answerList[1].AnswerDescrip;
                 answerChoice3.Text = this.answerList[2].AnswerDescrip;
                 answerChoice4.Text = this.answerList[3].AnswerDescrip;
+                //Loads the question's category
+                int categoryID = this.question.CatergoryID;
+                this.categoriesTableAdapter.Fill(this.categoriesDataSet.categories, categoryID);
+                //Loads the question's difficulty and point value
+                int difficultyID = this.question.DifficultyID;
+                this.difficultiesTableAdapter.Fill(this.difficultiesDataSet.difficulties, difficultyID);
             }
         }
 
@@ -140,5 +149,6 @@ namespace BrainFart
                 this.Close();
             }
         }
+
     }
 }

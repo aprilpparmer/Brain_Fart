@@ -120,11 +120,26 @@
   <metadata name="questionLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="categoryLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="dificultyLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="point_valueLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="difficultiesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>167, 56</value>
+  </metadata>
+  <metadata name="difficultiesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUYAAAB5CAYAAABFjIg8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAGnVJREFUeF7tnUtzHsd1hvXjssoqq2yyysqrbOKqVCUql72IXSlX4liy5di6y1JC
+        vAAADrwBlbxySQAAGnVJREFUeF7tnUtzHsd1hvXjssoqq2yyysqrbOKqVCUql72IXSlX4liy5di6y1JC
         RdRdpGhTokhKtEQJ4k0kxTt4AQgSBEAQvIC4kJr00+BhNQ565puZb76LovepOkUJmO6Z6T7n7dM9PYMn
         CiGEEJuQMAohhEPCKIQQDgmjEEI4JIxCCOGQMAohhEPCKIQQDgmjEEI4JIxCCOGQMAohhEPCKIQQDgmj
         EEI4JIxCCOGQMAohhKOnMD7xhLRTCPHDQsIohBAOCaMQQjgkjEII4ZAwCiGEQ8IohBAOCaMQQjgkjEII
@@ -243,7 +258,7 @@
   <data name="logo.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUYAAAB5CAYAAABFjIg8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAGnVJREFUeF7tnUtzHsd1hvXjssoqq2yyysqrbOKqVCUql72IXSlX4liy5di6y1JC
+        vAAADrwBlbxySQAAGnVJREFUeF7tnUtzHsd1hvXjssoqq2yyysqrbOKqVCUql72IXSlX4liy5di6y1JC
         RdRdpGhTokhKtEQJ4k0kxTt4AQgSBEAQvIC4kJr00+BhNQ565puZb76LovepOkUJmO6Z6T7n7dM9PYMn
         CiGEEJuQMAohhEPCKIQQDgmjEEI4JIxCCOGQMAohhEPCKIQQDgmjEEI4JIxCCOGQMAohhEPCKIQQDgmj
         EEI4JIxCCOGQMAohhKOnMD7xhLRTCPHDQsIohBAOCaMQQjgkjEII4ZAwCiGEQ8IohBAOCaMQQjgkjEII
@@ -359,6 +374,24 @@
         CCE2URT/B1NWzitIENl7AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="categoriesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>167, 17</value>
+  </metadata>
+  <metadata name="categoriesDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="categoriesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>354, 17</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>535, 17</value>
+  </metadata>
+  <metadata name="difficultiesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>353, 56</value>
+  </metadata>
+  <metadata name="tableAdapterManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>533, 56</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAEBAAAAEAIABoBAAAZgAAAAAAAAABACAAzBUAAM4EAAAwMAAAAQAgAKglAACaGgAAICAAAAEA

@@ -44,10 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoriesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controller\BrainFartController.cs" />
     <Compile Include="DAL\AnswersDAL.cs" />
     <Compile Include="DAL\QuestionsDAL.cs" />
     <Compile Include="DB\BrainFartConnection.cs" />
+    <Compile Include="DifficultiesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DifficultiesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\frmAddModifyQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +138,28 @@
     <EmbeddedResource Include="View\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CategoriesDataSet.xsc">
+      <DependentUpon>CategoriesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CategoriesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CategoriesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CategoriesDataSet.xss">
+      <DependentUpon>CategoriesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DifficultiesDataSet.xsc">
+      <DependentUpon>DifficultiesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DifficultiesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DifficultiesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DifficultiesDataSet.xss">
+      <DependentUpon>DifficultiesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
