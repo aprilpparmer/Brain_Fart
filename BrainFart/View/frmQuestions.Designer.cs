@@ -45,7 +45,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblPatientTabUser = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             questionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -225,14 +225,15 @@
             this.lblPatientTabUser.TabIndex = 22;
             this.lblPatientTabUser.Text = "Logged in as: Guest";
             // 
-            // button3
+            // btnQuit
             // 
-            this.button3.Location = new System.Drawing.Point(367, 292);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 25);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "Quit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnQuit.Location = new System.Drawing.Point(367, 292);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(75, 25);
+            this.btnQuit.TabIndex = 35;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // frmQuestions
             // 
@@ -240,7 +241,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblPatientTabUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.logo);
@@ -273,7 +274,7 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblPatientTabUser;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lblScore;
     }
 }

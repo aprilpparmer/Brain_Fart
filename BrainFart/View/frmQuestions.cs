@@ -130,5 +130,15 @@ namespace BrainFart
             this.loadQuestion();
 
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to Quit?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                this.Close();
+            }
+        }
     }
 }
