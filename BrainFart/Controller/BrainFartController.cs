@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BrainFart.Controller
 {
-    class BrainFartController
+    public class BrainFartController
     {
         public static List<Questions> GetAllQuestions()
         {

@@ -1,5 +1,6 @@
 ﻿using BrainFart.Controller;
 using BrainFart.Model;
+using BrainFart.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriesDataSet.cs">
+      <DependentUpon>CategoriesDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CategoriesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -53,6 +57,10 @@
     <Compile Include="DAL\AnswersDAL.cs" />
     <Compile Include="DAL\QuestionsDAL.cs" />
     <Compile Include="DB\BrainFartConnection.cs" />
+    <Compile Include="DifficultiesDataSet.cs">
+      <DependentUpon>DifficultiesDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DifficultiesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
