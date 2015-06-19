@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="QuestionUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AnswerUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BrainFart\BrainFart.csproj">
