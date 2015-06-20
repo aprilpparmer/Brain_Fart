@@ -68,6 +68,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DifficultiesDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Model\Validator.cs" />
     <Compile Include="View\frmAddModifyQuestion.cs">
       <SubType>Form</SubType>
     </Compile>

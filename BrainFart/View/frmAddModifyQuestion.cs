@@ -14,6 +14,11 @@ namespace BrainFart.View
 {
     public partial class frmAddModifyQuestion : Form
     {
+        public Questions question;
+        public Questions newQuestion;
+        public bool updated;
+
+
         public frmAddModifyQuestion()
         {
             InitializeComponent();
@@ -61,5 +66,75 @@ namespace BrainFart.View
             }
         }
 
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (Validator.IsPresent(txtQuestion) && Validator.IsPresent(txtAnswerA)
+                    && Validator.IsPresent(txtAnswerB) && Validator.IsPresent(txtAnswerC)
+                    && Validator.IsPresent(txtAnswerD) && Validator.IsPresent(cbCategory)
+                    && Validator.IsPresent(cbDifficulty))
+                {
+                    if (addQuestion)
+                    {
+                        question = new Questions();
+                        this.putQuestionData(question);
+                        try
+                        {
+                            this.question.QuestionID = BrainFartController.AddQuestion(question);
+
+
+                            MessageBox.Show("You have successfully Added a Question");
+
+                            this.BeginInvoke(new MethodInvoker(Close));
+
+                        }
+                        catch (InvalidOperationException ioe)
+                        {
+                            throw ioe;
+                        }
+
+                    }
+                    else
+                    {
+                        newQuestion = new Questions();
+                        this.putQuestionData(newQuestion);
+                        try
+                        {
+                            if (BrainFartController.UpdateQuestion(question, newQuestion))
+                            {
+                                MessageBox.Show("Question Successfully updated to the system!", "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                updated = true;
+                                this.BeginInvoke(new MethodInvoker(Close));
+                            }
+                        }
+                        catch (InvalidOperationException ioe)
+                        {
+                            throw ioe;
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }
+        }
+
+        /// <summary>
+        /// Insert question information
+        /// </summary>
+        /// <param name="question"></param>
+        private void putQuestionData(Questions question)
+        {
+            question.QuestionID = this.question.QuestionID;
+            question.QuestionDescrip = this.question.QuestionDescrip;
+            question.CategoryID = (int)cbCategory.SelectedValue;
+            question.DifficultyID = (int)cbDifficulty.SelectedValue;
+        }
     }
 }
+
+             

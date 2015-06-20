@@ -40,7 +40,7 @@ namespace BrainFart
 
             //Code for Adding Questions form
             //addQuestions = new frmAddModifyQuestion();
-           // addQuestions.addQuestion = true;
+            //addQuestions.addQuestion = true;
             //this.addQuestions.ShowDialog();
         }
     }

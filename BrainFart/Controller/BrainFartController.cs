@@ -20,14 +20,24 @@ namespace BrainFart.Controller
             return AnswersDAL.GetAllAnswerChoices(questionID);
         }
 
-        internal static List<Categories> getAllCategories()
+        public static List<Categories> getAllCategories()
         {
             return CategoriesDAL.GetAllCategories();
         }
 
-        internal static List<Difficulties> getAllDifficulties()
+        public static List<Difficulties> getAllDifficulties()
         {
             return DifficultiesDAL.GetAllDifficulties();
+        }
+
+        public static int AddQuestion(Questions question)
+        {
+            return QuestionsDAL.AddQuestion(question);
+        }
+
+        public static bool UpdateQuestion(Questions question, Questions newQuestion)
+        {
+            throw new NotImplementedException();
         }
     }
 }

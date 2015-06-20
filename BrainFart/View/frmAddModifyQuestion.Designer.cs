@@ -97,6 +97,7 @@
             this.btnSubmit.TabIndex = 34;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // groupBox1
             // 
@@ -145,6 +146,7 @@
             this.cbDifficulty.Name = "cbDifficulty";
             this.cbDifficulty.Size = new System.Drawing.Size(121, 21);
             this.cbDifficulty.TabIndex = 19;
+            this.cbDifficulty.Tag = "Difficulty";
             // 
             // lblDifficulty
             // 
@@ -163,6 +165,7 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(121, 21);
             this.cbCategory.TabIndex = 17;
+            this.cbCategory.Tag = "Category ";
             // 
             // lblCategory
             // 
@@ -219,6 +222,7 @@
             this.txtAnswerD.Name = "txtAnswerD";
             this.txtAnswerD.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerD.TabIndex = 11;
+            this.txtAnswerD.Tag = "Answer D";
             // 
             // txtAnswerC
             // 
@@ -226,6 +230,7 @@
             this.txtAnswerC.Name = "txtAnswerC";
             this.txtAnswerC.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerC.TabIndex = 10;
+            this.txtAnswerC.Tag = "Answer C";
             // 
             // txtAnswerB
             // 
@@ -233,6 +238,7 @@
             this.txtAnswerB.Name = "txtAnswerB";
             this.txtAnswerB.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerB.TabIndex = 9;
+            this.txtAnswerB.Tag = "Answer B";
             // 
             // txtAnswerA
             // 
@@ -240,6 +246,7 @@
             this.txtAnswerA.Name = "txtAnswerA";
             this.txtAnswerA.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerA.TabIndex = 8;
+            this.txtAnswerA.Tag = "Answer A";
             // 
             // lblD
             // 
@@ -293,6 +300,7 @@
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.Size = new System.Drawing.Size(351, 73);
             this.txtQuestion.TabIndex = 2;
+            this.txtQuestion.Tag = "Question";
             // 
             // lblQuestion
             // 
