@@ -36,7 +36,7 @@ namespace BrainFart.DAL
 
                                 question.QuestionID = (Int32)reader["questionID"];
                                 question.QuestionDescrip = reader["questionDescrip"].ToString().Trim();
-                                question.CatergoryID = (Int32)reader["categoryID"];
+                                question.CategoryID = (Int32)reader["categoryID"];
                                 question.DifficultyID = (Int32)reader["difficultyID"];
 
                                 questionList.Add(question);

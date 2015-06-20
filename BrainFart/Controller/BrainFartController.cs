@@ -19,5 +19,15 @@ namespace BrainFart.Controller
         {
             return AnswersDAL.GetAllAnswerChoices(questionID);
         }
+
+        internal static List<Categories> getAllCategories()
+        {
+            return CategoriesDAL.GetAllCategories();
+        }
+
+        internal static List<Difficulties> getAllDifficulties()
+        {
+            return DifficultiesDAL.GetAllDifficulties();
+        }
     }
 }

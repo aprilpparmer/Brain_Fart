@@ -139,6 +139,7 @@
             // 
             // cbDifficulty
             // 
+            this.cbDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDifficulty.FormattingEnabled = true;
             this.cbDifficulty.Location = new System.Drawing.Point(239, 202);
             this.cbDifficulty.Name = "cbDifficulty";
@@ -156,6 +157,7 @@
             // 
             // cbCategory
             // 
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(59, 202);
             this.cbCategory.Name = "cbCategory";
@@ -326,6 +328,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddModifyQuestion";
             this.Text = "Add/Modify/Question";
+            this.Load += new System.EventHandler(this.frmAddModifyQuestion_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

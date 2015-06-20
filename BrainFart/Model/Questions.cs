@@ -29,7 +29,7 @@ namespace BrainFart.Model
 
        public string QuestionDescrip { get; set; }
 
-       public int CatergoryID { get; set; }
+       public int CategoryID { get; set; }
 
        public int DifficultyID { get; set; }
 

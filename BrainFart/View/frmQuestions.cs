@@ -62,7 +62,7 @@ namespace BrainFart
                 answerChoice3.Text = this.answerList[2].AnswerDescrip;
                 answerChoice4.Text = this.answerList[3].AnswerDescrip;
                 //Loads the question's category
-                int categoryID = this.question.CatergoryID;
+                int categoryID = this.question.CategoryID;
                 this.categoriesTableAdapter.Fill(this.categoriesDataSet.categories, categoryID);
                 //Loads the question's difficulty and point value
                 int difficultyID = this.question.DifficultyID;
