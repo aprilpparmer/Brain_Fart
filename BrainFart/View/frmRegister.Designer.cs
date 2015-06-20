@@ -168,6 +168,7 @@
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Register";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.groupBox1.ResumeLayout(false);

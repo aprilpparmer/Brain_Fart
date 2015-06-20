@@ -26,7 +26,7 @@ namespace BrainFart
         private void btnStart_Click(object sender, EventArgs e)
         {
             questions = new frmQuestions();
-            this.questions.Show();
+            this.questions.ShowDialog();
             //Code for when options are in place
             //newGame = new frmNewGame();
             //this.newGame.Show();
@@ -34,8 +34,9 @@ namespace BrainFart
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+          
             register = new frmRegister();
-            this.register.Show();
+            this.register.ShowDialog();
         }
     }
 }

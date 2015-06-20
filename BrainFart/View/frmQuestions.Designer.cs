@@ -378,6 +378,7 @@
             this.Controls.Add(this.lblCorrectAnswer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQuestions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "       ";
             ((System.ComponentModel.ISupportInitialize)(this.difficultiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.difficultiesDataSet)).EndInit();
