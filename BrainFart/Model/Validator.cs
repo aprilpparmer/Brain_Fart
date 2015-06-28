@@ -82,5 +82,19 @@ namespace BrainFart.Model
                 return false;
             }
         }
+
+        public static bool IsRadioButtonChecked(RadioButton radioButton, RadioButton radioButton2, RadioButton radioButton3, RadioButton radioButton4)
+        {
+            if (radioButton.Checked || radioButton2.Checked || radioButton3.Checked || radioButton4.Checked)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show(" One Answer Must be marked as correct", Title);
+                return false;
+            }
+
+        }
     }
 }

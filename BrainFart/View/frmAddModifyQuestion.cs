@@ -74,7 +74,8 @@ namespace BrainFart.View
                 if (Validator.IsPresent(txtQuestion) && Validator.IsPresent(txtAnswerA)
                     && Validator.IsPresent(txtAnswerB) && Validator.IsPresent(txtAnswerC)
                     && Validator.IsPresent(txtAnswerD) && Validator.IsPresent(cbCategory)
-                    && Validator.IsPresent(cbDifficulty))
+                    && Validator.IsPresent(cbDifficulty) &&
+                    (Validator.IsRadioButtonChecked(radioButton1, radioButton2, radioButton3, radioButton4)))
                 {
                     if (addQuestion)
                     {

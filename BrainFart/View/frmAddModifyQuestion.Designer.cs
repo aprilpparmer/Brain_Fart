@@ -204,6 +204,7 @@
             this.radioButton2.Size = new System.Drawing.Size(14, 13);
             this.radioButton2.TabIndex = 13;
             this.radioButton2.TabStop = true;
+            this.radioButton2.Tag = "Correct Answer";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
@@ -214,6 +215,7 @@
             this.radioButton1.Size = new System.Drawing.Size(14, 13);
             this.radioButton1.TabIndex = 12;
             this.radioButton1.TabStop = true;
+            this.radioButton1.Tag = "Correct Answer";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // txtAnswerD
