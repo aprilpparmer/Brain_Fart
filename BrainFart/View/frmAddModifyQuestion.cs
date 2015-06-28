@@ -84,7 +84,7 @@ namespace BrainFart.View
                         try
                         {
                             this.question.QuestionID = BrainFartController.AddQuestion(question);
-
+                            
 
                             MessageBox.Show("You have successfully Added a Question");
 
@@ -131,7 +131,7 @@ namespace BrainFart.View
         private void putQuestionData(Questions question)
         {
             question.QuestionID = this.question.QuestionID;
-            question.QuestionDescrip = this.question.QuestionDescrip;
+            question.QuestionDescrip = txtQuestion.Text;
             question.CategoryID = (int)cbCategory.SelectedValue;
             question.DifficultyID = (int)cbDifficulty.SelectedValue;
         }
