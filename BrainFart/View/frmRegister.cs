@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BrainFart.DAL;
+using BrainFart.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,9 @@ namespace BrainFart.View
 {
     public partial class frmRegister : Form
     {
+
+        private Users user;
+
         public frmRegister()
         {
             InitializeComponent();
@@ -21,5 +26,55 @@ namespace BrainFart.View
         {
             this.Close();
         }
+
+        private void getUserData(Users user)
+        {
+            
+            user.UserName = txtUserName.Text;
+            user.UserPassword = txtPassword.Text;
+            user.PasswordConfirm = txtConfirm.Text;
+            
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (IsValidData()) 
+            {
+                user = new Users();
+                this.getUserData(user);
+                this.confirmPassword();
+                UsersDAL.AddUser(user);
+                Close();
+            }
+
+        }
+
+        private void confirmPassword()
+        {
+
+            if (user.UserPassword.ToString().Equals(user.PasswordConfirm.ToString()))
+            {
+                DialogResult result2 = MessageBox.Show("Confirm Password?", "Important Query", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+            else
+            {
+                MessageBox.Show("Password does not match");
+            }
+        }
+
+        private bool IsValidData()
+        {
+            if (Validator.IsPresent(txtUserName) &&
+                Validator.IsPresent(txtPassword) &&
+                Validator.IsPresent(txtConfirm))
+
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
     }
 }
