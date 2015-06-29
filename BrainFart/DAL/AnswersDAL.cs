@@ -56,7 +56,53 @@ namespace BrainFart.DAL
             }
             return answerList;
         }
-    
-    }
 
+
+        /// <summary>
+        /// Insert a Answer row to the Answers table
+        /// </summary>
+        /// <param name="answer">The input Answer row object</param>
+        /// <returns>The AnswerID for the row inserted</returns>
+        /// 
+        public static int AddAnswer(Answers answer)
+        {
+            string insertStatement =
+                "INSERT Answers " +
+                    "(AnswerDescrip, QuestionID, Correct) " +
+                "VALUES (@AnswerDescrip, @QuestionID, @Correct)";
+
+            try
+            {
+                using (SqlConnection connection = BrainFartConnection.GetConnection())
+                {
+                    connection.Open();
+
+                    using (SqlCommand insertCommand = new SqlCommand(insertStatement, connection))
+                    {
+                        insertCommand.Parameters.AddWithValue("@AnswerDescrip", answer.AnswerDescrip);
+                        insertCommand.Parameters.AddWithValue("@QuestionID", answer.QuestionID);
+                        insertCommand.Parameters.AddWithValue("@Correct", answer.Correct);
+
+                        insertCommand.ExecuteNonQuery(); // Check for using statement use
+                        string selectStatement =
+                            "SELECT IDENT_CURRENT('Answers') FROM Answers"; // Check for backticks instead of single quotes
+                        using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                        {
+                            int answerID = Convert.ToInt32(selectCommand.ExecuteScalar());
+                            return answerID;
+                        }
+                    }
+                }
+            }
+            catch (SqlException se)
+            {
+                throw se;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+    }
 }

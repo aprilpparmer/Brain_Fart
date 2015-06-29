@@ -15,6 +15,7 @@ namespace BrainFart.View
     public partial class frmAddModifyQuestion : Form
     {
         public Questions question;
+        public Answers answer;
         public Questions newQuestion;
         public bool updated;
 
@@ -68,6 +69,7 @@ namespace BrainFart.View
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            //NEED TO ADD QUESTION.  Then add Answer due to FK
             try
             {
 
@@ -80,11 +82,15 @@ namespace BrainFart.View
                     if (addQuestion)
                     {
                         question = new Questions();
+                        answer = new Answers();
                         this.putQuestionData(question);
+                        this.putAnswerData1(answer);
+                        this.putAnswerData2(answer);
+
                         try
                         {
                             this.question.QuestionID = BrainFartController.AddQuestion(question);
-                            
+                            this.answer.AnswerID = BrainFartController.AddAnswer(answer);
 
                             MessageBox.Show("You have successfully Added a Question");
 
@@ -134,6 +140,40 @@ namespace BrainFart.View
             question.QuestionDescrip = txtQuestion.Text;
             question.CategoryID = (int)cbCategory.SelectedValue;
             question.DifficultyID = (int)cbDifficulty.SelectedValue;
+        }
+        /// <summary>
+        /// Insert answer information
+        /// </summary>
+        /// <param name="answer"></param>
+        private void putAnswerData1(Answers answer)
+        {
+            int correctAnswer;
+            answer.QuestionID = this.question.QuestionID;
+            answer.AnswerDescrip = txtAnswerA.Text;
+            if (radioButton1.Checked)
+            {
+                correctAnswer = 1;
+            }
+            else 
+            {
+                correctAnswer = 0;
+            }             
+            answer.Correct = correctAnswer;            
+        }
+        private void putAnswerData2(Answers answer)
+        {
+            int correctAnswer;
+            answer.QuestionID = this.question.QuestionID;
+            answer.AnswerDescrip = txtAnswerB.Text;
+            if (radioButton2.Checked)
+            {
+                correctAnswer = 1;
+            }
+            else
+            {
+                correctAnswer = 0;
+            }
+            answer.Correct = correctAnswer;
         }
     }
 }

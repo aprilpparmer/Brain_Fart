@@ -39,5 +39,10 @@ namespace BrainFart.Controller
         {
             throw new NotImplementedException();
         }
+
+        public static int AddAnswer(Answers answer)
+        {
+            return AnswersDAL.AddAnswer(answer);
+        }
     }
 }
