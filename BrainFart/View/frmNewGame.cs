@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BrainFart.Controller;
+using BrainFart.DAL;
+using BrainFart.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +21,7 @@ namespace BrainFart.View
         public frmNewGame()
         {
             InitializeComponent();
+            this.loadComboBoxes();
         }
 
         private void btnGameStart_Click(object sender, EventArgs e)
@@ -25,6 +29,25 @@ namespace BrainFart.View
             questions = new frmQuestions();
             this.questions.Show();
             this.Close();
+        }
+
+        private void loadComboBoxes()
+        {
+            try
+            {
+                this.categoryComboBox.Items.Add("All Categories");
+                List<Categories> categoryList = BrainFartController.getAllCategories();
+                foreach (Categories c in categoryList)
+                {
+                    this.categoryComboBox.Items.Add(c);
+                    
+                }
+                this.categoryComboBox.DisplayMember = "categoryDescrip";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }
         }
     }
 }
