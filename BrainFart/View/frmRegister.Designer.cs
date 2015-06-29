@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.logo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textConfirm = new System.Windows.Forms.TextBox();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
             this.lblConfirm = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textConfirm);
+            this.groupBox1.Controls.Add(this.txtConfirm);
             this.groupBox1.Controls.Add(this.lblConfirm);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.lblPassword);
@@ -70,14 +70,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registration";
             // 
-            // textConfirm
+            // txtConfirm
             // 
-            this.textConfirm.Location = new System.Drawing.Point(103, 102);
-            this.textConfirm.Name = "textConfirm";
-            this.textConfirm.Size = new System.Drawing.Size(194, 20);
-            this.textConfirm.TabIndex = 23;
-            this.textConfirm.Tag = "Password";
-            this.textConfirm.UseSystemPasswordChar = true;
+            this.txtConfirm.Location = new System.Drawing.Point(103, 102);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.Size = new System.Drawing.Size(194, 20);
+            this.txtConfirm.TabIndex = 23;
+            this.txtConfirm.Tag = "Password";
+            this.txtConfirm.UseSystemPasswordChar = true;
             // 
             // lblConfirm
             // 
@@ -154,6 +154,7 @@
             this.btnRegister.TabIndex = 37;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // frmRegister
             // 
@@ -182,7 +183,7 @@
 
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textConfirm;
+        private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.Label lblConfirm;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;

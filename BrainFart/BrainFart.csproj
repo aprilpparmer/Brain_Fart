@@ -58,6 +58,7 @@
     <Compile Include="DAL\CategoriesDAL.cs" />
     <Compile Include="DAL\DifficultiesDAL.cs" />
     <Compile Include="DAL\QuestionsDAL.cs" />
+    <Compile Include="DAL\UsersDAL.cs" />
     <Compile Include="DB\BrainFartConnection.cs" />
     <Compile Include="DifficultiesDataSet.cs">
       <DependentUpon>DifficultiesDataSet.xsd</DependentUpon>
