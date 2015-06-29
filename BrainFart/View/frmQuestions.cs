@@ -28,7 +28,7 @@ namespace BrainFart
                 InitializeComponent();
                 this.questionList = BrainFartController.GetAllQuestions();
                 this.loadQuestion();
-                
+                this.scoreLabel.Text = Convert.ToString(0);
             }
             catch (Exception ex)
             {
@@ -90,26 +90,16 @@ namespace BrainFart
         private void checkAnswer()
         {
             correctLabel.ForeColor = System.Drawing.Color.Green;
-            if (this.answerChoice1.Checked && answerList[0].Correct.Equals(1))
+            if ((this.answerChoice1.Checked && answerList[0].Correct.Equals(1)) ||
+                (this.answerChoice2.Checked && answerList[1].Correct.Equals(1)) ||
+                (this.answerChoice3.Checked && answerList[2].Correct.Equals(1)) ||
+                (this.answerChoice4.Checked && answerList[3].Correct.Equals(1)))
             {
                 correctLabel.Text = "Correct!";
-            }
-            else if (this.answerChoice2.Checked && answerList[1].Correct.Equals(1))
-            {
-
-                correctLabel.Text = "Correct!";
-            }
-            else if (this.answerChoice3.Checked && answerList[2].Correct.Equals(1))
-            {
-                correctLabel.Text = "Correct!";
-            }
-            else if (this.answerChoice4.Checked && answerList[3].Correct.Equals(1))
-            {
-                correctLabel.Text = "Correct!";
+                this.scoreLabel.Text = Convert.ToString(Int32.Parse(this.scoreLabel.Text) + Int32.Parse(this.pointValueLabel.Text));
             }
             else
             {
-
                 if (answerList[0].Correct.Equals(1))
                 {
                     this.answer = answerList[0];

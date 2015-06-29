@@ -61,6 +61,7 @@
             this.tableAdapterManager = new BrainFart.CategoriesDataSetTableAdapters.TableAdapterManager();
             this.difficultiesTableAdapter = new BrainFart.DifficultiesDataSetTableAdapters.difficultiesTableAdapter();
             this.tableAdapterManager1 = new BrainFart.DifficultiesDataSetTableAdapters.TableAdapterManager();
+            this.scoreLabel = new System.Windows.Forms.Label();
             questionLabel = new System.Windows.Forms.Label();
             categoryLabel = new System.Windows.Forms.Label();
             dificultyLabel = new System.Windows.Forms.Label();
@@ -239,6 +240,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.scoreLabel);
             this.groupBox1.Controls.Add(this.questionDescripLabel);
             this.groupBox1.Controls.Add(point_valueLabel);
             this.groupBox1.Controls.Add(this.pointValueLabel);
@@ -285,7 +287,7 @@
             this.difficultyDescripLabel.AutoSize = true;
             this.difficultyDescripLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.difficultiesBindingSource, "difficultyDescrip", true));
             this.difficultyDescripLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.difficultyDescripLabel.Location = new System.Drawing.Point(215, 0);
+            this.difficultyDescripLabel.Location = new System.Drawing.Point(210, 0);
             this.difficultyDescripLabel.Name = "difficultyDescripLabel";
             this.difficultyDescripLabel.Size = new System.Drawing.Size(39, 13);
             this.difficultyDescripLabel.TabIndex = 31;
@@ -316,7 +318,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblScore.Location = new System.Drawing.Point(308, 0);
+            this.lblScore.Location = new System.Drawing.Point(293, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(75, 13);
             this.lblScore.TabIndex = 29;
@@ -363,6 +365,15 @@
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.difficultiesTableAdapter = this.difficultiesTableAdapter;
             this.tableAdapterManager1.UpdateOrder = BrainFart.DifficultiesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Location = new System.Drawing.Point(367, 0);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(35, 13);
+            this.scoreLabel.TabIndex = 34;
+            this.scoreLabel.Text = "*******";
             // 
             // frmQuestions
             // 
@@ -421,5 +432,6 @@
         private System.Windows.Forms.Label pointValueLabel;
         private System.Windows.Forms.Label difficultyDescripLabel;
         private System.Windows.Forms.Label questionDescripLabel;
+        private System.Windows.Forms.Label scoreLabel;
     }
 }
