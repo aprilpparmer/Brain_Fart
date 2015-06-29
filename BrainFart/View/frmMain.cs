@@ -35,13 +35,13 @@ namespace BrainFart
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //this.register = new frmRegister();
-            //this.register.ShowDialog();
+            this.register = new frmRegister();
+            this.register.ShowDialog();
 
             //Code for Adding Questions form
-            addQuestions = new frmAddModifyQuestion();
-            addQuestions.addQuestion = true;
-            this.addQuestions.ShowDialog();
+            //addQuestions = new frmAddModifyQuestion();
+            //addQuestions.addQuestion = true;
+            //this.addQuestions.ShowDialog();
         }
     }
 }
