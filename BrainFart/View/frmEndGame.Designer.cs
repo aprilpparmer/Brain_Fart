@@ -37,10 +37,6 @@
             this.lblPoints = new System.Windows.Forms.Label();
             this.lblTotalPoints = new System.Windows.Forms.Label();
             this.lblCongrads = new System.Windows.Forms.Label();
-            this.txtMissed = new System.Windows.Forms.TextBox();
-            this.lblMissed = new System.Windows.Forms.Label();
-            this.txtCorrect = new System.Windows.Forms.TextBox();
-            this.lblCorrect = new System.Windows.Forms.Label();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -87,10 +83,6 @@
             this.groupBox1.Controls.Add(this.lblPoints);
             this.groupBox1.Controls.Add(this.lblTotalPoints);
             this.groupBox1.Controls.Add(this.lblCongrads);
-            this.groupBox1.Controls.Add(this.txtMissed);
-            this.groupBox1.Controls.Add(this.lblMissed);
-            this.groupBox1.Controls.Add(this.txtCorrect);
-            this.groupBox1.Controls.Add(this.lblCorrect);
             this.groupBox1.Location = new System.Drawing.Point(12, 109);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(421, 161);
@@ -100,7 +92,7 @@
             // pictureEinstein
             // 
             this.pictureEinstein.Image = ((System.Drawing.Image)(resources.GetObject("pictureEinstein.Image")));
-            this.pictureEinstein.Location = new System.Drawing.Point(299, 41);
+            this.pictureEinstein.Location = new System.Drawing.Point(265, 31);
             this.pictureEinstein.Name = "pictureEinstein";
             this.pictureEinstein.Size = new System.Drawing.Size(100, 85);
             this.pictureEinstein.TabIndex = 22;
@@ -110,7 +102,7 @@
             // 
             this.lblPoints.AutoSize = true;
             this.lblPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoints.Location = new System.Drawing.Point(240, 74);
+            this.lblPoints.Location = new System.Drawing.Point(156, 78);
             this.lblPoints.Name = "lblPoints";
             this.lblPoints.Size = new System.Drawing.Size(53, 20);
             this.lblPoints.TabIndex = 21;
@@ -121,7 +113,7 @@
             this.lblTotalPoints.AutoSize = true;
             this.lblTotalPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPoints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTotalPoints.Location = new System.Drawing.Point(161, 55);
+            this.lblTotalPoints.Location = new System.Drawing.Point(67, 59);
             this.lblTotalPoints.Name = "lblTotalPoints";
             this.lblTotalPoints.Size = new System.Drawing.Size(83, 44);
             this.lblTotalPoints.TabIndex = 20;
@@ -136,38 +128,6 @@
             this.lblCongrads.Size = new System.Drawing.Size(209, 20);
             this.lblCongrads.TabIndex = 19;
             this.lblCongrads.Text = "Congratulations You Scored";
-            // 
-            // txtMissed
-            // 
-            this.txtMissed.Location = new System.Drawing.Point(105, 136);
-            this.txtMissed.Name = "txtMissed";
-            this.txtMissed.Size = new System.Drawing.Size(26, 20);
-            this.txtMissed.TabIndex = 17;
-            // 
-            // lblMissed
-            // 
-            this.lblMissed.AutoSize = true;
-            this.lblMissed.Location = new System.Drawing.Point(6, 139);
-            this.lblMissed.Name = "lblMissed";
-            this.lblMissed.Size = new System.Drawing.Size(92, 13);
-            this.lblMissed.TabIndex = 18;
-            this.lblMissed.Text = "Questions missed:";
-            // 
-            // txtCorrect
-            // 
-            this.txtCorrect.Location = new System.Drawing.Point(105, 106);
-            this.txtCorrect.Name = "txtCorrect";
-            this.txtCorrect.Size = new System.Drawing.Size(26, 20);
-            this.txtCorrect.TabIndex = 15;
-            // 
-            // lblCorrect
-            // 
-            this.lblCorrect.AutoSize = true;
-            this.lblCorrect.Location = new System.Drawing.Point(6, 113);
-            this.lblCorrect.Name = "lblCorrect";
-            this.lblCorrect.Size = new System.Drawing.Size(93, 13);
-            this.lblCorrect.TabIndex = 16;
-            this.lblCorrect.Text = "Questions correct:";
             // 
             // btnQuit
             // 
@@ -225,10 +185,6 @@
         private System.Windows.Forms.Label lblPoints;
         private System.Windows.Forms.Label lblTotalPoints;
         private System.Windows.Forms.Label lblCongrads;
-        private System.Windows.Forms.TextBox txtMissed;
-        private System.Windows.Forms.Label lblMissed;
-        private System.Windows.Forms.TextBox txtCorrect;
-        private System.Windows.Forms.Label lblCorrect;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnNewGame;
     }
