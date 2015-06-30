@@ -46,7 +46,7 @@ namespace BrainFart.View
            
                 this.numberOfQuestions = Int32.Parse(o.ToString());
                 questions = new frmQuestions(this.categoryID, this.numberOfQuestions);
-                this.questions.Show();
+                this.questions.ShowDialog();
                 this.Close();
                           
         }

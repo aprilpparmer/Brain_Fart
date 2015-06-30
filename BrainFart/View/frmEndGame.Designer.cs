@@ -177,6 +177,7 @@
             this.btnQuit.TabIndex = 44;
             this.btnQuit.Text = "Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnNewGame
             // 
@@ -186,6 +187,7 @@
             this.btnNewGame.TabIndex = 43;
             this.btnNewGame.Text = "New Game";
             this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // frmEndGame
             // 
@@ -201,6 +203,7 @@
             this.Controls.Add(this.btnMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEndGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Game Over Dude";
             this.Load += new System.EventHandler(this.frmEndGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
