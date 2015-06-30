@@ -149,12 +149,12 @@
             this.numberQuestionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.numberQuestionsComboBox.FormattingEnabled = true;
             this.numberQuestionsComboBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
             "5",
-            "6"});
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.numberQuestionsComboBox.Location = new System.Drawing.Point(125, 73);
             this.numberQuestionsComboBox.Name = "numberQuestionsComboBox";
             this.numberQuestionsComboBox.Size = new System.Drawing.Size(37, 21);
