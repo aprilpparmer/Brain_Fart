@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewGame));
             this.logo = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -35,14 +36,20 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblClearForm = new System.Windows.Forms.Button();
             this.btnGameStart = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.gameOverComboBox = new System.Windows.Forms.ComboBox();
             this.lblGameOver = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.numberQuestionsComboBox = new System.Windows.Forms.ComboBox();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriesDataSet1 = new BrainFart.CategoriesDataSet();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.categoriesTableAdapter = new BrainFart.CategoriesDataSetTableAdapters.categoriesTableAdapter();
+            this.fillByCategoryToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // logo
@@ -82,15 +89,15 @@
             // 
             this.groupBox1.Controls.Add(this.lblClearForm);
             this.groupBox1.Controls.Add(this.btnGameStart);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.gameOverComboBox);
             this.groupBox1.Controls.Add(this.lblGameOver);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.numberQuestionsComboBox);
             this.groupBox1.Controls.Add(this.lblNumber);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.categoryComboBox);
             this.groupBox1.Controls.Add(this.lblCategory);
             this.groupBox1.Location = new System.Drawing.Point(12, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 192);
+            this.groupBox1.Size = new System.Drawing.Size(418, 206);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Game Options";
@@ -116,13 +123,17 @@
             this.btnGameStart.UseVisualStyleBackColor = true;
             this.btnGameStart.Click += new System.EventHandler(this.btnGameStart_Click);
             // 
-            // comboBox3
+            // gameOverComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(125, 121);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(119, 21);
-            this.comboBox3.TabIndex = 6;
+            this.gameOverComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gameOverComboBox.FormattingEnabled = true;
+            this.gameOverComboBox.Items.AddRange(new object[] {
+            "All Questions Attempted",
+            "3 Strikes You\'re Out!"});
+            this.gameOverComboBox.Location = new System.Drawing.Point(125, 121);
+            this.gameOverComboBox.Name = "gameOverComboBox";
+            this.gameOverComboBox.Size = new System.Drawing.Size(119, 21);
+            this.gameOverComboBox.TabIndex = 6;
             // 
             // lblGameOver
             // 
@@ -133,13 +144,21 @@
             this.lblGameOver.TabIndex = 5;
             this.lblGameOver.Text = "Game Over:";
             // 
-            // comboBox2
+            // numberQuestionsComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(125, 73);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(37, 21);
-            this.comboBox2.TabIndex = 4;
+            this.numberQuestionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.numberQuestionsComboBox.FormattingEnabled = true;
+            this.numberQuestionsComboBox.Items.AddRange(new object[] {
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.numberQuestionsComboBox.Location = new System.Drawing.Point(125, 73);
+            this.numberQuestionsComboBox.Name = "numberQuestionsComboBox";
+            this.numberQuestionsComboBox.Size = new System.Drawing.Size(37, 21);
+            this.numberQuestionsComboBox.TabIndex = 4;
             // 
             // lblNumber
             // 
@@ -150,13 +169,24 @@
             this.lblNumber.TabIndex = 3;
             this.lblNumber.Text = "Number of Questions:";
             // 
-            // comboBox1
+            // categoryComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 21);
-            this.comboBox1.TabIndex = 2;
+            this.categoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoryComboBox.FormattingEnabled = true;
+            this.categoryComboBox.Location = new System.Drawing.Point(125, 26);
+            this.categoryComboBox.Name = "categoryComboBox";
+            this.categoryComboBox.Size = new System.Drawing.Size(119, 21);
+            this.categoryComboBox.TabIndex = 2;
+            // 
+            // categoriesBindingSource
+            // 
+            this.categoriesBindingSource.DataMember = "categories";
+            this.categoriesBindingSource.DataSource = this.categoriesDataSet1;
+            // 
+            // categoriesDataSet1
+            // 
+            this.categoriesDataSet1.DataSetName = "CategoriesDataSet";
+            this.categoriesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblCategory
             // 
@@ -166,6 +196,15 @@
             this.lblCategory.Size = new System.Drawing.Size(99, 13);
             this.lblCategory.TabIndex = 1;
             this.lblCategory.Text = "Category Selection:";
+            // 
+            // categoriesTableAdapter
+            // 
+            this.categoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // fillByCategoryToolStripButton
+            // 
+            this.fillByCategoryToolStripButton.Name = "fillByCategoryToolStripButton";
+            this.fillByCategoryToolStripButton.Size = new System.Drawing.Size(23, 23);
             // 
             // frmNewGame
             // 
@@ -183,6 +222,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,11 +237,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button lblClearForm;
         private System.Windows.Forms.Button btnGameStart;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox gameOverComboBox;
         private System.Windows.Forms.Label lblGameOver;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox numberQuestionsComboBox;
         private System.Windows.Forms.Label lblNumber;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox categoryComboBox;
         private System.Windows.Forms.Label lblCategory;
+        private CategoriesDataSet categoriesDataSet1;
+        private System.Windows.Forms.BindingSource categoriesBindingSource;
+        private CategoriesDataSetTableAdapters.categoriesTableAdapter categoriesTableAdapter;
+        private System.Windows.Forms.ToolStripButton fillByCategoryToolStripButton;
     }
 }

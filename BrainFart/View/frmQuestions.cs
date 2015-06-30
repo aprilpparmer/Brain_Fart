@@ -19,22 +19,48 @@ namespace BrainFart
         private List<Questions> questionList;
         private List<Answers> answerList;
         private Answers answer;
-        private frmEndGame endGame;
+        private int numberOfQuestions;
+        private int categoryID;
+        private string gameOverMode;
         
-        public frmQuestions()
+        public frmQuestions(int categoryID, int numberOfQuestions)
         {
 
             try
             {
                 InitializeComponent();
-                this.questionList = BrainFartController.GetAllQuestions();
+                this.getListOfQuestions(categoryID, numberOfQuestions);
                 this.loadQuestion();
                 this.scoreLabel.Text = Convert.ToString(0);
+                this.BringToFront();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
+        }
+        private List<Questions> getListOfQuestions(int categoryID, int numberOfQuestions)
+        {
+            List<Questions> copyList = new List<Questions>();
+            this.questionList = new List<Questions>();
+            if (categoryID == -1)
+            {
+                copyList = BrainFartController.GetAllQuestions();
+            }
+            else
+            {
+                copyList = BrainFartController.GetQuestionsFromCategory(categoryID);
+            }
+
+            Random rnd = new Random();
+            for (int i = 0; i < numberOfQuestions; i++) 
+            {
+                int r = rnd.Next(copyList.Count);
+                Questions q = copyList[r];
+                this.questionList.Add(q);
+            }
+
+            return this.questionList;
         }
 
         public void loadQuestion()
@@ -42,13 +68,8 @@ namespace BrainFart
 
             if (this.questionList.Count == 0)
             {
-                //Code for Adding End Game form
-                endGame = new frmEndGame();
-                this.endGame.totalPoint = this.scoreLabel.Text;
-                this.endGame.ShowDialog();
+                MessageBox.Show("You have answered all of the questions! Game Over!");
                 this.Close();
-               // MessageBox.Show("You have answered all of the questions! Game Over!");
-                //this.Close();
             }
             else
             {

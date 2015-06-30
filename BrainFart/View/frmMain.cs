@@ -26,11 +26,11 @@ namespace BrainFart
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            questions = new frmQuestions();
-            this.questions.ShowDialog();
+            //questions = new frmQuestions();
+            //this.questions.ShowDialog();
             //Code for when options are in place
-            //newGame = new frmNewGame();
-            //this.newGame.ShowDialog();
+            newGame = new frmNewGame();
+            this.newGame.ShowDialog();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
