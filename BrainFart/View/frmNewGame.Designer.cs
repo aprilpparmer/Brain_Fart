@@ -125,10 +125,11 @@
             // 
             // gameOverComboBox
             // 
+            this.gameOverComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gameOverComboBox.FormattingEnabled = true;
             this.gameOverComboBox.Items.AddRange(new object[] {
-            "3 Strikes You\'re Out!",
-            "All Questions Attempted"});
+            "All Questions Attempted",
+            "3 Strikes You\'re Out!"});
             this.gameOverComboBox.Location = new System.Drawing.Point(125, 121);
             this.gameOverComboBox.Name = "gameOverComboBox";
             this.gameOverComboBox.Size = new System.Drawing.Size(119, 21);
@@ -145,6 +146,7 @@
             // 
             // numberQuestionsComboBox
             // 
+            this.numberQuestionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.numberQuestionsComboBox.FormattingEnabled = true;
             this.numberQuestionsComboBox.Items.AddRange(new object[] {
             "10",
@@ -173,6 +175,7 @@
             // 
             // categoryComboBox
             // 
+            this.categoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Location = new System.Drawing.Point(125, 26);
             this.categoryComboBox.Name = "categoryComboBox";

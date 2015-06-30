@@ -16,22 +16,44 @@ namespace BrainFart.View
     public partial class frmNewGame : Form
     {
         private frmQuestions questions;
+        private int categoryID;
+        private int numberOfQuestions;
+        private string gameOverMode;
 
 
         public frmNewGame()
         {
             InitializeComponent();
-            this.loadComboBoxes();
+            this.loadCategoryComboBox();
+            this.categoryComboBox.SelectedIndex = 0;
+            this.numberQuestionsComboBox.SelectedIndex = 0;
+            this.gameOverComboBox.SelectedIndex = 0;
         }
 
         private void btnGameStart_Click(object sender, EventArgs e)
         {
-            questions = new frmQuestions();
-            this.questions.Show();
-            this.Close();
+            try
+            {
+                if (this.categoryComboBox.SelectedValue == null)
+                {
+                    this.categoryID = -1;
+                }
+                else
+                {
+                    Categories c = (Categories)this.categoryComboBox.SelectedItem;
+                    this.categoryID = c.CategoryID;
+                }
+                questions = new frmQuestions(this.categoryID);
+                this.questions.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }                
         }
 
-        private void loadComboBoxes()
+        private void loadCategoryComboBox()
         {
             try
             {

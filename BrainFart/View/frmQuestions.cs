@@ -20,13 +20,20 @@ namespace BrainFart
         private List<Answers> answerList;
         private Answers answer;
         
-        public frmQuestions()
+        public frmQuestions(int categoryID)
         {
 
             try
             {
                 InitializeComponent();
-                this.questionList = BrainFartController.GetAllQuestions();
+                if (categoryID == -1)
+                {
+                    this.questionList = BrainFartController.GetAllQuestions();
+                }
+                else
+                {
+                    this.questionList = BrainFartController.GetQuestionsFromCategory(categoryID);
+                }
                 this.loadQuestion();
                 this.scoreLabel.Text = Convert.ToString(0);
             }
