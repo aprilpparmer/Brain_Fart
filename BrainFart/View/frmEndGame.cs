@@ -12,9 +12,16 @@ namespace BrainFart.View
 {
     public partial class frmEndGame : Form
     {
+        public String totalPoint;
         public frmEndGame()
         {
+    
             InitializeComponent();
+        }
+
+        private void frmEndGame_Load(object sender, EventArgs e)
+        {
+            lblTotalPoints.Text = this.totalPoint;
         }
     }
 }

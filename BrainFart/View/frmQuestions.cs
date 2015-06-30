@@ -19,6 +19,7 @@ namespace BrainFart
         private List<Questions> questionList;
         private List<Answers> answerList;
         private Answers answer;
+        private frmEndGame endGame;
         
         public frmQuestions()
         {
@@ -41,8 +42,13 @@ namespace BrainFart
 
             if (this.questionList.Count == 0)
             {
-                MessageBox.Show("You have answered all of the questions! Game Over!");
+                //Code for Adding End Game form
+                endGame = new frmEndGame();
+                this.endGame.totalPoint = this.scoreLabel.Text;
+                this.endGame.ShowDialog();
                 this.Close();
+               // MessageBox.Show("You have answered all of the questions! Game Over!");
+                //this.Close();
             }
             else
             {
