@@ -41,9 +41,9 @@
             this.numberQuestionsComboBox = new System.Windows.Forms.ComboBox();
             this.lblNumber = new System.Windows.Forms.Label();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.lblCategory = new System.Windows.Forms.Label();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesDataSet1 = new BrainFart.CategoriesDataSet();
-            this.lblCategory = new System.Windows.Forms.Label();
             this.categoriesTableAdapter = new BrainFart.CategoriesDataSetTableAdapters.categoriesTableAdapter();
             this.fillByCategoryToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -178,6 +178,15 @@
             this.categoryComboBox.Size = new System.Drawing.Size(119, 21);
             this.categoryComboBox.TabIndex = 2;
             // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Location = new System.Drawing.Point(10, 29);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(99, 13);
+            this.lblCategory.TabIndex = 1;
+            this.lblCategory.Text = "Category Selection:";
+            // 
             // categoriesBindingSource
             // 
             this.categoriesBindingSource.DataMember = "categories";
@@ -187,15 +196,6 @@
             // 
             this.categoriesDataSet1.DataSetName = "CategoriesDataSet";
             this.categoriesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(10, 29);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(99, 13);
-            this.lblCategory.TabIndex = 1;
-            this.lblCategory.Text = "Category Selection:";
             // 
             // categoriesTableAdapter
             // 
@@ -218,6 +218,7 @@
             this.Controls.Add(this.btnMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNewGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Bring it On!";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.groupBox1.ResumeLayout(false);

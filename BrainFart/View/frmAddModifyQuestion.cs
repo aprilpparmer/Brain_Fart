@@ -15,8 +15,12 @@ namespace BrainFart.View
     public partial class frmAddModifyQuestion : Form
     {
         public Questions question;
-        public Answers answer;
+        public Answers answer1;
+        public Answers answer2;
+        public Answers answer3;
+        public Answers answer4;
         public Questions newQuestion;
+        public Answers newAnswer;
         public bool updated;
 
 
@@ -69,7 +73,6 @@ namespace BrainFart.View
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            //NEED TO ADD QUESTION.  Then add Answer due to FK
             try
             {
 
@@ -82,26 +85,33 @@ namespace BrainFart.View
                     if (addQuestion)
                     {
                         question = new Questions();
-                        answer = new Answers();
+                        answer1 = new Answers();
+                        answer2 = new Answers();
+                        answer3 = new Answers();
+                        answer4 = new Answers();
                         this.putQuestionData(question);
-                        this.putAnswerData1(answer);
-                        this.putAnswerData2(answer);
-
+                        this.putAnswerData1(answer1);
+                        this.putAnswerData2(answer2);
+                        this.putAnswerData3(answer3);
+                        this.putAnswerData4(answer4);
                         try
                         {
                             this.question.QuestionID = BrainFartController.AddQuestion(question);
-                            this.answer.AnswerID = BrainFartController.AddAnswer(answer);
-
-                            MessageBox.Show("You have successfully Added a Question");
-
+                            answer1.QuestionID = this.question.QuestionID;
+                            this.answer1.AnswerID = BrainFartController.AddAnswer(answer1);
+                            answer2.QuestionID = this.question.QuestionID;
+                            this.answer2.AnswerID = BrainFartController.AddAnswer(answer2);
+                            answer3.QuestionID = this.question.QuestionID;
+                            this.answer3.AnswerID = BrainFartController.AddAnswer(answer3);
+                            answer4.QuestionID = this.question.QuestionID;
+                            this.answer4.AnswerID = BrainFartController.AddAnswer(answer4);
+                            MessageBox.Show("Question submission successful");
                             this.BeginInvoke(new MethodInvoker(Close));
-
                         }
                         catch (InvalidOperationException ioe)
                         {
                             throw ioe;
                         }
-
                     }
                     else
                     {
@@ -142,29 +152,30 @@ namespace BrainFart.View
             question.DifficultyID = (int)cbDifficulty.SelectedValue;
         }
         /// <summary>
-        /// Insert answer information
+        /// Insert Answer information
         /// </summary>
         /// <param name="answer"></param>
-        private void putAnswerData1(Answers answer)
+        private void putAnswerData1(Answers answer1)
         {
             int correctAnswer;
-            answer.QuestionID = this.question.QuestionID;
-            answer.AnswerDescrip = txtAnswerA.Text;
+            answer1.AnswerID = this.answer1.AnswerID;
+            answer1.AnswerDescrip = txtAnswerA.Text;
             if (radioButton1.Checked)
             {
                 correctAnswer = 1;
             }
-            else 
+            else
             {
                 correctAnswer = 0;
-            }             
-            answer.Correct = correctAnswer;            
+            }
+            answer1.Correct = correctAnswer;
         }
-        private void putAnswerData2(Answers answer)
+
+        private void putAnswerData2(Answers answer2)
         {
             int correctAnswer;
-            answer.QuestionID = this.question.QuestionID;
-            answer.AnswerDescrip = txtAnswerB.Text;
+            answer2.AnswerID = this.answer2.AnswerID;
+            answer2.AnswerDescrip = txtAnswerB.Text;
             if (radioButton2.Checked)
             {
                 correctAnswer = 1;
@@ -173,8 +184,39 @@ namespace BrainFart.View
             {
                 correctAnswer = 0;
             }
-            answer.Correct = correctAnswer;
+            answer2.Correct = correctAnswer;
         }
+
+        private void putAnswerData3(Answers answer3)
+        {
+            int correctAnswer;
+            answer3.AnswerID = this.answer3.AnswerID;
+            answer3.AnswerDescrip = txtAnswerC.Text;
+            if (radioButton3.Checked)
+            {
+                correctAnswer = 1;
+            }
+            else
+            {
+                correctAnswer = 0;
+            }
+            answer3.Correct = correctAnswer;
+        }
+        private void putAnswerData4(Answers answer4)
+        {
+            int correctAnswer;
+            answer4.AnswerID = this.answer4.AnswerID;
+            answer4.AnswerDescrip = txtAnswerD.Text;
+            if (radioButton4.Checked)
+            {
+                correctAnswer = 1;
+            }
+            else
+            {
+                correctAnswer = 0;
+            }
+            answer4.Correct = correctAnswer;
+        }   
     }
 }
 
