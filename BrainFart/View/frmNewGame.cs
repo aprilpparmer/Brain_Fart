@@ -33,7 +33,7 @@ namespace BrainFart.View
         private void btnGameStart_Click(object sender, EventArgs e)
         {
             
-                if (this.categoryComboBox.SelectedValue == null)
+                if (this.categoryComboBox.SelectedItem == null)
                 {
                     this.categoryID = -1;
                 }
@@ -42,9 +42,8 @@ namespace BrainFart.View
                     Categories c = (Categories)this.categoryComboBox.SelectedItem;
                     this.categoryID = c.CategoryID;
                 }
-                Object o = this.numberQuestionsComboBox.SelectedItem;
            
-                this.numberOfQuestions = Int32.Parse(o.ToString());
+                this.numberOfQuestions = Int32.Parse(this.numberQuestionsComboBox.SelectedItem.ToString());
                 questions = new frmQuestions(this.categoryID, this.numberOfQuestions);
                 this.questions.ShowDialog();
                 this.Close();
