@@ -55,16 +55,16 @@ namespace BrainFart
                     MessageBox.Show(AccessMessage, "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.None);
                     newGame = new frmNewGame();
                     this.newGame.ShowDialog();
-                    //ToggleLoginObjectsSelection(false);
-                    //ToggleLogOutObjectsSelection(true);
-                    //SetCurrentUserLabelsOnTabs();
+                    ToggleLoginObjectsSelection(false);
+                    ToggleLogOutObjectsSelection(true);
+                    
                 }
                 else
                 {
                     AccessMessage = String.Concat("Unable to login as User ", txtUserName.Text, ", Please check your user name and password and try again!");
                     MessageBox.Show(AccessMessage, "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    //ToggleLoginObjectsSelection(true);
-                    //ToggleLogOutObjectsSelection(false);
+                    ToggleLoginObjectsSelection(true);
+                    ToggleLogOutObjectsSelection(false);
                 }
             }
             catch (Exception ex)
@@ -78,9 +78,20 @@ namespace BrainFart
         private void btnLogout_Click(object sender, EventArgs e)
         {
             userAccess.LogOutUser();
-            //ToggleLoginObjectsSelection(true);
-            //ToggleLogOutObjectsSelection(false);
-            //SetRememberSettings();
+            ToggleLoginObjectsSelection(true);
+            ToggleLogOutObjectsSelection(false);
+           
+        }
+        private void ToggleLoginObjectsSelection(bool value)
+        {
+            if (txtUserName.Enabled != value) txtUserName.Enabled = value;
+            if (txtPassword.Enabled != value) txtPassword.Enabled = value;
+            if (btnLogin.Enabled != value) btnLogin.Enabled = value;
+        }
+
+        private void ToggleLogOutObjectsSelection(bool value)
+        {
+            if (btnLogout.Enabled != value) btnLogout.Enabled = value;
         }
 
     }
