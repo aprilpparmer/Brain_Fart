@@ -30,6 +30,7 @@ namespace BrainFart.View
         {
             newGame = new frmNewGame();
             this.newGame.ShowDialog();
+            this.Close();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace BrainFart
 {
     public partial class frmQuestions : Form
     {
+        private UserAccessController userAccess = UserAccessController.Instance;
         private Questions question;
         private List<Questions> questionList;
         private List<Answers> answerList;
@@ -30,6 +31,7 @@ namespace BrainFart
             try
             {
                 InitializeComponent();
+                //lblUserTabUser.Text = "Welcome: " + userAccess.CurrentLoggedUser.UserName;
                 this.getListOfQuestions(categoryID, numberOfQuestions);
                 this.loadQuestion();
                 this.scoreLabel.Text = Convert.ToString(0);
