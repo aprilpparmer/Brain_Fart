@@ -33,7 +33,7 @@ namespace BrainFart.View
         private void btnGameStart_Click(object sender, EventArgs e)
         {
             
-                if (this.categoryComboBox.SelectedItem == null)
+                if (this.categoryComboBox.SelectedIndex == 0)
                 {
                     this.categoryID = -1;
                 }
