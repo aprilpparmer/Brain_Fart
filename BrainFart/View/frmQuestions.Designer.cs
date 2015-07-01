@@ -48,6 +48,7 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.scoreLabel = new System.Windows.Forms.Label();
             this.questionDescripLabel = new System.Windows.Forms.Label();
             this.pointValueLabel = new System.Windows.Forms.Label();
             this.difficultyDescripLabel = new System.Windows.Forms.Label();
@@ -55,13 +56,12 @@
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriesDataSet = new BrainFart.CategoriesDataSet();
             this.lblScore = new System.Windows.Forms.Label();
-            this.lblPatientTabUser = new System.Windows.Forms.Label();
+            this.lblUserTabUser = new System.Windows.Forms.Label();
             this.btnQuit = new System.Windows.Forms.Button();
             this.categoriesTableAdapter = new BrainFart.CategoriesDataSetTableAdapters.categoriesTableAdapter();
             this.tableAdapterManager = new BrainFart.CategoriesDataSetTableAdapters.TableAdapterManager();
             this.difficultiesTableAdapter = new BrainFart.DifficultiesDataSetTableAdapters.difficultiesTableAdapter();
             this.tableAdapterManager1 = new BrainFart.DifficultiesDataSetTableAdapters.TableAdapterManager();
-            this.scoreLabel = new System.Windows.Forms.Label();
             questionLabel = new System.Windows.Forms.Label();
             categoryLabel = new System.Windows.Forms.Label();
             dificultyLabel = new System.Windows.Forms.Label();
@@ -264,6 +264,15 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Location = new System.Drawing.Point(367, 0);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(35, 13);
+            this.scoreLabel.TabIndex = 34;
+            this.scoreLabel.Text = "*******";
+            // 
             // questionDescripLabel
             // 
             this.questionDescripLabel.Location = new System.Drawing.Point(73, 25);
@@ -324,17 +333,17 @@
             this.lblScore.TabIndex = 29;
             this.lblScore.Text = "Current Score:";
             // 
-            // lblPatientTabUser
+            // lblUserTabUser
             // 
-            this.lblPatientTabUser.AutoSize = true;
-            this.lblPatientTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPatientTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPatientTabUser.Location = new System.Drawing.Point(286, 67);
-            this.lblPatientTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPatientTabUser.Name = "lblPatientTabUser";
-            this.lblPatientTabUser.Size = new System.Drawing.Size(127, 16);
-            this.lblPatientTabUser.TabIndex = 22;
-            this.lblPatientTabUser.Text = "Logged in as: Guest";
+            this.lblUserTabUser.AutoSize = true;
+            this.lblUserTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblUserTabUser.Location = new System.Drawing.Point(286, 67);
+            this.lblUserTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserTabUser.Name = "lblUserTabUser";
+            this.lblUserTabUser.Size = new System.Drawing.Size(127, 16);
+            this.lblUserTabUser.TabIndex = 22;
+            this.lblUserTabUser.Text = "Logged in as: Guest";
             // 
             // btnQuit
             // 
@@ -366,15 +375,6 @@
             this.tableAdapterManager1.difficultiesTableAdapter = this.difficultiesTableAdapter;
             this.tableAdapterManager1.UpdateOrder = BrainFart.DifficultiesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // scoreLabel
-            // 
-            this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Location = new System.Drawing.Point(367, 0);
-            this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(35, 13);
-            this.scoreLabel.TabIndex = 34;
-            this.scoreLabel.Text = "*******";
-            // 
             // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,7 +382,7 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 333);
             this.Controls.Add(this.btnQuit);
-            this.Controls.Add(this.lblPatientTabUser);
+            this.Controls.Add(this.lblUserTabUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.btnMenu);
@@ -417,7 +417,7 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblPatientTabUser;
+        private System.Windows.Forms.Label lblUserTabUser;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lblScore;
         private CategoriesDataSet categoriesDataSet;

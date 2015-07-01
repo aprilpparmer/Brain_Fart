@@ -6,36 +6,18 @@ using System.Threading.Tasks;
 
 namespace BrainFart.Model
 {
-    class Users
+    public class Users
     {
-
-        private string userName;
-        private string userPassword;
+        private int userID;
+        //private string userName;
         private string passwordConfirm;
 
-        public string UserName 
-        {
-            get
-            {
-                return userName;
-            }
-            set
-            {
-                userName = value;
-            }
-        }
 
-        public string UserPassword
-        { 
-            get
-            {
-                return userPassword;
-            }
-            set 
-            {
-                userPassword = value;
-            }
-        }
+        public int UserID { get { return userID; } set { userID = value; } }
+
+        public string UserName { get; set; }
+
+        public string UserPassword { get; set; }
 
 
         public string PasswordConfirm
@@ -51,10 +33,6 @@ namespace BrainFart.Model
             }
 
         }
-
-      
-
-
 
     }
 }

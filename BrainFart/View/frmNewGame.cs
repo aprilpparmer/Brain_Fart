@@ -15,6 +15,7 @@ namespace BrainFart.View
 {
     public partial class frmNewGame : Form
     {
+        private UserAccessController userAccess = UserAccessController.Instance;
         private frmQuestions questions;
         private int categoryID;
         private int numberOfQuestions;
@@ -23,7 +24,8 @@ namespace BrainFart.View
 
         public frmNewGame()
         {
-            InitializeComponent();
+            InitializeComponent();           
+            //lblUserTabUser.Text = "Welcome: " + userAccess.CurrentLoggedUser.UserName;
             this.loadCategoryComboBox();
             this.categoryComboBox.SelectedIndex = 0;
             this.numberQuestionsComboBox.SelectedIndex = 0;
