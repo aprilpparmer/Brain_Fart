@@ -132,7 +132,7 @@
             "3 Strikes You\'re Out!"});
             this.gameOverComboBox.Location = new System.Drawing.Point(125, 121);
             this.gameOverComboBox.Name = "gameOverComboBox";
-            this.gameOverComboBox.Size = new System.Drawing.Size(119, 21);
+            this.gameOverComboBox.Size = new System.Drawing.Size(167, 21);
             this.gameOverComboBox.TabIndex = 6;
             // 
             // lblGameOver
@@ -175,7 +175,7 @@
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Location = new System.Drawing.Point(125, 26);
             this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(119, 21);
+            this.categoryComboBox.Size = new System.Drawing.Size(167, 21);
             this.categoryComboBox.TabIndex = 2;
             // 
             // lblCategory
