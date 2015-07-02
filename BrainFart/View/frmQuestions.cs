@@ -87,7 +87,9 @@ namespace BrainFart
                 //Loads a new question
                 this.getQuestion();
                 //Loads the answer choices for the question
-                this.answerList = BrainFartController.GetAllAnswerChoices(this.question.QuestionID);
+                int id = this.question.QuestionID;
+                this.answerList = new List<Answers>();
+                this.answerList = BrainFartController.GetAllAnswerChoices(id);
                 questionDescripLabel.Text = this.question.QuestionDescrip;
                 answerChoice1.Text = this.answerList[0].AnswerDescrip;
                 answerChoice2.Text = this.answerList[1].AnswerDescrip;
