@@ -20,8 +20,9 @@ namespace BrainFart.DB
         public static SqlConnection GetConnection()
         {
             string connectionString =
-                "Data Source=localhost;Initial Catalog=BrainFart;" +
-                "Integrated Security=True";
+                "Server=tcp:xnk6n9ftjq.database.windows.net,1433;Database=BrainFartDatabase;" + 
+                "User ID=aprilpparmer@xnk6n9ftjq;Password=Ap1ri2l3*;Trusted_Connection=False;" + 
+                "Encrypt=True;Connection Timeout=30;";
             SqlConnection connection = new SqlConnection(connectionString);
             return connection;
         }
