@@ -84,9 +84,13 @@ namespace BrainFart.View
 
         private void btnMain_Click(object sender, EventArgs e)
         {
-            this.main = new mainForm();
-            this. main.ShowDialog();
-            
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to return to main menu?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                this.main = new mainForm();
+                this.main.ShowDialog();
+            }
         }
     }
 }
