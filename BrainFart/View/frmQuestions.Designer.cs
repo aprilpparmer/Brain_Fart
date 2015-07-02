@@ -370,7 +370,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 333);
-            this.ControlBox = false;
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblUserTabUser);
             this.Controls.Add(this.groupBox1);
@@ -378,9 +377,8 @@
             this.Controls.Add(this.lblCorrectAnswer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQuestions";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "       ";
-            this.Load += new System.EventHandler(this.frmQuestions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.difficultiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.difficultiesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();

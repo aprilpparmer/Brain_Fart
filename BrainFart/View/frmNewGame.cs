@@ -20,7 +20,6 @@ namespace BrainFart.View
         private int categoryID;
         private int numberOfQuestions;
         private string gameOverMode;
-        public String userLabel;
 
 
         public frmNewGame()
@@ -32,10 +31,6 @@ namespace BrainFart.View
             this.gameOverComboBox.SelectedIndex = 0;
         }
 
-        private void frmNewGame_Load(object sender, EventArgs e)
-        {
-            this.lblUserTabUser.Text = userLabel;
-        }
 
         private void btnGameStart_Click(object sender, EventArgs e)
         {
@@ -51,19 +46,11 @@ namespace BrainFart.View
                 }
            
                 this.numberOfQuestions = Int32.Parse(this.numberQuestionsComboBox.SelectedItem.ToString());
-                questions = new frmQuestions(this.categoryID, this.numberOfQuestions);
-                questions.userLabel = this.userLabel;
-                questions.FormClosed += new FormClosedEventHandler(questions_FormClosed);
-                this.questions.Show();
-                this.Hide();
+                questions = new frmQuestions(this.categoryID, this.numberOfQuestions);             
+                this.questions.ShowDialog();
+                this.Close();
                           
         }
-
-        private void questions_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
-
 
         private void loadCategoryComboBox()
         {

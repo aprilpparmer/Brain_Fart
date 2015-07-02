@@ -27,18 +27,9 @@ namespace BrainFart
         private void btnStart_Click(object sender, EventArgs e)
         {
             newGame = new frmNewGame();
-            newGame.userLabel = "Welcome: Guest";
-            //this.newGame.ShowDialog();
-            newGame.FormClosed += new FormClosedEventHandler(newGame_FormClosed);
-            newGame.Show();
+            newGame.ShowDialog();
             this.Hide();
         }
-
-        private void newGame_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
-
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -61,9 +52,7 @@ namespace BrainFart
                     AccessMessage = String.Concat("WELCOME to BrainFart! \n You are logged in as ", userAccess.CurrentLoggedUser.UserName);
                     MessageBox.Show(AccessMessage, "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.None);
                     newGame = new frmNewGame();
-                    newGame.userLabel = "Welcome: " + userAccess.CurrentLoggedUser.UserName;
-                    this.newGame.Show();
-                    
+                    this.newGame.ShowDialog();
                     ToggleLoginObjectsSelection(false);
                     ToggleLogOutObjectsSelection(true);
                     
