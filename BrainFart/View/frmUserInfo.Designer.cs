@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserInfo));
             this.logo = new System.Windows.Forms.PictureBox();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnResetStats = new System.Windows.Forms.Button();
             this.txtTotalMissed = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.groupInfo = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnMain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupStats.SuspendLayout();
             this.groupInfo.SuspendLayout();
@@ -67,16 +67,6 @@
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logo.TabIndex = 37;
             this.logo.TabStop = false;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(9, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(50, 25);
-            this.btnMenu.TabIndex = 36;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
             // 
             // btnQuit
             // 
@@ -275,15 +265,25 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 2;
             // 
+            // btnMain
+            // 
+            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.Location = new System.Drawing.Point(12, 12);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.Size = new System.Drawing.Size(50, 25);
+            this.btnMain.TabIndex = 41;
+            this.btnMain.Text = "Main";
+            this.btnMain.UseVisualStyleBackColor = true;
+            // 
             // frmUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.groupInfo);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.btnMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserInfo";
             this.Text = "User Information";
@@ -299,7 +299,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnResetStats;
         private System.Windows.Forms.TextBox txtTotalMissed;
@@ -321,5 +320,6 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.GroupBox groupInfo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnMain;
     }
 }

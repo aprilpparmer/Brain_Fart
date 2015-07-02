@@ -38,6 +38,7 @@
             this.lblCongrads = new System.Windows.Forms.Label();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
+            this.btnMain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEinstein)).BeginInit();
@@ -138,12 +139,23 @@
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
+            // btnMain
+            // 
+            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.Location = new System.Drawing.Point(12, 12);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.Size = new System.Drawing.Size(50, 25);
+            this.btnMain.TabIndex = 45;
+            this.btnMain.Text = "Main";
+            this.btnMain.UseVisualStyleBackColor = true;
+            // 
             // frmEndGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnNewGame);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.Label lblCongrads;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button btnMain;
     }
 }

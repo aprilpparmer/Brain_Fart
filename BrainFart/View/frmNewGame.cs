@@ -77,7 +77,7 @@ namespace BrainFart.View
             if (dlgResult == DialogResult.No) return;
             else
             {
-                this.Close();
+                Application.Exit();
             }
         }
     }

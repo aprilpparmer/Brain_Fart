@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddModifyQuestion));
             this.logo = new System.Windows.Forms.PictureBox();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,6 +54,7 @@
             this.txtQuestion = new System.Windows.Forms.TextBox();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.lblPatientTabUser = new System.Windows.Forms.Label();
+            this.btnMain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,16 +69,6 @@
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logo.TabIndex = 37;
             this.logo.TabStop = false;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(9, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(50, 25);
-            this.btnMenu.TabIndex = 36;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
@@ -325,16 +315,26 @@
             this.lblPatientTabUser.TabIndex = 39;
             this.lblPatientTabUser.Text = "Logged in as: Guest";
             // 
+            // btnMain
+            // 
+            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.Location = new System.Drawing.Point(12, 12);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.Size = new System.Drawing.Size(50, 25);
+            this.btnMain.TabIndex = 41;
+            this.btnMain.Text = "Main";
+            this.btnMain.UseVisualStyleBackColor = true;
+            // 
             // frmAddModifyQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.lblPatientTabUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.btnMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddModifyQuestion";
             this.Text = "Add/Modify/Question";
@@ -350,7 +350,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -375,5 +374,6 @@
         private System.Windows.Forms.TextBox txtQuestion;
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.Label lblPatientTabUser;
+        private System.Windows.Forms.Button btnMain;
     }
 }
