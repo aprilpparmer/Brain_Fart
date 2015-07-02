@@ -24,6 +24,7 @@ namespace BrainFart
         private int numberOfQuestions;
         private int categoryID;
         private string gameOverMode;
+        private mainForm main;
         
         public frmQuestions(int categoryID, int numberOfQuestions)
         {
@@ -175,6 +176,14 @@ namespace BrainFart
             {
                 Application.Exit();
             }
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            this.main = new mainForm();
+            this.main.ShowDialog();
+            
+            
         }
 
     }

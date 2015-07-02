@@ -374,6 +374,7 @@
             this.btnMain.TabIndex = 40;
             this.btnMain.Text = "Main";
             this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // frmQuestions
             // 

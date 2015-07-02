@@ -20,6 +20,7 @@ namespace BrainFart.View
         private int categoryID;
         private int numberOfQuestions;
         private string gameOverMode;
+        private mainForm main;
 
 
         public frmNewGame()
@@ -79,6 +80,13 @@ namespace BrainFart.View
             {
                 Application.Exit();
             }
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            this.main = new mainForm();
+            this. main.ShowDialog();
+            
         }
     }
 }

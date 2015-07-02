@@ -216,6 +216,7 @@
             this.btnMain.TabIndex = 39;
             this.btnMain.Text = "Main";
             this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
             // frmNewGame
             // 
