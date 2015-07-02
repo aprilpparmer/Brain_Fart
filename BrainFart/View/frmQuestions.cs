@@ -21,6 +21,7 @@ namespace BrainFart
         private List<Answers> answerList;
         private Answers answer;
         private frmEndGame endGame;
+        public String userLabel;
         private int numberOfQuestions;
         private int categoryID;
         private string gameOverMode;
@@ -31,7 +32,6 @@ namespace BrainFart
             try
             {
                 InitializeComponent();
-                //lblUserTabUser.Text = "Welcome: " + userAccess.CurrentLoggedUser.UserName;
                 this.getListOfQuestions(categoryID, numberOfQuestions);
                 this.loadQuestion();
                 this.scoreLabel.Text = Convert.ToString(0);
@@ -42,6 +42,12 @@ namespace BrainFart
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
         }
+
+        private void frmQuestions_Load(object sender, EventArgs e)
+        {
+            this.lblUserTabUser.Text = userLabel;
+        }
+
         private List<Questions> getListOfQuestions(int categoryID, int numberOfQuestions)
         {
             List<Questions> copyList = new List<Questions>();
@@ -72,9 +78,10 @@ namespace BrainFart
             if (this.questionList.Count == 0)
             {
                 endGame = new frmEndGame();
+                endGame.userLabel = this.userLabel;
                 endGame.totalPoint = this.scoreLabel.Text;
-                this.endGame.ShowDialog();
-                this.Close();
+                this.endGame.Show();
+                this.Hide();
             }
             else
             {

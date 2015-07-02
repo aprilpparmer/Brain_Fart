@@ -20,16 +20,21 @@ namespace BrainFart.View
         private int categoryID;
         private int numberOfQuestions;
         private string gameOverMode;
+        public String userLabel;
 
 
         public frmNewGame()
         {
-            InitializeComponent();           
-            //lblUserTabUser.Text = "Welcome: " + userAccess.CurrentLoggedUser.UserName;
+            InitializeComponent();
             this.loadCategoryComboBox();
             this.categoryComboBox.SelectedIndex = 0;
             this.numberQuestionsComboBox.SelectedIndex = 0;
             this.gameOverComboBox.SelectedIndex = 0;
+        }
+
+        private void frmNewGame_Load(object sender, EventArgs e)
+        {
+            this.lblUserTabUser.Text = userLabel;
         }
 
         private void btnGameStart_Click(object sender, EventArgs e)
@@ -47,10 +52,18 @@ namespace BrainFart.View
            
                 this.numberOfQuestions = Int32.Parse(this.numberQuestionsComboBox.SelectedItem.ToString());
                 questions = new frmQuestions(this.categoryID, this.numberOfQuestions);
-                this.questions.ShowDialog();
-                this.Close();
+                questions.userLabel = this.userLabel;
+                questions.FormClosed += new FormClosedEventHandler(questions_FormClosed);
+                this.questions.Show();
+                this.Hide();
                           
         }
+
+        private void questions_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
+
 
         private void loadCategoryComboBox()
         {
@@ -68,6 +81,16 @@ namespace BrainFart.View
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to Quit?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                this.Close();
             }
         }
     }

@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEndGame));
             this.logo = new System.Windows.Forms.PictureBox();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.lblPatientTabUser = new System.Windows.Forms.Label();
+            this.lblUserTabUser = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureEinstein = new System.Windows.Forms.PictureBox();
             this.lblPoints = new System.Windows.Forms.Label();
@@ -55,27 +54,17 @@
             this.logo.TabIndex = 39;
             this.logo.TabStop = false;
             // 
-            // btnMenu
+            // lblUserTabUser
             // 
-            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(9, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(50, 25);
-            this.btnMenu.TabIndex = 38;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            // 
-            // lblPatientTabUser
-            // 
-            this.lblPatientTabUser.AutoSize = true;
-            this.lblPatientTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPatientTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPatientTabUser.Location = new System.Drawing.Point(286, 67);
-            this.lblPatientTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPatientTabUser.Name = "lblPatientTabUser";
-            this.lblPatientTabUser.Size = new System.Drawing.Size(127, 16);
-            this.lblPatientTabUser.TabIndex = 40;
-            this.lblPatientTabUser.Text = "Logged in as: Guest";
+            this.lblUserTabUser.AutoSize = true;
+            this.lblUserTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblUserTabUser.Location = new System.Drawing.Point(286, 67);
+            this.lblUserTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserTabUser.Name = "lblUserTabUser";
+            this.lblUserTabUser.Size = new System.Drawing.Size(127, 16);
+            this.lblUserTabUser.TabIndex = 40;
+            this.lblUserTabUser.Text = "Logged in as: Guest";
             // 
             // groupBox1
             // 
@@ -155,15 +144,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnNewGame);
-            this.Controls.Add(this.lblPatientTabUser);
+            this.Controls.Add(this.lblUserTabUser);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.btnMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEndGame";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Over Dude";
             this.Load += new System.EventHandler(this.frmEndGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
@@ -178,8 +167,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Label lblPatientTabUser;
+        private System.Windows.Forms.Label lblUserTabUser;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureEinstein;
         private System.Windows.Forms.Label lblPoints;
