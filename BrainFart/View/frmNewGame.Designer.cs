@@ -125,6 +125,7 @@
             this.gameOverComboBox.Name = "gameOverComboBox";
             this.gameOverComboBox.Size = new System.Drawing.Size(167, 21);
             this.gameOverComboBox.TabIndex = 6;
+            this.gameOverComboBox.SelectedIndexChanged += new System.EventHandler(this.gameOverComboBox_SelectedIndexChanged);
             // 
             // lblGameOver
             // 

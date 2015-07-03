@@ -47,7 +47,7 @@ namespace BrainFart.View
                 }
            
                 this.numberOfQuestions = Int32.Parse(this.numberQuestionsComboBox.SelectedItem.ToString());
-                questions = new frmQuestions(this.categoryID, this.numberOfQuestions);             
+                questions = new frmQuestions(this.categoryID, this.numberOfQuestions, this.gameOverMode);             
                 this.questions.ShowDialog();
                 this.Close();
                           
@@ -92,5 +92,19 @@ namespace BrainFart.View
                 this.main.ShowDialog();
             }
         }
+
+        private void gameOverComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (gameOverComboBox.SelectedIndex == 0) 
+            {
+                this.gameOverMode = "All";
+            }
+            else 
+            {
+                this.gameOverMode = "Three Strikes";
+            }
+        }
+
+
     }
 }
