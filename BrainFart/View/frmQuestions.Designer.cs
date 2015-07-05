@@ -45,7 +45,6 @@
             this.correctLabel = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
             this.lblCorrectAnswer = new System.Windows.Forms.Label();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.scoreLabel = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.tableAdapterManager = new BrainFart.CategoriesDataSetTableAdapters.TableAdapterManager();
             this.difficultiesTableAdapter = new BrainFart.DifficultiesDataSetTableAdapters.difficultiesTableAdapter();
             this.tableAdapterManager1 = new BrainFart.DifficultiesDataSetTableAdapters.TableAdapterManager();
+            this.btnMain = new System.Windows.Forms.Button();
             questionLabel = new System.Windows.Forms.Label();
             categoryLabel = new System.Windows.Forms.Label();
             dificultyLabel = new System.Windows.Forms.Label();
@@ -217,16 +217,6 @@
             this.lblCorrectAnswer.Size = new System.Drawing.Size(0, 13);
             this.lblCorrectAnswer.TabIndex = 13;
             // 
-            // btnMenu
-            // 
-            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(9, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(50, 25);
-            this.btnMenu.TabIndex = 32;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            // 
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
@@ -375,17 +365,28 @@
             this.tableAdapterManager1.difficultiesTableAdapter = this.difficultiesTableAdapter;
             this.tableAdapterManager1.UpdateOrder = BrainFart.DifficultiesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // btnMain
+            // 
+            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMain.Location = new System.Drawing.Point(12, 12);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.Size = new System.Drawing.Size(50, 25);
+            this.btnMain.TabIndex = 40;
+            this.btnMain.Text = "Main";
+            this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
+            // 
             // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 333);
+            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblUserTabUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.lblCorrectAnswer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQuestions";
@@ -414,7 +415,6 @@
         private System.Windows.Forms.Label correctLabel;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Label lblCorrectAnswer;
-        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblUserTabUser;
@@ -433,5 +433,6 @@
         private System.Windows.Forms.Label difficultyDescripLabel;
         private System.Windows.Forms.Label questionDescripLabel;
         private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Button btnMain;
     }
 }

@@ -24,7 +24,7 @@ namespace BrainFart.DAL
         {
             string SelectStatement = string.Empty;
 
-            SelectStatement = "Select userID, username, password from [BrainFart].dbo.Users " +
+            SelectStatement = "Select userID, username, password from Users " +
             " where username like @UserName";
 
             SqlConnection connection = BrainFartConnection.GetConnection();

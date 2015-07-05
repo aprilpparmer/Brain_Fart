@@ -24,17 +24,21 @@ namespace BrainFart
         private int numberOfQuestions;
         private int categoryID;
         private string gameOverMode;
+        private mainForm main;
+        private int strike;
+        private string correct;
         
-        public frmQuestions(int categoryID, int numberOfQuestions)
+        public frmQuestions(int categoryID, int numberOfQuestions, string gameOverMode)
         {
 
             try
             {
                 InitializeComponent();
-                //lblUserTabUser.Text = "Welcome: " + userAccess.CurrentLoggedUser.UserName;
                 this.getListOfQuestions(categoryID, numberOfQuestions);
+                this.gameOverMode = gameOverMode;
                 this.loadQuestion();
                 this.scoreLabel.Text = Convert.ToString(0);
+                this.strike = 0;
                 this.BringToFront();
             }
             catch (Exception ex)
@@ -42,6 +46,8 @@ namespace BrainFart
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
         }
+
+
         private List<Questions> getListOfQuestions(int categoryID, int numberOfQuestions)
         {
             List<Questions> copyList = new List<Questions>();
@@ -67,9 +73,31 @@ namespace BrainFart
             return this.questionList;
         }
 
+        private void gameMode()
+        {
+            if(this.gameOverMode.Equals("Three Strikes"))
+            {
+                if (this.correct.Equals("Incorrect"))
+                {
+                    this.strike++;
+                    MessageBox.Show("Strike " + this.strike);
+
+                    if(this.strike == 3)
+                    {
+                        endGame = new frmEndGame();
+                        endGame.totalPoint = this.scoreLabel.Text;
+                        this.endGame.ShowDialog();
+                        this.Close();
+                    }
+
+                }
+            }
+
+        
+        }
+
         public void loadQuestion()
         {
-
             if (this.questionList.Count == 0)
             {
                 endGame = new frmEndGame();
@@ -103,6 +131,7 @@ namespace BrainFart
                 int difficultyID = this.question.DifficultyID;
                 this.difficultiesTableAdapter.Fill(this.difficultiesDataSet.difficulties, difficultyID);
             }
+
         }
 
         private void getQuestion()
@@ -120,6 +149,7 @@ namespace BrainFart
             correctLabel.Visible = true;
             submitButton.Enabled = false;
             nextButton.Visible = true;
+            this.gameMode();
         }
 
         private void checkAnswer()
@@ -131,6 +161,7 @@ namespace BrainFart
                 (this.answerChoice4.Checked && answerList[3].Correct.Equals(1)))
             {
                 correctLabel.Text = "Correct!";
+                this.correct = "Correct";
                 this.scoreLabel.Text = Convert.ToString(Int32.Parse(this.scoreLabel.Text) + Int32.Parse(this.pointValueLabel.Text));
             }
             else
@@ -153,6 +184,7 @@ namespace BrainFart
                 }
                 correctLabel.ForeColor = System.Drawing.Color.Red;
                 correctLabel.Text = "Incorrect!";
+                this.correct = "Incorrect";
                 lblCorrectAnswer.Text = "The Correct Answer is: " + answer.AnswerDescrip;
             }
         }
@@ -173,7 +205,18 @@ namespace BrainFart
             if (dlgResult == DialogResult.No) return;
             else
             {
-                this.Close();
+                Application.Exit();
+            }
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to return to main menu?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                this.main = new mainForm();
+                this.main.ShowDialog();
             }
         }
 

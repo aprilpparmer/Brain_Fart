@@ -26,11 +26,9 @@ namespace BrainFart
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-
-        
-           
             newGame = new frmNewGame();
-            this.newGame.ShowDialog();
+            newGame.ShowDialog();
+            this.Hide();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

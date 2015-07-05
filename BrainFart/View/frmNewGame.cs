@@ -20,17 +20,18 @@ namespace BrainFart.View
         private int categoryID;
         private int numberOfQuestions;
         private string gameOverMode;
+        private mainForm main;
 
 
         public frmNewGame()
         {
-            InitializeComponent();           
-            //lblUserTabUser.Text = "Welcome: " + userAccess.CurrentLoggedUser.UserName;
+            InitializeComponent();
             this.loadCategoryComboBox();
             this.categoryComboBox.SelectedIndex = 0;
             this.numberQuestionsComboBox.SelectedIndex = 0;
             this.gameOverComboBox.SelectedIndex = 0;
         }
+
 
         private void btnGameStart_Click(object sender, EventArgs e)
         {
@@ -46,7 +47,7 @@ namespace BrainFart.View
                 }
            
                 this.numberOfQuestions = Int32.Parse(this.numberQuestionsComboBox.SelectedItem.ToString());
-                questions = new frmQuestions(this.categoryID, this.numberOfQuestions);
+                questions = new frmQuestions(this.categoryID, this.numberOfQuestions, this.gameOverMode);             
                 this.questions.ShowDialog();
                 this.Close();
                           
@@ -70,5 +71,40 @@ namespace BrainFart.View
                 MessageBox.Show(ex.Message, ex.GetType().ToString());
             }
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to Quit?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to return to main menu?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                this.main = new mainForm();
+                this.main.ShowDialog();
+            }
+        }
+
+        private void gameOverComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (gameOverComboBox.SelectedIndex == 0) 
+            {
+                this.gameOverMode = "All";
+            }
+            else 
+            {
+                this.gameOverMode = "Three Strikes";
+            }
+        }
+
+
     }
 }

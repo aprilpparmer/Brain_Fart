@@ -28,14 +28,20 @@ namespace BrainFart.View
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
+           
             newGame = new frmNewGame();
-            this.newGame.ShowDialog();
+            newGame.ShowDialog();
             this.Close();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to Quit?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
