@@ -61,6 +61,7 @@ namespace BrainFart
                 int r = rnd.Next(copyList.Count);
                 Questions q = copyList[r];
                 this.questionList.Add(q);
+                copyList.Remove(q);
             }
 
             return this.questionList;
