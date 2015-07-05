@@ -16,7 +16,7 @@ namespace BrainFartUnitTests
 
         //Tests to check controller is returning all 4 answers per question
         [TestMethod]
-        public void TestGetAllQuestions()
+        public void TestGetAllAnswers()
         {
             this.answerList = BrainFartController.GetAllAnswerChoices(1);
             bool allAnswersSuccess = answerList.Count == 4;
@@ -24,7 +24,7 @@ namespace BrainFartUnitTests
             Assert.AreEqual(true, allAnswersSuccess);
         }
         [TestMethod]
-        public void TestGetAllQuestionsReturnGreaterThanOne()
+        public void TestGetAllAnswersReturnGreaterThanOne()
         {
             this.answerList = BrainFartController.GetAllAnswerChoices(1);
             bool allAnswersSuccess = answerList.Count > 1;
@@ -32,7 +32,7 @@ namespace BrainFartUnitTests
             Assert.AreEqual(true, allAnswersSuccess);
         }
         [TestMethod]
-        public void TestGetAllQuestionsReturnsFalse()
+        public void TestGetAllAnswersReturnsFalse()
         {
             this.answerList = BrainFartController.GetAllAnswerChoices(1);
             bool allAnswersSuccess = answerList.Count == 1;
@@ -40,7 +40,7 @@ namespace BrainFartUnitTests
             Assert.AreEqual(false, allAnswersSuccess);
         }
         [TestMethod]
-        public void TestGetAllQuestionsQuestionID()
+        public void TestGetAllAnswersQuestionID()
         {
             this.answerList = BrainFartController.GetAllAnswerChoices(21);
             bool allAnswersSuccess = answerList.Count == 4;
@@ -48,7 +48,7 @@ namespace BrainFartUnitTests
             Assert.AreEqual(true, allAnswersSuccess);
         }
         [TestMethod]
-        public void TestGetAllQuestionsReturnGreaterThanOneQuestionID()
+        public void TestGetAllAnswerssReturnGreaterThanOneQuestionID()
         {
             this.answerList = BrainFartController.GetAllAnswerChoices(21);
             bool allAnswersSuccess = answerList.Count > 1;
@@ -56,7 +56,7 @@ namespace BrainFartUnitTests
             Assert.AreEqual(true, allAnswersSuccess);
         }
         [TestMethod]
-        public void TestGetAllQuestionsReturnsFalseQuestionID()
+        public void TestGetAllAnswersReturnsFalseQuestionID()
         {
             this.answerList = BrainFartController.GetAllAnswerChoices(21);
             bool allAnswersSuccess = answerList.Count == 1;
