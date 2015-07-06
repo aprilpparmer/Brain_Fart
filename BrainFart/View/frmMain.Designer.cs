@@ -43,6 +43,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.btnAddQuestion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(138, 77);
+            this.lblWelcome.Location = new System.Drawing.Point(138, 67);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(167, 20);
             this.lblWelcome.TabIndex = 1;
@@ -76,7 +77,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(174, 111);
+            this.btnStart.Location = new System.Drawing.Point(174, 99);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(97, 23);
             this.btnStart.TabIndex = 2;
@@ -86,7 +87,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(174, 149);
+            this.btnRegister.Location = new System.Drawing.Point(174, 128);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(97, 23);
             this.btnRegister.TabIndex = 6;
@@ -177,12 +178,23 @@
             this.lblUserName.Text = "UserName:";
             this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnAddQuestion
+            // 
+            this.btnAddQuestion.Location = new System.Drawing.Point(174, 157);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.Size = new System.Drawing.Size(97, 23);
+            this.btnAddQuestion.TabIndex = 8;
+            this.btnAddQuestion.Text = "Add Question";
+            this.btnAddQuestion.UseVisualStyleBackColor = true;
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnStart);
@@ -214,6 +226,7 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Button btnAddQuestion;
     }
 }
 
