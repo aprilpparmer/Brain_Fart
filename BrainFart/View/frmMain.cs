@@ -53,8 +53,6 @@ namespace BrainFart
                 {
                     AccessMessage = String.Concat("WELCOME to BrainFart! \n You are logged in as ", userAccess.CurrentLoggedUser.UserName);
                     MessageBox.Show(AccessMessage, "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    newGame = new frmNewGame();
-                    this.newGame.ShowDialog();
                     ToggleLoginObjectsSelection(false);
                     ToggleLogOutObjectsSelection(true);
                     
