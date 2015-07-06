@@ -28,10 +28,9 @@ namespace BrainFart.View
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
             newGame = new frmNewGame();
             newGame.ShowDialog();
-            this.Close();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

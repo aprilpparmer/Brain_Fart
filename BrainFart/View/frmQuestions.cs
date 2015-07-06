@@ -99,10 +99,11 @@ namespace BrainFart
         {
             if (this.questionList.Count == 0)
             {
+                this.Hide();
                 endGame = new frmEndGame();
                 endGame.totalPoint = this.scoreLabel.Text;
                 this.endGame.ShowDialog();
-                this.Close();
+               
             }
             else
             {
