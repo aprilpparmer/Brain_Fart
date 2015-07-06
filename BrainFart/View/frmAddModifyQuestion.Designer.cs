@@ -78,6 +78,7 @@
             this.btnCancel.TabIndex = 35;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -337,6 +338,7 @@
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddModifyQuestion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add/Modify/Question";
             this.Load += new System.EventHandler(this.frmAddModifyQuestion_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();

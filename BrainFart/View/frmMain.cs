@@ -18,6 +18,7 @@ namespace BrainFart
         private UserAccessController userAccess = UserAccessController.Instance;
         private frmRegister register;
         private frmNewGame newGame;
+        private frmAddModifyQuestion addQuestion;
 
         public mainForm()
         {
@@ -91,6 +92,13 @@ namespace BrainFart
         private void ToggleLogOutObjectsSelection(bool value)
         {
             if (btnLogout.Enabled != value) btnLogout.Enabled = value;
+        }
+
+        private void btnAddQuestion_Click(object sender, EventArgs e)
+        {
+            addQuestion = new frmAddModifyQuestion();
+            addQuestion.addQuestion = true;
+            this.addQuestion.ShowDialog();
         }
 
     }

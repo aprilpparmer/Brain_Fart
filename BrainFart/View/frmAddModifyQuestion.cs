@@ -45,7 +45,7 @@ namespace BrainFart.View
             else
             {
                 this.Text = "Modify Question";
-                //Code to be completed Second Iteration
+                //Code to be completed Another Iteration
             }
         }
 
@@ -216,6 +216,11 @@ namespace BrainFart.View
                 correctAnswer = 0;
             }
             answer4.Correct = correctAnswer;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }   
     }
 }
