@@ -39,6 +39,7 @@
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
+            this.loggedInLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEinstein)).BeginInit();
@@ -60,12 +61,12 @@
             this.lblUserTabUser.AutoSize = true;
             this.lblUserTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblUserTabUser.Location = new System.Drawing.Point(286, 67);
+            this.lblUserTabUser.Location = new System.Drawing.Point(266, 75);
             this.lblUserTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserTabUser.Name = "lblUserTabUser";
-            this.lblUserTabUser.Size = new System.Drawing.Size(127, 16);
+            this.lblUserTabUser.Size = new System.Drawing.Size(89, 16);
             this.lblUserTabUser.TabIndex = 40;
-            this.lblUserTabUser.Text = "Logged in as: Guest";
+            this.lblUserTabUser.Text = "Logged in as:";
             // 
             // groupBox1
             // 
@@ -150,12 +151,25 @@
             this.btnMain.UseVisualStyleBackColor = true;
             this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
+            // loggedInLabel
+            // 
+            this.loggedInLabel.AutoSize = true;
+            this.loggedInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggedInLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.loggedInLabel.Location = new System.Drawing.Point(351, 74);
+            this.loggedInLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.loggedInLabel.Name = "loggedInLabel";
+            this.loggedInLabel.Size = new System.Drawing.Size(53, 18);
+            this.loggedInLabel.TabIndex = 46;
+            this.loggedInLabel.Text = "Guest";
+            // 
             // frmEndGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.loggedInLabel);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnQuit);
@@ -188,5 +202,6 @@
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnMain;
+        private System.Windows.Forms.Label loggedInLabel;
     }
 }

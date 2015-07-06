@@ -30,6 +30,11 @@ namespace BrainFart.View
             this.categoryComboBox.SelectedIndex = 0;
             this.numberQuestionsComboBox.SelectedIndex = 0;
             this.gameOverComboBox.SelectedIndex = 0;
+            UserAccessController uac = UserAccessController.Instance;
+            if (uac.CurrentLoggedUser != null)
+            {
+                this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
+            }
         }
 
 

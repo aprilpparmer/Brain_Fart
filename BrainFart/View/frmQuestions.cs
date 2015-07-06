@@ -34,6 +34,11 @@ namespace BrainFart
             try
             {
                 InitializeComponent();
+                UserAccessController uac = UserAccessController.Instance;
+                if (uac.CurrentLoggedUser != null)
+                {
+                    this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
+                }
                 this.getListOfQuestions(categoryID, numberOfQuestions);
                 this.gameOverMode = gameOverMode;
                 this.loadQuestion();

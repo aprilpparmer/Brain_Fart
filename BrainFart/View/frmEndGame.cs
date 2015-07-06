@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrainFart.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,11 @@ namespace BrainFart.View
         private void frmEndGame_Load(object sender, EventArgs e)
         {
             lblTotalPoints.Text = this.totalPoint;
+            UserAccessController uac = UserAccessController.Instance;
+            if (uac.CurrentLoggedUser != null)
+            {
+                this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
+            }
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)

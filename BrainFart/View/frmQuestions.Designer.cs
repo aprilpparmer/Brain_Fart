@@ -62,6 +62,7 @@
             this.difficultiesTableAdapter = new BrainFart.DifficultiesDataSetTableAdapters.difficultiesTableAdapter();
             this.tableAdapterManager1 = new BrainFart.DifficultiesDataSetTableAdapters.TableAdapterManager();
             this.btnMain = new System.Windows.Forms.Button();
+            this.loggedInLabel = new System.Windows.Forms.Label();
             questionLabel = new System.Windows.Forms.Label();
             categoryLabel = new System.Windows.Forms.Label();
             dificultyLabel = new System.Windows.Forms.Label();
@@ -328,12 +329,12 @@
             this.lblUserTabUser.AutoSize = true;
             this.lblUserTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblUserTabUser.Location = new System.Drawing.Point(286, 67);
+            this.lblUserTabUser.Location = new System.Drawing.Point(275, 67);
             this.lblUserTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserTabUser.Name = "lblUserTabUser";
-            this.lblUserTabUser.Size = new System.Drawing.Size(127, 16);
+            this.lblUserTabUser.Size = new System.Drawing.Size(89, 16);
             this.lblUserTabUser.TabIndex = 22;
-            this.lblUserTabUser.Text = "Logged in as: Guest";
+            this.lblUserTabUser.Text = "Logged in as:";
             // 
             // btnQuit
             // 
@@ -376,12 +377,25 @@
             this.btnMain.UseVisualStyleBackColor = true;
             this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
             // 
+            // loggedInLabel
+            // 
+            this.loggedInLabel.AutoSize = true;
+            this.loggedInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggedInLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.loggedInLabel.Location = new System.Drawing.Point(361, 65);
+            this.loggedInLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.loggedInLabel.Name = "loggedInLabel";
+            this.loggedInLabel.Size = new System.Drawing.Size(53, 18);
+            this.loggedInLabel.TabIndex = 41;
+            this.loggedInLabel.Text = "Guest";
+            // 
             // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 333);
+            this.Controls.Add(this.loggedInLabel);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblUserTabUser);
@@ -434,5 +448,6 @@
         private System.Windows.Forms.Label questionDescripLabel;
         private System.Windows.Forms.Label scoreLabel;
         private System.Windows.Forms.Button btnMain;
+        private System.Windows.Forms.Label loggedInLabel;
     }
 }
