@@ -180,6 +180,7 @@
             // 
             // btnAddQuestion
             // 
+            this.btnAddQuestion.Enabled = false;
             this.btnAddQuestion.Location = new System.Drawing.Point(174, 157);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(97, 23);

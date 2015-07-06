@@ -55,6 +55,7 @@ namespace BrainFart
                     MessageBox.Show(AccessMessage, "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.None);
                     ToggleLoginObjectsSelection(false);
                     ToggleLogOutObjectsSelection(true);
+                    btnAddQuestion.Enabled = true;
                     
                 }
                 else
