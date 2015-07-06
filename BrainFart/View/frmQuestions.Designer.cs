@@ -395,6 +395,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 333);
+            this.ControlBox = false;
             this.Controls.Add(this.loggedInLabel);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnQuit);
