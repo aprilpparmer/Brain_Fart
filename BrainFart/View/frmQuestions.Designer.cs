@@ -329,7 +329,7 @@
             this.lblUserTabUser.AutoSize = true;
             this.lblUserTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblUserTabUser.Location = new System.Drawing.Point(275, 67);
+            this.lblUserTabUser.Location = new System.Drawing.Point(276, 67);
             this.lblUserTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserTabUser.Name = "lblUserTabUser";
             this.lblUserTabUser.Size = new System.Drawing.Size(89, 16);
@@ -380,12 +380,12 @@
             // loggedInLabel
             // 
             this.loggedInLabel.AutoSize = true;
-            this.loggedInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggedInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loggedInLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.loggedInLabel.Location = new System.Drawing.Point(361, 65);
+            this.loggedInLabel.Location = new System.Drawing.Point(361, 69);
             this.loggedInLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loggedInLabel.Name = "loggedInLabel";
-            this.loggedInLabel.Size = new System.Drawing.Size(53, 18);
+            this.loggedInLabel.Size = new System.Drawing.Size(40, 13);
             this.loggedInLabel.TabIndex = 41;
             this.loggedInLabel.Text = "Guest";
             // 
