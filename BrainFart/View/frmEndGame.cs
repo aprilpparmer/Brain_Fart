@@ -14,6 +14,7 @@ namespace BrainFart.View
     {
         public String totalPoint;
         private frmNewGame newGame;
+        private mainForm main;
 
         public frmEndGame()
         {
@@ -40,6 +41,18 @@ namespace BrainFart.View
             else
             {
                 Application.Exit();
+            }
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to return to main menu?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                this.Hide();
+                this.main = new mainForm();
+                this.main.ShowDialog();
             }
         }
     }

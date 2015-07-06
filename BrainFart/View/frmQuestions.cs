@@ -216,6 +216,7 @@ namespace BrainFart
             if (dlgResult == DialogResult.No) return;
             else
             {
+                this.Hide();
                 this.main = new mainForm();
                 this.main.ShowDialog();
             }
