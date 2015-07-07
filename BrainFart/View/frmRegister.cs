@@ -43,8 +43,7 @@ namespace BrainFart.View
                 user = new Users();
                 this.getUserData(user);
                 this.confirmPassword();
-                UsersDAL.AddUser(user);
-                Close();
+                
             }
 
         }
@@ -55,10 +54,17 @@ namespace BrainFart.View
             if (user.UserPassword.ToString().Equals(user.PasswordConfirm.ToString()))
             {
                 DialogResult result2 = MessageBox.Show("Confirm Password?", "Important Query", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                UsersDAL.AddUser(user);
+                Close();
             }
             else
             {
-                MessageBox.Show("Password does not match");
+                MessageBox.Show("Password does not match", "BrainFart ",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+      
             }
         }
 

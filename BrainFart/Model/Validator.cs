@@ -37,7 +37,8 @@ namespace BrainFart.Model
                 TextBox textBox = (TextBox)control;
                 if (textBox.Text == "")
                 {
-                    MessageBox.Show(textBox.Tag.ToString() + " is a required field.", Title);
+                    MessageBox.Show(textBox.Tag.ToString() + " is a required field.", Title, MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
                     textBox.Focus();
                     return false;
                 }
