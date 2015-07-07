@@ -14,6 +14,7 @@ namespace BrainFart.View
 {
     public partial class frmAddModifyQuestion : Form
     {
+        private UserAccessController userAccess = UserAccessController.Instance;
         public Questions question;
         public Answers answer1;
         public Answers answer2;
@@ -27,6 +28,11 @@ namespace BrainFart.View
         public frmAddModifyQuestion()
         {
             InitializeComponent();
+            UserAccessController uac = UserAccessController.Instance;
+            if (uac.CurrentLoggedUser != null)
+            {
+                this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
+            }
         }
 
         public bool addQuestion;

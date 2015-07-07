@@ -45,6 +45,7 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.btnStats = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +115,7 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.Enabled = false;
             this.btnLogout.Location = new System.Drawing.Point(212, 89);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(53, 23);
@@ -200,12 +202,25 @@
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
+            // btnStats
+            // 
+            this.btnStats.Enabled = false;
+            this.btnStats.Location = new System.Drawing.Point(371, 22);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(78, 23);
+            this.btnStats.TabIndex = 46;
+            this.btnStats.Text = "Your Stats";
+            this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.Visible = false;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.btnStats);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.groupBox1);
@@ -241,6 +256,7 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnAddQuestion;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnStats;
     }
 }
 

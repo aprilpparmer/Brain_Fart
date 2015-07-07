@@ -40,7 +40,6 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.btnMain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -157,23 +156,12 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // btnMain
-            // 
-            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMain.Location = new System.Drawing.Point(12, 12);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(50, 25);
-            this.btnMain.TabIndex = 41;
-            this.btnMain.Text = "Main";
-            this.btnMain.UseVisualStyleBackColor = true;
-            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
-            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnCancel);
@@ -204,6 +192,5 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Button btnMain;
     }
 }

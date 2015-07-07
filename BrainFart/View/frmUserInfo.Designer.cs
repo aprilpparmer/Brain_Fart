@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserInfo));
             this.logo = new System.Windows.Forms.PictureBox();
-            this.btnQuit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnResetStats = new System.Windows.Forms.Button();
             this.txtTotalMissed = new System.Windows.Forms.TextBox();
             this.lblTotalMissed = new System.Windows.Forms.Label();
@@ -51,7 +51,6 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.groupInfo = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnMain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupStats.SuspendLayout();
             this.groupInfo.SuspendLayout();
@@ -68,14 +67,15 @@
             this.logo.TabIndex = 37;
             this.logo.TabStop = false;
             // 
-            // btnQuit
+            // btnCancel
             // 
-            this.btnQuit.Location = new System.Drawing.Point(315, 190);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(75, 25);
-            this.btnQuit.TabIndex = 32;
-            this.btnQuit.Text = "Quit";
-            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(315, 190);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 25);
+            this.btnCancel.TabIndex = 32;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnResetStats
             // 
@@ -89,6 +89,7 @@
             // 
             // txtTotalMissed
             // 
+            this.txtTotalMissed.Enabled = false;
             this.txtTotalMissed.Location = new System.Drawing.Point(262, 65);
             this.txtTotalMissed.Name = "txtTotalMissed";
             this.txtTotalMissed.Size = new System.Drawing.Size(26, 20);
@@ -105,6 +106,7 @@
             // 
             // txtTotalCorrect
             // 
+            this.txtTotalCorrect.Enabled = false;
             this.txtTotalCorrect.Location = new System.Drawing.Point(262, 35);
             this.txtTotalCorrect.Name = "txtTotalCorrect";
             this.txtTotalCorrect.Size = new System.Drawing.Size(26, 20);
@@ -121,6 +123,7 @@
             // 
             // txtAvgScore
             // 
+            this.txtAvgScore.Enabled = false;
             this.txtAvgScore.Location = new System.Drawing.Point(90, 65);
             this.txtAvgScore.Name = "txtAvgScore";
             this.txtAvgScore.Size = new System.Drawing.Size(26, 20);
@@ -137,6 +140,7 @@
             // 
             // cbCategory
             // 
+            this.cbCategory.Enabled = false;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(135, 10);
             this.cbCategory.Name = "cbCategory";
@@ -154,6 +158,7 @@
             // 
             // txtHighScore
             // 
+            this.txtHighScore.Enabled = false;
             this.txtHighScore.Location = new System.Drawing.Point(90, 39);
             this.txtHighScore.Name = "txtHighScore";
             this.txtHighScore.Size = new System.Drawing.Size(26, 20);
@@ -170,6 +175,7 @@
             // 
             // txtGamesPlayed
             // 
+            this.txtGamesPlayed.Enabled = false;
             this.txtGamesPlayed.Location = new System.Drawing.Point(90, 92);
             this.txtGamesPlayed.Name = "txtGamesPlayed";
             this.txtGamesPlayed.Size = new System.Drawing.Size(26, 20);
@@ -227,6 +233,9 @@
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.Enabled = false;
             this.txtUser.Location = new System.Drawing.Point(98, 26);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(110, 20);
@@ -244,7 +253,7 @@
             // groupInfo
             // 
             this.groupInfo.Controls.Add(this.btnEditInfo);
-            this.groupInfo.Controls.Add(this.btnQuit);
+            this.groupInfo.Controls.Add(this.btnCancel);
             this.groupInfo.Controls.Add(this.btnAddQuestion);
             this.groupInfo.Controls.Add(this.groupStats);
             this.groupInfo.Controls.Add(this.label2);
@@ -265,27 +274,17 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 2;
             // 
-            // btnMain
-            // 
-            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMain.Location = new System.Drawing.Point(12, 12);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(50, 25);
-            this.btnMain.TabIndex = 41;
-            this.btnMain.Text = "Main";
-            this.btnMain.UseVisualStyleBackColor = true;
-            // 
             // frmUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
-            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.groupInfo);
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "User Information";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.groupStats.ResumeLayout(false);
@@ -299,7 +298,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnResetStats;
         private System.Windows.Forms.TextBox txtTotalMissed;
         private System.Windows.Forms.Label lblTotalMissed;
@@ -320,6 +319,5 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.GroupBox groupInfo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnMain;
     }
 }

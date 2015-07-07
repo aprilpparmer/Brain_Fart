@@ -19,6 +19,7 @@ namespace BrainFart
         private frmRegister register;
         private frmNewGame newGame;
         private frmAddModifyQuestion addQuestion;
+        private frmUserInfo stats;
 
         public mainForm()
         {
@@ -56,6 +57,8 @@ namespace BrainFart
                     ToggleLoginObjectsSelection(false);
                     ToggleLogOutObjectsSelection(true);
                     btnAddQuestion.Enabled = true;
+                    btnStats.Enabled = true;
+                    btnStats.Visible = true;
                     
                 }
                 else
@@ -79,6 +82,9 @@ namespace BrainFart
             userAccess.LogOutUser();
             ToggleLoginObjectsSelection(true);
             ToggleLogOutObjectsSelection(false);
+            btnAddQuestion.Enabled = false;
+            btnStats.Enabled = false;
+            btnStats.Visible = false;
            
         }
         private void ToggleLoginObjectsSelection(bool value)
@@ -108,6 +114,12 @@ namespace BrainFart
             {
                 Application.Exit();
             }
+        }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+            stats = new frmUserInfo();
+            this.stats.ShowDialog();
         }
 
     }
