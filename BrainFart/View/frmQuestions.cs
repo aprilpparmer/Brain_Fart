@@ -85,7 +85,11 @@ namespace BrainFart
                 if (this.correct.Equals("Incorrect"))
                 {
                     this.strike++;
-                    MessageBox.Show("Strike " + this.strike);
+                    MessageBox.Show("Strike " + this.strike,
+                    "BrainFart ",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
 
                     if(this.strike == 3)
                     {
