@@ -44,6 +44,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.btnAddQuestion = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -189,12 +190,23 @@
             this.btnAddQuestion.UseVisualStyleBackColor = true;
             this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(387, 296);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(55, 23);
+            this.btnQuit.TabIndex = 45;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(454, 331);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRegister);
@@ -228,6 +240,7 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnAddQuestion;
+        private System.Windows.Forms.Button btnQuit;
     }
 }
 

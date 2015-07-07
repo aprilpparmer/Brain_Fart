@@ -27,7 +27,7 @@ namespace BrainFart
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             newGame = new frmNewGame();
             newGame.ShowDialog();
       
@@ -98,6 +98,16 @@ namespace BrainFart
             addQuestion = new frmAddModifyQuestion();
             addQuestion.addQuestion = true;
             this.addQuestion.ShowDialog();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            DialogResult dlgResult = MessageBox.Show("Are you sure you want to Quit?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlgResult == DialogResult.No) return;
+            else
+            {
+                Application.Exit();
+            }
         }
 
     }
