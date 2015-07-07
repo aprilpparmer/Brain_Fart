@@ -53,7 +53,7 @@ namespace BrainFart
                 if (userAccess.LoginUser(txtUserName.Text, txtPassword.Text))
                 {
                     AccessMessage = String.Concat("WELCOME to BrainFart! \n You are logged in as ", userAccess.CurrentLoggedUser.UserName);
-                    MessageBox.Show(AccessMessage, "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show(AccessMessage, "BrainFart", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     ToggleLoginObjectsSelection(false);
                     ToggleLogOutObjectsSelection(true);
                     btnAddQuestion.Enabled = true;
