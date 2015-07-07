@@ -110,6 +110,13 @@ namespace BrainFart.View
             }
         }
 
+        private void lblClearForm_Click(object sender, EventArgs e)
+        {
+            this.categoryComboBox.SelectedIndex = 0;
+            this.numberQuestionsComboBox.SelectedIndex = 0;
+            this.gameOverComboBox.SelectedIndex = 0;
+        }
+
 
     }
 }

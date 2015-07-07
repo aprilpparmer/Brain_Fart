@@ -103,6 +103,7 @@
             this.lblClearForm.TabIndex = 35;
             this.lblClearForm.Text = "Reset";
             this.lblClearForm.UseVisualStyleBackColor = true;
+            this.lblClearForm.Click += new System.EventHandler(this.lblClearForm_Click);
             // 
             // btnGameStart
             // 
