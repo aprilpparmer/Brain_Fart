@@ -48,6 +48,8 @@
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
             this.loggedInLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.difficultyComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
@@ -79,6 +81,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.difficultyComboBox);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblClearForm);
             this.groupBox1.Controls.Add(this.btnGameStart);
             this.groupBox1.Controls.Add(this.gameOverComboBox);
@@ -89,7 +93,7 @@
             this.groupBox1.Controls.Add(this.lblCategory);
             this.groupBox1.Location = new System.Drawing.Point(12, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 191);
+            this.groupBox1.Size = new System.Drawing.Size(418, 210);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Game Options";
@@ -97,7 +101,7 @@
             // lblClearForm
             // 
             this.lblClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClearForm.Location = new System.Drawing.Point(248, 161);
+            this.lblClearForm.Location = new System.Drawing.Point(248, 179);
             this.lblClearForm.Name = "lblClearForm";
             this.lblClearForm.Size = new System.Drawing.Size(76, 25);
             this.lblClearForm.TabIndex = 35;
@@ -108,7 +112,7 @@
             // btnGameStart
             // 
             this.btnGameStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGameStart.Location = new System.Drawing.Point(151, 161);
+            this.btnGameStart.Location = new System.Drawing.Point(151, 179);
             this.btnGameStart.Name = "btnGameStart";
             this.btnGameStart.Size = new System.Drawing.Size(76, 25);
             this.btnGameStart.TabIndex = 34;
@@ -123,7 +127,7 @@
             this.gameOverComboBox.Items.AddRange(new object[] {
             "All Questions Attempted",
             "3 Strikes You\'re Out!"});
-            this.gameOverComboBox.Location = new System.Drawing.Point(125, 121);
+            this.gameOverComboBox.Location = new System.Drawing.Point(125, 140);
             this.gameOverComboBox.Name = "gameOverComboBox";
             this.gameOverComboBox.Size = new System.Drawing.Size(167, 21);
             this.gameOverComboBox.TabIndex = 6;
@@ -132,7 +136,7 @@
             // lblGameOver
             // 
             this.lblGameOver.AutoSize = true;
-            this.lblGameOver.Location = new System.Drawing.Point(10, 124);
+            this.lblGameOver.Location = new System.Drawing.Point(10, 143);
             this.lblGameOver.Name = "lblGameOver";
             this.lblGameOver.Size = new System.Drawing.Size(64, 13);
             this.lblGameOver.TabIndex = 5;
@@ -149,7 +153,7 @@
             "8",
             "9",
             "10"});
-            this.numberQuestionsComboBox.Location = new System.Drawing.Point(125, 73);
+            this.numberQuestionsComboBox.Location = new System.Drawing.Point(125, 105);
             this.numberQuestionsComboBox.Name = "numberQuestionsComboBox";
             this.numberQuestionsComboBox.Size = new System.Drawing.Size(37, 21);
             this.numberQuestionsComboBox.TabIndex = 4;
@@ -157,7 +161,7 @@
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
-            this.lblNumber.Location = new System.Drawing.Point(10, 76);
+            this.lblNumber.Location = new System.Drawing.Point(10, 113);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(109, 13);
             this.lblNumber.TabIndex = 3;
@@ -202,7 +206,7 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(355, 300);
+            this.btnQuit.Location = new System.Drawing.Point(355, 319);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(75, 25);
             this.btnQuit.TabIndex = 38;
@@ -232,12 +236,30 @@
             this.loggedInLabel.TabIndex = 40;
             this.loggedInLabel.Text = "Guest";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Difficulty Selection:";
+            // 
+            // difficultyComboBox
+            // 
+            this.difficultyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.difficultyComboBox.FormattingEnabled = true;
+            this.difficultyComboBox.Location = new System.Drawing.Point(125, 69);
+            this.difficultyComboBox.Name = "difficultyComboBox";
+            this.difficultyComboBox.Size = new System.Drawing.Size(167, 21);
+            this.difficultyComboBox.TabIndex = 37;
+            // 
             // frmNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(454, 331);
+            this.ClientSize = new System.Drawing.Size(454, 356);
             this.ControlBox = false;
             this.Controls.Add(this.loggedInLabel);
             this.Controls.Add(this.btnMain);
@@ -279,5 +301,7 @@
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.Label loggedInLabel;
+        private System.Windows.Forms.ComboBox difficultyComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

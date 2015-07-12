@@ -27,8 +27,9 @@ namespace BrainFart
         private mainForm main;
         private int strike;
         private string correct;
+        private int difficultyID;
         
-        public frmQuestions(int categoryID, int numberOfQuestions, string gameOverMode)
+        public frmQuestions(int categoryID, int numberOfQuestions, string gameOverMode, int difficultyID)
         {
 
             try
@@ -39,7 +40,7 @@ namespace BrainFart
                 {
                     this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
                 }
-                this.getListOfQuestions(categoryID, numberOfQuestions);
+                this.getListOfQuestions(categoryID, numberOfQuestions, difficultyID);
                 this.gameOverMode = gameOverMode;
                 this.loadQuestion();
                 this.scoreLabel.Text = Convert.ToString(0);
@@ -53,18 +54,19 @@ namespace BrainFart
         }
 
 
-        private List<Questions> getListOfQuestions(int categoryID, int numberOfQuestions)
+        private List<Questions> getListOfQuestions(int categoryID, int numberOfQuestions, int difficultyID)
         {
             List<Questions> copyList = new List<Questions>();
             this.questionList = new List<Questions>();
-            if (categoryID == -1)
+            if (categoryID == -1 && difficultyID == -1)
             {
                 copyList = BrainFartController.GetAllQuestions();
             }
             else
             {
-                copyList = BrainFartController.GetQuestionsFromCategory(categoryID);
+                copyList = BrainFartController.GetQuestionsFromCategory(categoryID, difficultyID);
             }
+
 
             Random rnd = new Random();
             for (int i = 0; i < numberOfQuestions; i++) 

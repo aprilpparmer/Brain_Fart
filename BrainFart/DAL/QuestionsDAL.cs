@@ -106,10 +106,10 @@ namespace BrainFart.DAL
         /// Gets a List of all questions in a particular category
         /// </summary>
         /// <returns>List<Questions> </returns>
-        public static List<Questions> GetQuestionsFromCategory(int categoryID)
+        public static List<Questions> GetQuestionsFromCategory(int categoryID, int difficultyID)
         {
             List<Questions> questionList = new List<Questions>();
-            string selectStatement = "Select * FROM questions WHERE categoryID = @categoryID";
+            string selectStatement = "Select * FROM questions WHERE categoryID = @categoryID AND difficultyID = @difficultyID";
 
             try
             {
@@ -120,6 +120,7 @@ namespace BrainFart.DAL
                     using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
                     {
                         selectCommand.Parameters.AddWithValue("categoryID", categoryID);
+                        selectCommand.Parameters.AddWithValue("difficultyID", difficultyID);
                         using (SqlDataReader reader = selectCommand.ExecuteReader())
                         {
                             while (reader.Read())

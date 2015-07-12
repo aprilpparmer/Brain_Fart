@@ -21,13 +21,16 @@ namespace BrainFart.View
         private int numberOfQuestions;
         private string gameOverMode;
         private mainForm main;
+        private int difficultyID;
 
 
         public frmNewGame()
         {
             InitializeComponent();
             this.loadCategoryComboBox();
+            this.loadDifficultyComboBox();
             this.categoryComboBox.SelectedIndex = 0;
+            this.difficultyComboBox.SelectedIndex = 0;
             this.numberQuestionsComboBox.SelectedIndex = 0;
             this.gameOverComboBox.SelectedIndex = 0;
             UserAccessController uac = UserAccessController.Instance;
@@ -51,12 +54,41 @@ namespace BrainFart.View
                     Categories c = (Categories)this.categoryComboBox.SelectedItem;
                     this.categoryID = c.CategoryID;
                 }
+
+                if (this.difficultyComboBox.SelectedIndex == 0)
+                {
+                    this.difficultyID = -1;
+                }
+                else
+                {
+                    Difficulties d = (Difficulties)this.difficultyComboBox.SelectedItem;
+                    this.difficultyID = d.DifficultyID;
+                }
                 
                 this.numberOfQuestions = Int32.Parse(this.numberQuestionsComboBox.SelectedItem.ToString());
-                questions = new frmQuestions(this.categoryID, this.numberOfQuestions, this.gameOverMode);             
+                questions = new frmQuestions(this.categoryID, this.numberOfQuestions, this.gameOverMode, this.difficultyID);             
                 this.questions.ShowDialog();
                 
                           
+        }
+
+        private void loadDifficultyComboBox()
+        {
+            try
+            {
+                this.difficultyComboBox.Items.Add("All Difficulty Levels");
+                List<Difficulties> difficultyList = BrainFartController.getAllDifficulties();
+                foreach (Difficulties d in difficultyList)
+                {
+                    this.difficultyComboBox.Items.Add(d);
+
+                }
+                this.difficultyComboBox.DisplayMember = "difficultyDescrip";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().ToString());
+            }
         }
 
         private void loadCategoryComboBox()
