@@ -16,6 +16,8 @@ namespace BrainFart.View
         public String totalPoint;
         private frmNewGame newGame;
         private mainForm main;
+        public String incorrect;
+        public String correct;
 
         public frmEndGame()
         {
@@ -26,6 +28,8 @@ namespace BrainFart.View
         private void frmEndGame_Load(object sender, EventArgs e)
         {
             lblTotalPoints.Text = this.totalPoint;
+            lblIncorrect.Text = this.incorrect;
+            lblCorrect.Text = this.correct;
             UserAccessController uac = UserAccessController.Instance;
             if (uac.CurrentLoggedUser != null)
             {

@@ -40,9 +40,15 @@
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
             this.loggedInLabel = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblIncorrect = new System.Windows.Forms.Label();
+            this.lblCorrect1 = new System.Windows.Forms.Label();
+            this.lblIncorrect1 = new System.Windows.Forms.Label();
+            this.lblCorrect = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEinstein)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // logo
@@ -70,6 +76,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.pictureEinstein);
             this.groupBox1.Controls.Add(this.lblPoints);
             this.groupBox1.Controls.Add(this.lblTotalPoints);
@@ -93,7 +100,7 @@
             // 
             this.lblPoints.AutoSize = true;
             this.lblPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoints.Location = new System.Drawing.Point(156, 78);
+            this.lblPoints.Location = new System.Drawing.Point(168, 69);
             this.lblPoints.Name = "lblPoints";
             this.lblPoints.Size = new System.Drawing.Size(53, 20);
             this.lblPoints.TabIndex = 21;
@@ -104,7 +111,7 @@
             this.lblTotalPoints.AutoSize = true;
             this.lblTotalPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPoints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTotalPoints.Location = new System.Drawing.Point(67, 59);
+            this.lblTotalPoints.Location = new System.Drawing.Point(93, 45);
             this.lblTotalPoints.Name = "lblTotalPoints";
             this.lblTotalPoints.Size = new System.Drawing.Size(83, 44);
             this.lblTotalPoints.TabIndex = 20;
@@ -163,6 +170,57 @@
             this.loggedInLabel.TabIndex = 46;
             this.loggedInLabel.Text = "Guest";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblIncorrect);
+            this.groupBox2.Controls.Add(this.lblCorrect1);
+            this.groupBox2.Controls.Add(this.lblIncorrect1);
+            this.groupBox2.Controls.Add(this.lblCorrect);
+            this.groupBox2.Location = new System.Drawing.Point(10, 96);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(146, 59);
+            this.groupBox2.TabIndex = 24;
+            this.groupBox2.TabStop = false;
+            // 
+            // lblIncorrect
+            // 
+            this.lblIncorrect.AutoSize = true;
+            this.lblIncorrect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblIncorrect.Location = new System.Drawing.Point(104, 39);
+            this.lblIncorrect.Name = "lblIncorrect";
+            this.lblIncorrect.Size = new System.Drawing.Size(35, 13);
+            this.lblIncorrect.TabIndex = 26;
+            this.lblIncorrect.Text = "label1";
+            // 
+            // lblCorrect1
+            // 
+            this.lblCorrect1.AutoSize = true;
+            this.lblCorrect1.Location = new System.Drawing.Point(6, 16);
+            this.lblCorrect1.Name = "lblCorrect1";
+            this.lblCorrect1.Size = new System.Drawing.Size(93, 13);
+            this.lblCorrect1.TabIndex = 24;
+            this.lblCorrect1.Text = "Questions correct:";
+            // 
+            // lblIncorrect1
+            // 
+            this.lblIncorrect1.AutoSize = true;
+            this.lblIncorrect1.Location = new System.Drawing.Point(6, 39);
+            this.lblIncorrect1.Name = "lblIncorrect1";
+            this.lblIncorrect1.Size = new System.Drawing.Size(92, 13);
+            this.lblIncorrect1.TabIndex = 23;
+            this.lblIncorrect1.Text = "Questions missed:";
+            // 
+            // lblCorrect
+            // 
+            this.lblCorrect.AutoSize = true;
+            this.lblCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorrect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblCorrect.Location = new System.Drawing.Point(104, 16);
+            this.lblCorrect.Name = "lblCorrect";
+            this.lblCorrect.Size = new System.Drawing.Size(41, 13);
+            this.lblCorrect.TabIndex = 25;
+            this.lblCorrect.Text = "label1";
+            // 
             // frmEndGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +244,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEinstein)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +264,10 @@
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.Label loggedInLabel;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblIncorrect;
+        private System.Windows.Forms.Label lblCorrect1;
+        private System.Windows.Forms.Label lblIncorrect1;
+        private System.Windows.Forms.Label lblCorrect;
     }
 }

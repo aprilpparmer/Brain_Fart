@@ -28,6 +28,9 @@ namespace BrainFart
         private int strike;
         private string correct;
         private int difficultyID;
+        private int incorrectAnswer;
+        private int correctAnswer;
+
         
         public frmQuestions(int categoryID, int numberOfQuestions, string gameOverMode, int difficultyID)
         {
@@ -45,6 +48,8 @@ namespace BrainFart
                 this.loadQuestion();
                 this.scoreLabel.Text = Convert.ToString(0);
                 this.strike = 0;
+                this.incorrectAnswer = 0;
+                this.correctAnswer = 0;
                 this.BringToFront();
             }
             catch (Exception ex)
@@ -98,6 +103,8 @@ namespace BrainFart
                         this.Hide();
                         endGame = new frmEndGame();
                         endGame.totalPoint = this.scoreLabel.Text;
+                        endGame.incorrect = Convert.ToString(this.incorrectAnswer);
+                        endGame.correct = Convert.ToString(this.correctAnswer);
                         this.endGame.ShowDialog();
                     }
 
@@ -107,6 +114,18 @@ namespace BrainFart
         
         }
 
+        private void saveStats()
+        {
+            if (this.correct.Equals("Incorrect"))
+            {
+                this.incorrectAnswer++;
+            }
+            else
+            {
+                this.correctAnswer++;
+            }
+        }
+
         public void loadQuestion()
         {
             if (this.questionList.Count == 0)
@@ -114,6 +133,8 @@ namespace BrainFart
                 this.Hide();
                 endGame = new frmEndGame();
                 endGame.totalPoint = this.scoreLabel.Text;
+                endGame.incorrect = Convert.ToString(this.incorrectAnswer);
+                endGame.correct = Convert.ToString(this.correctAnswer);
                 this.endGame.ShowDialog();
                
             }
@@ -161,7 +182,9 @@ namespace BrainFart
             correctLabel.Visible = true;
             submitButton.Enabled = false;
             nextButton.Visible = true;
+            this.saveStats();
             this.gameMode();
+            
         }
 
         private void checkAnswer()
