@@ -45,9 +45,14 @@ namespace BrainFart.Controller
             return AnswersDAL.AddAnswer(answer);
         }
 
-        public static List<Questions> GetQuestionsFromCategory(int categoryID, int difficultyID)
+        public static List<Questions> GetQuestionsFromCategoryWithDifficulty(int categoryID, int difficultyID)
         {
-            return QuestionsDAL.GetQuestionsFromCategory(categoryID, difficultyID);
+            return QuestionsDAL.GetQuestionsFromCategoryWithDifficulty(categoryID, difficultyID);
+        }
+
+        public static List<Questions> GetQuestionsFromCategory(int categoryID)
+        {
+            return QuestionsDAL.GetQuestionsFromCategory(categoryID);
         }
     }
 }

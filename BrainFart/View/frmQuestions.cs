@@ -67,9 +67,13 @@ namespace BrainFart
             {
                 copyList = BrainFartController.GetAllQuestions();
             }
+            else if (categoryID != -1 && difficultyID == -1)
+            {
+                copyList = BrainFartController.GetQuestionsFromCategory(categoryID);
+            }
             else
             {
-                copyList = BrainFartController.GetQuestionsFromCategory(categoryID, difficultyID);
+                copyList = BrainFartController.GetQuestionsFromCategoryWithDifficulty(categoryID,difficultyID);
             }
 
 

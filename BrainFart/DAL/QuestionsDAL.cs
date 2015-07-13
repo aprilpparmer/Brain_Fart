@@ -106,7 +106,7 @@ namespace BrainFart.DAL
         /// Gets a List of all questions in a particular category
         /// </summary>
         /// <returns>List<Questions> </returns>
-        public static List<Questions> GetQuestionsFromCategory(int categoryID, int difficultyID)
+        public static List<Questions> GetQuestionsFromCategoryWithDifficulty(int categoryID, int difficultyID)
         {
             List<Questions> questionList = new List<Questions>();
             string selectStatement = "Select * FROM questions WHERE categoryID = @categoryID AND difficultyID = @difficultyID";
@@ -121,6 +121,51 @@ namespace BrainFart.DAL
                     {
                         selectCommand.Parameters.AddWithValue("categoryID", categoryID);
                         selectCommand.Parameters.AddWithValue("difficultyID", difficultyID);
+                        using (SqlDataReader reader = selectCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Questions question = new Questions();
+
+                                question.QuestionID = (Int32)reader["questionID"];
+                                question.QuestionDescrip = reader["questionDescrip"].ToString().Trim();
+                                question.CategoryID = (Int32)reader["categoryID"];
+                                question.DifficultyID = (Int32)reader["difficultyID"];
+
+                                questionList.Add(question);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return questionList;
+        }
+        /// <summary>
+        /// Gets a List of all questions in a particular category
+        /// </summary>
+        /// <returns>List<Questions> </returns>
+        public static List<Questions> GetQuestionsFromCategory(int categoryID)
+        {
+            List<Questions> questionList = new List<Questions>();
+            string selectStatement = "Select * FROM questions WHERE categoryID = @categoryID";
+
+            try
+            {
+                using (SqlConnection connection = BrainFartConnection.GetConnection())
+                {
+                    connection.Open();
+
+                    using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                    {
+                        selectCommand.Parameters.AddWithValue("categoryID", categoryID);
                         using (SqlDataReader reader = selectCommand.ExecuteReader())
                         {
                             while (reader.Read())
