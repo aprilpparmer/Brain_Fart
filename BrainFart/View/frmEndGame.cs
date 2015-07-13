@@ -16,8 +16,8 @@ namespace BrainFart.View
         public String totalPoint;
         private frmNewGame newGame;
         private mainForm main;
-        public String incorrect;
-        public String correct;
+        public int incorrect;
+        public int correct;
 
         public frmEndGame()
         {
@@ -28,15 +28,24 @@ namespace BrainFart.View
         private void frmEndGame_Load(object sender, EventArgs e)
         {
             lblTotalPoints.Text = this.totalPoint;
-            lblIncorrect.Text = this.incorrect;
-            lblCorrect.Text = this.correct;
+            lblIncorrect.Text = Convert.ToString(this.incorrect);
+            lblCorrect.Text = Convert.ToString(this.correct);
             UserAccessController uac = UserAccessController.Instance;
             if (uac.CurrentLoggedUser != null)
             {
                 this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
+                //this.saveStats();
             }
         }
 
+        private void saveStats(int userID, int score, int questionsMissed, int questionsCorrect)
+        {
+            this.incorrect = questionsMissed;
+            this.correct = questionsCorrect;
+            int talley =  Convert.ToInt32(this.lblTotalPoints.Text);
+            talley = score;       
+            
+        }
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             this.Hide();

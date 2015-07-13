@@ -111,8 +111,8 @@ namespace BrainFart
                         this.Hide();
                         endGame = new frmEndGame();
                         endGame.totalPoint = this.scoreLabel.Text;
-                        endGame.incorrect = Convert.ToString(this.incorrectAnswer);
-                        endGame.correct = Convert.ToString(this.correctAnswer);
+                        endGame.incorrect = this.incorrectAnswer;
+                        endGame.correct = this.correctAnswer;
                         this.endGame.ShowDialog();
                     }
 
@@ -141,8 +141,8 @@ namespace BrainFart
                 this.Hide();
                 endGame = new frmEndGame();
                 endGame.totalPoint = this.scoreLabel.Text;
-                endGame.incorrect = Convert.ToString(this.incorrectAnswer);
-                endGame.correct = Convert.ToString(this.correctAnswer);
+                endGame.incorrect = this.incorrectAnswer;
+                endGame.correct = this.correctAnswer;
                 this.endGame.ShowDialog();
                
             }
