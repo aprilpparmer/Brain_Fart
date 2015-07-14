@@ -108,7 +108,7 @@
             // 
             point_valueLabel.AutoSize = true;
             point_valueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            point_valueLabel.Location = new System.Drawing.Point(6, 180);
+            point_valueLabel.Location = new System.Drawing.Point(6, 327);
             point_valueLabel.Name = "point_valueLabel";
             point_valueLabel.Size = new System.Drawing.Size(64, 13);
             point_valueLabel.TabIndex = 31;
@@ -117,7 +117,7 @@
             // answerLabel
             // 
             this.answerLabel.AutoSize = true;
-            this.answerLabel.Location = new System.Drawing.Point(25, 86);
+            this.answerLabel.Location = new System.Drawing.Point(25, 96);
             this.answerLabel.Name = "answerLabel";
             this.answerLabel.Size = new System.Drawing.Size(42, 13);
             this.answerLabel.TabIndex = 1;
@@ -125,10 +125,9 @@
             // 
             // answerChoice1
             // 
-            this.answerChoice1.AutoSize = true;
             this.answerChoice1.Location = new System.Drawing.Point(76, 86);
             this.answerChoice1.Name = "answerChoice1";
-            this.answerChoice1.Size = new System.Drawing.Size(68, 17);
+            this.answerChoice1.Size = new System.Drawing.Size(326, 50);
             this.answerChoice1.TabIndex = 2;
             this.answerChoice1.TabStop = true;
             this.answerChoice1.Text = "answer 1";
@@ -136,10 +135,9 @@
             // 
             // answerChoice2
             // 
-            this.answerChoice2.AutoSize = true;
-            this.answerChoice2.Location = new System.Drawing.Point(76, 109);
+            this.answerChoice2.Location = new System.Drawing.Point(76, 142);
             this.answerChoice2.Name = "answerChoice2";
-            this.answerChoice2.Size = new System.Drawing.Size(68, 17);
+            this.answerChoice2.Size = new System.Drawing.Size(326, 50);
             this.answerChoice2.TabIndex = 3;
             this.answerChoice2.TabStop = true;
             this.answerChoice2.Text = "answer 2";
@@ -147,10 +145,9 @@
             // 
             // answerChoice3
             // 
-            this.answerChoice3.AutoSize = true;
-            this.answerChoice3.Location = new System.Drawing.Point(76, 132);
+            this.answerChoice3.Location = new System.Drawing.Point(76, 198);
             this.answerChoice3.Name = "answerChoice3";
-            this.answerChoice3.Size = new System.Drawing.Size(68, 17);
+            this.answerChoice3.Size = new System.Drawing.Size(326, 50);
             this.answerChoice3.TabIndex = 4;
             this.answerChoice3.TabStop = true;
             this.answerChoice3.Text = "answer 3";
@@ -158,10 +155,9 @@
             // 
             // answerChoice4
             // 
-            this.answerChoice4.AutoSize = true;
-            this.answerChoice4.Location = new System.Drawing.Point(76, 155);
+            this.answerChoice4.Location = new System.Drawing.Point(76, 254);
             this.answerChoice4.Name = "answerChoice4";
-            this.answerChoice4.Size = new System.Drawing.Size(68, 17);
+            this.answerChoice4.Size = new System.Drawing.Size(326, 50);
             this.answerChoice4.TabIndex = 5;
             this.answerChoice4.TabStop = true;
             this.answerChoice4.Text = "answer 4";
@@ -169,7 +165,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(257, 175);
+            this.submitButton.Location = new System.Drawing.Point(257, 322);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 7;
@@ -192,7 +188,7 @@
             this.correctLabel.AutoSize = true;
             this.correctLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correctLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.correctLabel.Location = new System.Drawing.Point(106, 177);
+            this.correctLabel.Location = new System.Drawing.Point(106, 324);
             this.correctLabel.Name = "correctLabel";
             this.correctLabel.Size = new System.Drawing.Size(145, 20);
             this.correctLabel.TabIndex = 10;
@@ -201,7 +197,7 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(338, 175);
+            this.nextButton.Location = new System.Drawing.Point(338, 322);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.TabIndex = 11;
@@ -212,11 +208,11 @@
             // 
             // lblCorrectAnswer
             // 
-            this.lblCorrectAnswer.AutoSize = true;
-            this.lblCorrectAnswer.Location = new System.Drawing.Point(49, 298);
+            this.lblCorrectAnswer.Location = new System.Drawing.Point(17, 446);
             this.lblCorrectAnswer.Name = "lblCorrectAnswer";
-            this.lblCorrectAnswer.Size = new System.Drawing.Size(0, 13);
+            this.lblCorrectAnswer.Size = new System.Drawing.Size(332, 50);
             this.lblCorrectAnswer.TabIndex = 13;
+            this.lblCorrectAnswer.Text = "Correct Answer:";
             // 
             // logo
             // 
@@ -249,9 +245,9 @@
             this.groupBox1.Controls.Add(this.answerChoice3);
             this.groupBox1.Controls.Add(this.submitButton);
             this.groupBox1.Controls.Add(this.answerChoice4);
-            this.groupBox1.Location = new System.Drawing.Point(24, 86);
+            this.groupBox1.Location = new System.Drawing.Point(17, 86);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 200);
+            this.groupBox1.Size = new System.Drawing.Size(419, 357);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
@@ -276,7 +272,7 @@
             // 
             this.pointValueLabel.AutoSize = true;
             this.pointValueLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.difficultiesBindingSource, "point_value", true));
-            this.pointValueLabel.Location = new System.Drawing.Point(66, 180);
+            this.pointValueLabel.Location = new System.Drawing.Point(66, 327);
             this.pointValueLabel.Name = "pointValueLabel";
             this.pointValueLabel.Size = new System.Drawing.Size(39, 13);
             this.pointValueLabel.TabIndex = 32;
@@ -338,7 +334,7 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(367, 292);
+            this.btnQuit.Location = new System.Drawing.Point(368, 468);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(75, 25);
             this.btnQuit.TabIndex = 35;
@@ -394,15 +390,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(454, 333);
+            this.ClientSize = new System.Drawing.Size(454, 505);
             this.ControlBox = false;
+            this.Controls.Add(this.lblCorrectAnswer);
             this.Controls.Add(this.loggedInLabel);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblUserTabUser);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.lblCorrectAnswer);
+            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQuestions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
