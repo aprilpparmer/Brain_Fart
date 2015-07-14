@@ -59,5 +59,10 @@ namespace BrainFart.Controller
          {
               return QuestionsDAL.GetQuestionsFromDifficulty(difficultyID);
          }
+
+        public static int AddUserStats(Games game)
+        {
+            return GamesDAL.AddUserStats(game);
+        }
     }
 }

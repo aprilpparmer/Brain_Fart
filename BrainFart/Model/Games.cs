@@ -14,7 +14,8 @@ namespace BrainFart.Model
     {
        private int gamesID;
        private int userID;
-       private int difficultyID;
+       private int questionsMissed;
+       private int questionsCorrect;
        private int score;
 
         /// <summary>
@@ -28,7 +29,9 @@ namespace BrainFart.Model
 
        public int UserID { get; set; }
 
-       public int DifficultyID { get; set; }
+       public int QuestionsMissed { get; set; }
+
+       public int QuestionsCorrect { get; set; }
 
        public int Score { get; set; }
 
