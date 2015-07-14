@@ -59,6 +59,7 @@
     <Compile Include="DAL\AnswersDAL.cs" />
     <Compile Include="DAL\CategoriesDAL.cs" />
     <Compile Include="DAL\DifficultiesDAL.cs" />
+    <Compile Include="DAL\GamesDAL.cs" />
     <Compile Include="DAL\QuestionsDAL.cs" />
     <Compile Include="DAL\UserAccessDAL.cs" />
     <Compile Include="DAL\UsersDAL.cs" />

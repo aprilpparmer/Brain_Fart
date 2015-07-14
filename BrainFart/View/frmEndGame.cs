@@ -8,16 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BrainFart.Model;
 
 namespace BrainFart.View
 {
     public partial class frmEndGame : Form
     {
+        private UserAccessController userAccess = UserAccessController.Instance;
         public String totalPoint;
         private frmNewGame newGame;
         private mainForm main;
         public int incorrect;
         public int correct;
+        public Games game;
 
         public frmEndGame()
         {
@@ -34,18 +37,31 @@ namespace BrainFart.View
             if (uac.CurrentLoggedUser != null)
             {
                 this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
-                //this.saveStats();
+                //game = new Games();
+                //this.saveStats(game);
+               // try
+                //{
+                   // this.game.GamesID = BrainFartController.AddUserStats(game);
+               // }
+                //catch (InvalidOperationException ioe)
+                //{
+                   // throw ioe;
+               // }
             }
+
         }
 
-        private void saveStats(int userID, int score, int questionsMissed, int questionsCorrect)
+        private void saveStats(Games game)
         {
-            this.incorrect = questionsMissed;
-            this.correct = questionsCorrect;
-            int talley =  Convert.ToInt32(this.lblTotalPoints.Text);
-            talley = score;       
-            
+            int talley = Convert.ToInt32(this.lblTotalPoints.Text);
+            game.GamesID = this.game.GamesID;
+            game.UserID = userAccess.CurrentLoggedUser.UserID;
+            game.Score = talley;
+            game.QuestionsMissed = this.incorrect;
+            game.QuestionsCorrect = this.correct;
         }
+
+
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             this.Hide();
