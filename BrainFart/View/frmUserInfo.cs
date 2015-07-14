@@ -43,13 +43,13 @@ namespace BrainFart.View
             HighScore = BrainFartController.userHighScore(userAccess.CurrentLoggedUser.UserID);
             this.txtHighScore.Text = HighScore.ToString();
 
-           // int missed = 0;
-           // missed = BrainFartController.userQuestionsMissed(userAccess.CurrentLoggedUser.UserID);
-           // this.txtTotalMissed.Text = missed.ToString();
+            int missed = 0;
+            missed = BrainFartController.userQuestionsMissed(userAccess.CurrentLoggedUser.UserID);
+            this.txtTotalMissed.Text = missed.ToString();
 
-           // int correct = 0;
-           // correct = BrainFartController.userQuestionsCorrect(userAccess.CurrentLoggedUser.UserID);
-           // this.txtTotalCorrect.Text = correct.ToString();
+            int correct = 0;
+            correct = BrainFartController.userQuestionsCorrect(userAccess.CurrentLoggedUser.UserID);
+            this.txtTotalCorrect.Text = correct.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

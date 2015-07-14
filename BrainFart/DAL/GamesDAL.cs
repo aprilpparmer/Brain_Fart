@@ -148,7 +148,7 @@ namespace BrainFart.DAL
 
         public static int userQuestionsMissed(int userID)
         {
-            string selectStatement = "Select SUM(questionsMissed) FROM games WHERE userID = @userID";
+            string selectStatement = "Select SUM(CONVERT(int,questionsMissed)) FROM games WHERE userID = @userID";
 
             try
             {
@@ -177,7 +177,7 @@ namespace BrainFart.DAL
 
         public static int userQuestionsCorrect(int userID)
         {
-            string selectStatement = "Select SUM(questionsCorrect) FROM games WHERE userID = @userID";
+            string selectStatement = "Select SUM(CONVERT(int,questionsCorrect)) FROM games WHERE userID = @userID";
 
             try
             {
