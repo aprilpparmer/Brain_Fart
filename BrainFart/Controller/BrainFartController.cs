@@ -69,5 +69,25 @@ namespace BrainFart.Controller
         {
             return GamesDAL.userGamesPlayed(userID);
         }
+
+        public static int userGamesAvg(int userID)
+        {
+            return GamesDAL.userGamesAvg(userID);
+        }
+
+        public static int userHighScore(int userID)
+        {
+            return GamesDAL.userHighScore(userID);
+        }
+
+        public static int userQuestionsMissed(int userID)
+        {
+            return GamesDAL.userQuestionsMissed(userID);
+        }
+
+        public static int userQuestionsCorrect(int userID)
+        {
+            return GamesDAL.userQuestionsCorrect(userID);
+        }
     }
 }

@@ -87,9 +87,11 @@
             // 
             // txtTotalMissed
             // 
-            this.txtTotalMissed.Enabled = false;
+            this.txtTotalMissed.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotalMissed.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtTotalMissed.Location = new System.Drawing.Point(257, 68);
             this.txtTotalMissed.Name = "txtTotalMissed";
+            this.txtTotalMissed.ReadOnly = true;
             this.txtTotalMissed.Size = new System.Drawing.Size(26, 20);
             this.txtTotalMissed.TabIndex = 13;
             // 
@@ -104,9 +106,11 @@
             // 
             // txtTotalCorrect
             // 
-            this.txtTotalCorrect.Enabled = false;
+            this.txtTotalCorrect.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotalCorrect.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtTotalCorrect.Location = new System.Drawing.Point(257, 32);
             this.txtTotalCorrect.Name = "txtTotalCorrect";
+            this.txtTotalCorrect.ReadOnly = true;
             this.txtTotalCorrect.Size = new System.Drawing.Size(26, 20);
             this.txtTotalCorrect.TabIndex = 11;
             // 
@@ -121,10 +125,12 @@
             // 
             // txtAvgScore
             // 
-            this.txtAvgScore.Enabled = false;
+            this.txtAvgScore.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAvgScore.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtAvgScore.Location = new System.Drawing.Point(90, 64);
             this.txtAvgScore.Name = "txtAvgScore";
-            this.txtAvgScore.Size = new System.Drawing.Size(26, 20);
+            this.txtAvgScore.ReadOnly = true;
+            this.txtAvgScore.Size = new System.Drawing.Size(40, 20);
             this.txtAvgScore.TabIndex = 10;
             // 
             // lblAvgScore
@@ -138,10 +144,13 @@
             // 
             // txtHighScore
             // 
-            this.txtHighScore.Enabled = false;
+            this.txtHighScore.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtHighScore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtHighScore.ForeColor = System.Drawing.SystemColors.MenuText;
             this.txtHighScore.Location = new System.Drawing.Point(90, 32);
             this.txtHighScore.Name = "txtHighScore";
-            this.txtHighScore.Size = new System.Drawing.Size(26, 20);
+            this.txtHighScore.ReadOnly = true;
+            this.txtHighScore.Size = new System.Drawing.Size(40, 20);
             this.txtHighScore.TabIndex = 6;
             // 
             // lblHighScore
@@ -155,10 +164,12 @@
             // 
             // txtGamesPlayed
             // 
-            this.txtGamesPlayed.Enabled = false;
+            this.txtGamesPlayed.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGamesPlayed.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtGamesPlayed.Location = new System.Drawing.Point(90, 100);
             this.txtGamesPlayed.Name = "txtGamesPlayed";
-            this.txtGamesPlayed.Size = new System.Drawing.Size(26, 20);
+            this.txtGamesPlayed.ReadOnly = true;
+            this.txtGamesPlayed.Size = new System.Drawing.Size(53, 20);
             this.txtGamesPlayed.TabIndex = 3;
             // 
             // lblGamesPlayed
@@ -173,7 +184,7 @@
             // btnEditInfo
             // 
             this.btnEditInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditInfo.Location = new System.Drawing.Point(218, 23);
+            this.btnEditInfo.Location = new System.Drawing.Point(294, 23);
             this.btnEditInfo.Name = "btnEditInfo";
             this.btnEditInfo.Size = new System.Drawing.Size(59, 25);
             this.btnEditInfo.TabIndex = 35;
@@ -212,11 +223,11 @@
             // txtUser
             // 
             this.txtUser.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUser.Enabled = false;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtUser.Location = new System.Drawing.Point(98, 26);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(110, 20);
+            this.txtUser.ReadOnly = true;
+            this.txtUser.Size = new System.Drawing.Size(162, 20);
             this.txtUser.TabIndex = 1;
             // 
             // lblUser

@@ -34,6 +34,22 @@ namespace BrainFart.View
             int gamesPlayed = 0;
             gamesPlayed = BrainFartController.userGamesPlayed(userAccess.CurrentLoggedUser.UserID);
             this.txtGamesPlayed.Text = gamesPlayed.ToString();
+
+            int avgScore = 0;
+            avgScore = BrainFartController.userGamesAvg(userAccess.CurrentLoggedUser.UserID);
+            this.txtAvgScore.Text = avgScore.ToString();
+
+            int HighScore = 0;
+            HighScore = BrainFartController.userHighScore(userAccess.CurrentLoggedUser.UserID);
+            this.txtHighScore.Text = HighScore.ToString();
+
+           // int missed = 0;
+           // missed = BrainFartController.userQuestionsMissed(userAccess.CurrentLoggedUser.UserID);
+           // this.txtTotalMissed.Text = missed.ToString();
+
+           // int correct = 0;
+           // correct = BrainFartController.userQuestionsCorrect(userAccess.CurrentLoggedUser.UserID);
+           // this.txtTotalCorrect.Text = correct.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
