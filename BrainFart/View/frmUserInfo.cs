@@ -16,7 +16,8 @@ namespace BrainFart.View
     public partial class frmUserInfo : Form
     {
         private UserAccessController userAccess = UserAccessController.Instance;
- 
+        private frmAddModifyQuestion addQuestion;
+
         public frmUserInfo()
         {
             InitializeComponent();
@@ -55,6 +56,13 @@ namespace BrainFart.View
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAddQuestion_Click(object sender, EventArgs e)
+        {
+            addQuestion = new frmAddModifyQuestion();
+            addQuestion.addQuestion = true;
+            this.addQuestion.ShowDialog();
         }
     }
 }

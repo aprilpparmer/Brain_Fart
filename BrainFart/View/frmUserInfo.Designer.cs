@@ -71,7 +71,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 25);
             this.btnCancel.TabIndex = 32;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Return";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -197,8 +197,9 @@
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(113, 23);
             this.btnAddQuestion.TabIndex = 7;
-            this.btnAddQuestion.Text = "Add/Edit Question";
+            this.btnAddQuestion.Text = "Add Question";
             this.btnAddQuestion.UseVisualStyleBackColor = true;
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // groupStats
             // 
