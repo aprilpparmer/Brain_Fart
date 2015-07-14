@@ -63,16 +63,16 @@
             this.groupBox1.Controls.Add(this.lblPassword);
             this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.lblUserName);
-            this.groupBox1.Location = new System.Drawing.Point(52, 115);
+            this.groupBox1.Location = new System.Drawing.Point(52, 149);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(332, 135);
+            this.groupBox1.Size = new System.Drawing.Size(332, 156);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registration";
             // 
             // txtConfirm
             // 
-            this.txtConfirm.Location = new System.Drawing.Point(103, 102);
+            this.txtConfirm.Location = new System.Drawing.Point(103, 113);
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.Size = new System.Drawing.Size(194, 20);
             this.txtConfirm.TabIndex = 23;
@@ -82,7 +82,7 @@
             // lblConfirm
             // 
             this.lblConfirm.AutoSize = true;
-            this.lblConfirm.Location = new System.Drawing.Point(2, 105);
+            this.lblConfirm.Location = new System.Drawing.Point(2, 116);
             this.lblConfirm.Name = "lblConfirm";
             this.lblConfirm.Size = new System.Drawing.Size(91, 13);
             this.lblConfirm.TabIndex = 22;
@@ -91,7 +91,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(103, 66);
+            this.txtPassword.Location = new System.Drawing.Point(103, 71);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(194, 20);
             this.txtPassword.TabIndex = 21;
@@ -101,7 +101,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(37, 66);
+            this.lblPassword.Location = new System.Drawing.Point(37, 71);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(56, 13);
             this.lblPassword.TabIndex = 20;
@@ -130,7 +130,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(151, 78);
+            this.lblWelcome.Location = new System.Drawing.Point(151, 97);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(121, 20);
             this.lblWelcome.TabIndex = 35;
@@ -138,7 +138,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(289, 267);
+            this.btnCancel.Location = new System.Drawing.Point(289, 337);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(95, 23);
             this.btnCancel.TabIndex = 38;
@@ -148,7 +148,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(190, 267);
+            this.btnRegister.Location = new System.Drawing.Point(179, 337);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(93, 23);
             this.btnRegister.TabIndex = 37;
@@ -161,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(454, 331);
+            this.ClientSize = new System.Drawing.Size(454, 384);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnCancel);

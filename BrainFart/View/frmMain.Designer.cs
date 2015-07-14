@@ -71,7 +71,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(138, 67);
+            this.lblWelcome.Location = new System.Drawing.Point(138, 80);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(167, 20);
             this.lblWelcome.TabIndex = 1;
@@ -79,7 +79,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(174, 99);
+            this.btnStart.Location = new System.Drawing.Point(174, 116);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(97, 23);
             this.btnStart.TabIndex = 2;
@@ -89,7 +89,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(174, 128);
+            this.btnRegister.Location = new System.Drawing.Point(174, 154);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(97, 23);
             this.btnRegister.TabIndex = 6;
@@ -106,7 +106,7 @@
             this.groupBox1.Controls.Add(this.lblPassword);
             this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.lblUserName);
-            this.groupBox1.Location = new System.Drawing.Point(71, 189);
+            this.groupBox1.Location = new System.Drawing.Point(71, 230);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(294, 120);
             this.groupBox1.TabIndex = 7;
@@ -184,7 +184,7 @@
             // btnAddQuestion
             // 
             this.btnAddQuestion.Enabled = false;
-            this.btnAddQuestion.Location = new System.Drawing.Point(174, 157);
+            this.btnAddQuestion.Location = new System.Drawing.Point(174, 192);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(97, 23);
             this.btnAddQuestion.TabIndex = 8;
@@ -194,7 +194,7 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(387, 296);
+            this.btnQuit.Location = new System.Drawing.Point(387, 349);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(55, 23);
             this.btnQuit.TabIndex = 45;
@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(454, 331);
+            this.ClientSize = new System.Drawing.Size(454, 384);
             this.Controls.Add(this.btnStats);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnAddQuestion);

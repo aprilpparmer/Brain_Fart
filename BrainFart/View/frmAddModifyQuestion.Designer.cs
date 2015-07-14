@@ -72,7 +72,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(372, 205);
+            this.btnCancel.Location = new System.Drawing.Point(347, 256);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(52, 20);
             this.btnCancel.TabIndex = 35;
@@ -82,7 +82,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(372, 181);
+            this.btnSubmit.Location = new System.Drawing.Point(277, 256);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(52, 20);
             this.btnSubmit.TabIndex = 34;
@@ -116,7 +116,7 @@
             this.groupBox1.Controls.Add(this.lblQuestion);
             this.groupBox1.Location = new System.Drawing.Point(12, 86);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(430, 230);
+            this.groupBox1.Size = new System.Drawing.Size(430, 286);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             // 
@@ -133,7 +133,7 @@
             // 
             this.cbDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDifficulty.FormattingEnabled = true;
-            this.cbDifficulty.Location = new System.Drawing.Point(239, 202);
+            this.cbDifficulty.Location = new System.Drawing.Point(239, 222);
             this.cbDifficulty.Name = "cbDifficulty";
             this.cbDifficulty.Size = new System.Drawing.Size(121, 21);
             this.cbDifficulty.TabIndex = 19;
@@ -142,7 +142,7 @@
             // lblDifficulty
             // 
             this.lblDifficulty.AutoSize = true;
-            this.lblDifficulty.Location = new System.Drawing.Point(186, 205);
+            this.lblDifficulty.Location = new System.Drawing.Point(186, 225);
             this.lblDifficulty.Name = "lblDifficulty";
             this.lblDifficulty.Size = new System.Drawing.Size(50, 13);
             this.lblDifficulty.TabIndex = 18;
@@ -152,7 +152,7 @@
             // 
             this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(59, 202);
+            this.cbCategory.Location = new System.Drawing.Point(59, 222);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(121, 21);
             this.cbCategory.TabIndex = 17;
@@ -161,7 +161,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(6, 205);
+            this.lblCategory.Location = new System.Drawing.Point(6, 225);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(52, 13);
             this.lblCategory.TabIndex = 16;
@@ -170,7 +170,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(346, 176);
+            this.radioButton4.Location = new System.Drawing.Point(346, 188);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(14, 13);
             this.radioButton4.TabIndex = 15;
@@ -180,7 +180,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(346, 153);
+            this.radioButton3.Location = new System.Drawing.Point(346, 165);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(14, 13);
             this.radioButton3.TabIndex = 14;
@@ -190,7 +190,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(346, 130);
+            this.radioButton2.Location = new System.Drawing.Point(346, 142);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(14, 13);
             this.radioButton2.TabIndex = 13;
@@ -201,7 +201,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(346, 106);
+            this.radioButton1.Location = new System.Drawing.Point(346, 118);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(14, 13);
             this.radioButton1.TabIndex = 12;
@@ -211,7 +211,7 @@
             // 
             // txtAnswerD
             // 
-            this.txtAnswerD.Location = new System.Drawing.Point(82, 173);
+            this.txtAnswerD.Location = new System.Drawing.Point(82, 185);
             this.txtAnswerD.Name = "txtAnswerD";
             this.txtAnswerD.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerD.TabIndex = 11;
@@ -219,7 +219,7 @@
             // 
             // txtAnswerC
             // 
-            this.txtAnswerC.Location = new System.Drawing.Point(82, 150);
+            this.txtAnswerC.Location = new System.Drawing.Point(82, 162);
             this.txtAnswerC.Name = "txtAnswerC";
             this.txtAnswerC.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerC.TabIndex = 10;
@@ -227,7 +227,7 @@
             // 
             // txtAnswerB
             // 
-            this.txtAnswerB.Location = new System.Drawing.Point(82, 127);
+            this.txtAnswerB.Location = new System.Drawing.Point(82, 139);
             this.txtAnswerB.Name = "txtAnswerB";
             this.txtAnswerB.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerB.TabIndex = 9;
@@ -235,7 +235,7 @@
             // 
             // txtAnswerA
             // 
-            this.txtAnswerA.Location = new System.Drawing.Point(82, 105);
+            this.txtAnswerA.Location = new System.Drawing.Point(82, 117);
             this.txtAnswerA.Name = "txtAnswerA";
             this.txtAnswerA.Size = new System.Drawing.Size(258, 20);
             this.txtAnswerA.TabIndex = 8;
@@ -244,7 +244,7 @@
             // lblD
             // 
             this.lblD.AutoSize = true;
-            this.lblD.Location = new System.Drawing.Point(56, 176);
+            this.lblD.Location = new System.Drawing.Point(56, 188);
             this.lblD.Name = "lblD";
             this.lblD.Size = new System.Drawing.Size(21, 13);
             this.lblD.TabIndex = 7;
@@ -253,7 +253,7 @@
             // lblC
             // 
             this.lblC.AutoSize = true;
-            this.lblC.Location = new System.Drawing.Point(56, 153);
+            this.lblC.Location = new System.Drawing.Point(56, 165);
             this.lblC.Name = "lblC";
             this.lblC.Size = new System.Drawing.Size(20, 13);
             this.lblC.TabIndex = 6;
@@ -262,7 +262,7 @@
             // lblB
             // 
             this.lblB.AutoSize = true;
-            this.lblB.Location = new System.Drawing.Point(56, 130);
+            this.lblB.Location = new System.Drawing.Point(56, 142);
             this.lblB.Name = "lblB";
             this.lblB.Size = new System.Drawing.Size(20, 13);
             this.lblB.TabIndex = 5;
@@ -271,7 +271,7 @@
             // lblA
             // 
             this.lblA.AutoSize = true;
-            this.lblA.Location = new System.Drawing.Point(56, 108);
+            this.lblA.Location = new System.Drawing.Point(56, 120);
             this.lblA.Name = "lblA";
             this.lblA.Size = new System.Drawing.Size(20, 13);
             this.lblA.TabIndex = 4;
@@ -280,7 +280,7 @@
             // lblAnswers
             // 
             this.lblAnswers.AutoSize = true;
-            this.lblAnswers.Location = new System.Drawing.Point(0, 89);
+            this.lblAnswers.Location = new System.Drawing.Point(0, 90);
             this.lblAnswers.Name = "lblAnswers";
             this.lblAnswers.Size = new System.Drawing.Size(92, 13);
             this.lblAnswers.TabIndex = 3;
@@ -332,7 +332,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(454, 331);
+            this.ClientSize = new System.Drawing.Size(454, 384);
             this.Controls.Add(this.loggedInLabel);
             this.Controls.Add(this.lblPatientTabUser);
             this.Controls.Add(this.groupBox1);

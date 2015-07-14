@@ -38,8 +38,6 @@
             this.lblTotalCorrect = new System.Windows.Forms.Label();
             this.txtAvgScore = new System.Windows.Forms.TextBox();
             this.lblAvgScore = new System.Windows.Forms.Label();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.lblCategory = new System.Windows.Forms.Label();
             this.txtHighScore = new System.Windows.Forms.TextBox();
             this.lblHighScore = new System.Windows.Forms.Label();
             this.txtGamesPlayed = new System.Windows.Forms.TextBox();
@@ -69,7 +67,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(315, 190);
+            this.btnCancel.Location = new System.Drawing.Point(333, 348);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 25);
             this.btnCancel.TabIndex = 32;
@@ -80,9 +78,9 @@
             // btnResetStats
             // 
             this.btnResetStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetStats.Location = new System.Drawing.Point(176, 92);
+            this.btnResetStats.Location = new System.Drawing.Point(198, 114);
             this.btnResetStats.Name = "btnResetStats";
-            this.btnResetStats.Size = new System.Drawing.Size(50, 21);
+            this.btnResetStats.Size = new System.Drawing.Size(62, 21);
             this.btnResetStats.TabIndex = 36;
             this.btnResetStats.Text = "Reset";
             this.btnResetStats.UseVisualStyleBackColor = true;
@@ -90,7 +88,7 @@
             // txtTotalMissed
             // 
             this.txtTotalMissed.Enabled = false;
-            this.txtTotalMissed.Location = new System.Drawing.Point(262, 65);
+            this.txtTotalMissed.Location = new System.Drawing.Point(257, 68);
             this.txtTotalMissed.Name = "txtTotalMissed";
             this.txtTotalMissed.Size = new System.Drawing.Size(26, 20);
             this.txtTotalMissed.TabIndex = 13;
@@ -98,7 +96,7 @@
             // lblTotalMissed
             // 
             this.lblTotalMissed.AutoSize = true;
-            this.lblTotalMissed.Location = new System.Drawing.Point(163, 68);
+            this.lblTotalMissed.Location = new System.Drawing.Point(158, 71);
             this.lblTotalMissed.Name = "lblTotalMissed";
             this.lblTotalMissed.Size = new System.Drawing.Size(92, 13);
             this.lblTotalMissed.TabIndex = 14;
@@ -107,7 +105,7 @@
             // txtTotalCorrect
             // 
             this.txtTotalCorrect.Enabled = false;
-            this.txtTotalCorrect.Location = new System.Drawing.Point(262, 35);
+            this.txtTotalCorrect.Location = new System.Drawing.Point(257, 32);
             this.txtTotalCorrect.Name = "txtTotalCorrect";
             this.txtTotalCorrect.Size = new System.Drawing.Size(26, 20);
             this.txtTotalCorrect.TabIndex = 11;
@@ -115,7 +113,7 @@
             // lblTotalCorrect
             // 
             this.lblTotalCorrect.AutoSize = true;
-            this.lblTotalCorrect.Location = new System.Drawing.Point(163, 42);
+            this.lblTotalCorrect.Location = new System.Drawing.Point(158, 39);
             this.lblTotalCorrect.Name = "lblTotalCorrect";
             this.lblTotalCorrect.Size = new System.Drawing.Size(93, 13);
             this.lblTotalCorrect.TabIndex = 12;
@@ -124,7 +122,7 @@
             // txtAvgScore
             // 
             this.txtAvgScore.Enabled = false;
-            this.txtAvgScore.Location = new System.Drawing.Point(90, 65);
+            this.txtAvgScore.Location = new System.Drawing.Point(90, 64);
             this.txtAvgScore.Name = "txtAvgScore";
             this.txtAvgScore.Size = new System.Drawing.Size(26, 20);
             this.txtAvgScore.TabIndex = 10;
@@ -132,34 +130,16 @@
             // lblAvgScore
             // 
             this.lblAvgScore.AutoSize = true;
-            this.lblAvgScore.Location = new System.Drawing.Point(6, 68);
+            this.lblAvgScore.Location = new System.Drawing.Point(6, 67);
             this.lblAvgScore.Name = "lblAvgScore";
             this.lblAvgScore.Size = new System.Drawing.Size(81, 13);
             this.lblAvgScore.TabIndex = 9;
             this.lblAvgScore.Text = "Average Score:";
             // 
-            // cbCategory
-            // 
-            this.cbCategory.Enabled = false;
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(135, 10);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(71, 21);
-            this.cbCategory.TabIndex = 8;
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(77, 13);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(52, 13);
-            this.lblCategory.TabIndex = 7;
-            this.lblCategory.Text = "Category:";
-            // 
             // txtHighScore
             // 
             this.txtHighScore.Enabled = false;
-            this.txtHighScore.Location = new System.Drawing.Point(90, 39);
+            this.txtHighScore.Location = new System.Drawing.Point(90, 32);
             this.txtHighScore.Name = "txtHighScore";
             this.txtHighScore.Size = new System.Drawing.Size(26, 20);
             this.txtHighScore.TabIndex = 6;
@@ -167,7 +147,7 @@
             // lblHighScore
             // 
             this.lblHighScore.AutoSize = true;
-            this.lblHighScore.Location = new System.Drawing.Point(6, 42);
+            this.lblHighScore.Location = new System.Drawing.Point(6, 35);
             this.lblHighScore.Name = "lblHighScore";
             this.lblHighScore.Size = new System.Drawing.Size(63, 13);
             this.lblHighScore.TabIndex = 5;
@@ -176,7 +156,7 @@
             // txtGamesPlayed
             // 
             this.txtGamesPlayed.Enabled = false;
-            this.txtGamesPlayed.Location = new System.Drawing.Point(90, 92);
+            this.txtGamesPlayed.Location = new System.Drawing.Point(90, 100);
             this.txtGamesPlayed.Name = "txtGamesPlayed";
             this.txtGamesPlayed.Size = new System.Drawing.Size(26, 20);
             this.txtGamesPlayed.TabIndex = 3;
@@ -184,7 +164,7 @@
             // lblGamesPlayed
             // 
             this.lblGamesPlayed.AutoSize = true;
-            this.lblGamesPlayed.Location = new System.Drawing.Point(6, 95);
+            this.lblGamesPlayed.Location = new System.Drawing.Point(6, 103);
             this.lblGamesPlayed.Name = "lblGamesPlayed";
             this.lblGamesPlayed.Size = new System.Drawing.Size(78, 13);
             this.lblGamesPlayed.TabIndex = 4;
@@ -202,7 +182,7 @@
             // 
             // btnAddQuestion
             // 
-            this.btnAddQuestion.Location = new System.Drawing.Point(51, 179);
+            this.btnAddQuestion.Location = new System.Drawing.Point(51, 226);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(113, 23);
             this.btnAddQuestion.TabIndex = 7;
@@ -218,15 +198,13 @@
             this.groupStats.Controls.Add(this.lblTotalCorrect);
             this.groupStats.Controls.Add(this.txtAvgScore);
             this.groupStats.Controls.Add(this.lblAvgScore);
-            this.groupStats.Controls.Add(this.cbCategory);
-            this.groupStats.Controls.Add(this.lblCategory);
             this.groupStats.Controls.Add(this.txtHighScore);
             this.groupStats.Controls.Add(this.lblHighScore);
             this.groupStats.Controls.Add(this.txtGamesPlayed);
             this.groupStats.Controls.Add(this.lblGamesPlayed);
             this.groupStats.Location = new System.Drawing.Point(42, 54);
             this.groupStats.Name = "groupStats";
-            this.groupStats.Size = new System.Drawing.Size(327, 119);
+            this.groupStats.Size = new System.Drawing.Size(327, 150);
             this.groupStats.TabIndex = 6;
             this.groupStats.TabStop = false;
             this.groupStats.Text = "Stats";
@@ -253,7 +231,6 @@
             // groupInfo
             // 
             this.groupInfo.Controls.Add(this.btnEditInfo);
-            this.groupInfo.Controls.Add(this.btnCancel);
             this.groupInfo.Controls.Add(this.btnAddQuestion);
             this.groupInfo.Controls.Add(this.groupStats);
             this.groupInfo.Controls.Add(this.label2);
@@ -261,7 +238,7 @@
             this.groupInfo.Controls.Add(this.lblUser);
             this.groupInfo.Location = new System.Drawing.Point(12, 87);
             this.groupInfo.Name = "groupInfo";
-            this.groupInfo.Size = new System.Drawing.Size(396, 221);
+            this.groupInfo.Size = new System.Drawing.Size(396, 255);
             this.groupInfo.TabIndex = 38;
             this.groupInfo.TabStop = false;
             this.groupInfo.Text = " Information and Stats";
@@ -279,8 +256,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(454, 331);
+            this.ClientSize = new System.Drawing.Size(454, 384);
             this.Controls.Add(this.groupInfo);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserInfo";
@@ -306,8 +284,6 @@
         private System.Windows.Forms.Label lblTotalCorrect;
         private System.Windows.Forms.TextBox txtAvgScore;
         private System.Windows.Forms.Label lblAvgScore;
-        private System.Windows.Forms.ComboBox cbCategory;
-        private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.TextBox txtHighScore;
         private System.Windows.Forms.Label lblHighScore;
         private System.Windows.Forms.TextBox txtGamesPlayed;
