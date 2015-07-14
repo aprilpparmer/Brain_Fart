@@ -58,5 +58,36 @@ namespace BrainFart.DAL
             }
         }
 
+
+        public static int userGamesPlayed(int userID)
+        {
+            string selectStatement = "Select COUNT(*) FROM games WHERE userID = @userID";
+
+            try
+            {
+                using (SqlConnection connection = BrainFartConnection.GetConnection())
+                {
+                    connection.Open();
+
+                    using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                    {
+                        selectCommand.Parameters.AddWithValue("userID", userID);
+                        int gamesID = Convert.ToInt32(selectCommand.ExecuteScalar());
+                        return gamesID;
+                    }
+                }
+            }
+
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
+
+

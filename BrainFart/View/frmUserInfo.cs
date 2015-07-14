@@ -16,7 +16,7 @@ namespace BrainFart.View
     public partial class frmUserInfo : Form
     {
         private UserAccessController userAccess = UserAccessController.Instance;
-
+ 
         public frmUserInfo()
         {
             InitializeComponent();
@@ -25,7 +25,15 @@ namespace BrainFart.View
             {
                 this.txtUser.Text = uac.CurrentLoggedUser.UserName;
             }
+            this.loadStats();
             
+        }
+
+        private void loadStats()
+        {
+            int gamesPlayed = 0;
+            gamesPlayed = BrainFartController.userGamesPlayed(userAccess.CurrentLoggedUser.UserID);
+            this.txtGamesPlayed.Text = gamesPlayed.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

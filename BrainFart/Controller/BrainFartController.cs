@@ -64,5 +64,10 @@ namespace BrainFart.Controller
         {
             return GamesDAL.AddUserStats(game);
         }
+
+        public static int userGamesPlayed(int userID)
+        {
+            return GamesDAL.userGamesPlayed(userID);
+        }
     }
 }
