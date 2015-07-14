@@ -210,7 +210,7 @@
             // 
             this.lblCorrectAnswer.Location = new System.Drawing.Point(17, 338);
             this.lblCorrectAnswer.Name = "lblCorrectAnswer";
-            this.lblCorrectAnswer.Size = new System.Drawing.Size(332, 36);
+            this.lblCorrectAnswer.Size = new System.Drawing.Size(332, 48);
             this.lblCorrectAnswer.TabIndex = 13;
             this.lblCorrectAnswer.Text = "Correct Answer:";
             // 
@@ -262,9 +262,10 @@
             // 
             // questionDescripLabel
             // 
+            this.questionDescripLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionDescripLabel.Location = new System.Drawing.Point(73, 25);
             this.questionDescripLabel.Name = "questionDescripLabel";
-            this.questionDescripLabel.Size = new System.Drawing.Size(340, 41);
+            this.questionDescripLabel.Size = new System.Drawing.Size(340, 45);
             this.questionDescripLabel.TabIndex = 33;
             this.questionDescripLabel.Text = "**************";
             // 
@@ -325,7 +326,7 @@
             this.lblUserTabUser.AutoSize = true;
             this.lblUserTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblUserTabUser.Location = new System.Drawing.Point(276, 67);
+            this.lblUserTabUser.Location = new System.Drawing.Point(276, 58);
             this.lblUserTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserTabUser.Name = "lblUserTabUser";
             this.lblUserTabUser.Size = new System.Drawing.Size(89, 16);
@@ -378,7 +379,7 @@
             this.loggedInLabel.AutoSize = true;
             this.loggedInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loggedInLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.loggedInLabel.Location = new System.Drawing.Point(361, 69);
+            this.loggedInLabel.Location = new System.Drawing.Point(361, 60);
             this.loggedInLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loggedInLabel.Name = "loggedInLabel";
             this.loggedInLabel.Size = new System.Drawing.Size(40, 13);

@@ -309,7 +309,7 @@
             this.lblPatientTabUser.AutoSize = true;
             this.lblPatientTabUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPatientTabUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPatientTabUser.Location = new System.Drawing.Point(286, 67);
+            this.lblPatientTabUser.Location = new System.Drawing.Point(276, 58);
             this.lblPatientTabUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPatientTabUser.Name = "lblPatientTabUser";
             this.lblPatientTabUser.Size = new System.Drawing.Size(92, 16);
@@ -321,7 +321,7 @@
             this.loggedInLabel.AutoSize = true;
             this.loggedInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loggedInLabel.ForeColor = System.Drawing.Color.LimeGreen;
-            this.loggedInLabel.Location = new System.Drawing.Point(371, 69);
+            this.loggedInLabel.Location = new System.Drawing.Point(361, 60);
             this.loggedInLabel.Name = "loggedInLabel";
             this.loggedInLabel.Size = new System.Drawing.Size(40, 13);
             this.loggedInLabel.TabIndex = 41;

@@ -37,16 +37,16 @@ namespace BrainFart.View
             if (uac.CurrentLoggedUser != null)
             {
                 this.loggedInLabel.Text = uac.CurrentLoggedUser.UserName;
-                //game = new Games();
-                //this.saveStats(game);
-               // try
-                //{
-                   // this.game.GamesID = BrainFartController.AddUserStats(game);
-               // }
-                //catch (InvalidOperationException ioe)
-                //{
-                   // throw ioe;
-               // }
+                game = new Games();
+                this.saveStats(game);
+                try
+                {
+                    this.game.GamesID = BrainFartController.AddUserStats(game);
+                }
+                catch (InvalidOperationException ioe)
+                {
+                   throw ioe;
+               }
             }
 
         }
