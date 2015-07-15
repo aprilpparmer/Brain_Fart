@@ -219,6 +219,42 @@ namespace BrainFart.DAL
                 throw ex;
             }
         }
+
+        public static bool DeleteStats(int userID)
+        {
+            string deleteStatement =
+                 "DELETE FROM games Where userID = @userID; ";
+
+            try
+            {
+                using (SqlConnection connection = BrainFartConnection.GetConnection())
+                {
+                    connection.Open();
+
+                    using (SqlCommand deleteCommand = new SqlCommand(deleteStatement, connection))
+                    {
+                        deleteCommand.Parameters.AddWithValue("userID", userID);
+                        
+
+                        int rowCount = deleteCommand.ExecuteNonQuery();
+
+                        if (rowCount > 0)
+                            return true;
+                        else
+                            return false;
+                    }
+                }
+            }
+            catch (SqlException se)
+            {
+                throw se;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
 
