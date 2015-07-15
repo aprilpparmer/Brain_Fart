@@ -64,5 +64,23 @@ namespace BrainFart.View
             addQuestion.addQuestion = true;
             this.addQuestion.ShowDialog();
         }
+
+        private void btnResetStats_Click(object sender, EventArgs e)
+        {
+             DialogResult dlgResult = MessageBox.Show("Are you sure you want to reset your stats?", "BrainFart", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+             if (dlgResult == DialogResult.No) return;
+             else
+             {
+                 if (BrainFartController.DeleteStats(userAccess.CurrentLoggedUser.UserID))
+                 {
+                     MessageBox.Show("Successfully Reset Stats: ");
+                     this.loadStats();
+                 }
+                 else
+                 {
+                     MessageBox.Show("You have no stats to reset at this time");
+                 }
+             }
+        }
     }
 }

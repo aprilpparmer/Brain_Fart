@@ -89,5 +89,10 @@ namespace BrainFart.Controller
         {
             return GamesDAL.userQuestionsCorrect(userID);
         }
+
+        public static bool DeleteStats(int removeUser)
+        {
+            return GamesDAL.DeleteStats(removeUser);
+        }
     }
 }

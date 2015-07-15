@@ -147,6 +147,7 @@ namespace BrainFart.View
             this.categoryComboBox.SelectedIndex = 0;
             this.numberQuestionsComboBox.SelectedIndex = 0;
             this.gameOverComboBox.SelectedIndex = 0;
+            this.difficultyComboBox.SelectedIndex = 0;
         }
 
 
