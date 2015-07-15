@@ -26,7 +26,8 @@ namespace BrainFart.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=BrainFart;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=xnk6n9ftjq.database.windows.net;Initial Catalog=BrainFartDatabase;Per" +
+            "sist Security Info=True;User ID=aprilpparmer;Password=Ap1ri2l3*")]
         public string BrainFartConnectionString {
             get {
                 return ((string)(this["BrainFartConnectionString"]));
