@@ -84,6 +84,7 @@
             this.btnResetStats.TabIndex = 36;
             this.btnResetStats.Text = "Reset";
             this.btnResetStats.UseVisualStyleBackColor = true;
+            this.btnResetStats.Click += new System.EventHandler(this.btnResetStats_Click);
             // 
             // txtTotalMissed
             // 

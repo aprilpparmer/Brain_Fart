@@ -64,5 +64,10 @@ namespace BrainFart.View
             addQuestion.addQuestion = true;
             this.addQuestion.ShowDialog();
         }
+
+        private void btnResetStats_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
