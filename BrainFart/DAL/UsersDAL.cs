@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BrainFart.DAL
 {
-    class UsersDAL
+    public static class UsersDAL
     {
 
         /// <summary>
