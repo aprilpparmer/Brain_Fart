@@ -42,7 +42,6 @@
             this.lblHighScore = new System.Windows.Forms.Label();
             this.txtGamesPlayed = new System.Windows.Forms.TextBox();
             this.lblGamesPlayed = new System.Windows.Forms.Label();
-            this.btnEditInfo = new System.Windows.Forms.Button();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.groupStats = new System.Windows.Forms.GroupBox();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -182,16 +181,6 @@
             this.lblGamesPlayed.TabIndex = 4;
             this.lblGamesPlayed.Text = "Games Played:";
             // 
-            // btnEditInfo
-            // 
-            this.btnEditInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditInfo.Location = new System.Drawing.Point(294, 23);
-            this.btnEditInfo.Name = "btnEditInfo";
-            this.btnEditInfo.Size = new System.Drawing.Size(59, 25);
-            this.btnEditInfo.TabIndex = 35;
-            this.btnEditInfo.Text = "Edit Info";
-            this.btnEditInfo.UseVisualStyleBackColor = true;
-            // 
             // btnAddQuestion
             // 
             this.btnAddQuestion.Location = new System.Drawing.Point(51, 226);
@@ -229,7 +218,7 @@
             this.txtUser.Location = new System.Drawing.Point(98, 26);
             this.txtUser.Name = "txtUser";
             this.txtUser.ReadOnly = true;
-            this.txtUser.Size = new System.Drawing.Size(162, 20);
+            this.txtUser.Size = new System.Drawing.Size(227, 20);
             this.txtUser.TabIndex = 1;
             // 
             // lblUser
@@ -243,7 +232,6 @@
             // 
             // groupInfo
             // 
-            this.groupInfo.Controls.Add(this.btnEditInfo);
             this.groupInfo.Controls.Add(this.btnAddQuestion);
             this.groupInfo.Controls.Add(this.groupStats);
             this.groupInfo.Controls.Add(this.label2);
@@ -301,7 +289,6 @@
         private System.Windows.Forms.Label lblHighScore;
         private System.Windows.Forms.TextBox txtGamesPlayed;
         private System.Windows.Forms.Label lblGamesPlayed;
-        private System.Windows.Forms.Button btnEditInfo;
         private System.Windows.Forms.Button btnAddQuestion;
         private System.Windows.Forms.GroupBox groupStats;
         private System.Windows.Forms.TextBox txtUser;

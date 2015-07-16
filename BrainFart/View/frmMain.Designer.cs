@@ -37,7 +37,6 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.chkRemember = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -100,7 +99,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnLogout);
-            this.groupBox1.Controls.Add(this.chkRemember);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.lblPassword);
@@ -123,16 +121,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // chkRemember
-            // 
-            this.chkRemember.AutoSize = true;
-            this.chkRemember.Location = new System.Drawing.Point(8, 93);
-            this.chkRemember.Name = "chkRemember";
-            this.chkRemember.Size = new System.Drawing.Size(77, 17);
-            this.chkRemember.TabIndex = 10;
-            this.chkRemember.Text = "Remember";
-            this.chkRemember.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
@@ -248,7 +236,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.CheckBox chkRemember;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
