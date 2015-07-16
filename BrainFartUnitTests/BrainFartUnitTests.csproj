@@ -55,6 +55,7 @@
     <Compile Include="AnswersUnitTests.cs" />
     <Compile Include="CategoriesUnitTests.cs" />
     <Compile Include="DifficultiesUnitTests.cs" />
+    <Compile Include="GamesUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BrainFart\BrainFart.csproj">
