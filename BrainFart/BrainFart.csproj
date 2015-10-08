@@ -183,7 +183,6 @@
     <EmbeddedResource Include="View\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BrainFart_TemporaryKey.pfx" />
     <None Include="CategoriesDataSet.xsc">
       <DependentUpon>CategoriesDataSet.xsd</DependentUpon>
     </None>

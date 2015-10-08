@@ -19,12 +19,19 @@ namespace BrainFart.DB
         /// <returns>an SqlConnection object</returns>
         public static SqlConnection GetConnection()
         {
-            string connectionString =
-                "Server=tcp:xnk6n9ftjq.database.windows.net,1433;Database=BrainFartDatabase;" + 
-                "User ID=aprilpparmer@xnk6n9ftjq;Password=Ap1ri2l3*;Trusted_Connection=False;" + 
-                "Encrypt=True;Connection Timeout=30;";
-            SqlConnection connection = new SqlConnection(connectionString);
-            return connection;
+            SqlConnection connection;
+            try
+            {
+                string connectionString =
+                    "Data Source=localhost;Initial Catalog=BrainFart;" +
+                    "Integrated Security=True";
+                connection = new SqlConnection(connectionString);
+            }
+           catch (Exception ex)
+            {
+                throw ex;
+            }
+                return connection;
         }
         /// <summary>
         /// Check if database exists. This is useful if the database was removed for some reason and the application crashes.
